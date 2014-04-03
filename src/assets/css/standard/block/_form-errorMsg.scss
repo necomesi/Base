@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - form-errorMsg
+//
+
+.#{$sb-prefix}form-errorMsg {
+	display: inline-block;
+	margin: 0 0 0.3em 0;
+	color: $sb-color-danger;
+
+	+ * {
+		margin-top: 0;
+	}
+}

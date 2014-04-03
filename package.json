@@ -1,0 +1,17 @@
+{
+  "name": "Necomesi_Base",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Necomesi ltd.",
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-sass": "~0.6.0",
+	  "grunt-csso": "~0.6.0",
+    "grunt-autoprefixer": "~0.6.4",
+    "grunt-bless": "~0.1.1",
+    "grunt-este-watch": "~0.1.15"
+  }
+}

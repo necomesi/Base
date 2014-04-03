@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - figure
+//
+
+.#{$sb-prefix}figure {
+	margin: 1em 0;
+	text-align: center;
+}
+
+.#{$sb-prefix}figure-image {
+	vertical-align: top;
+}
+
+.#{$sb-prefix}figure-caption {
+	display: block;
+	margin: 0;
+	padding: 0.3em 0 0 0;
+	color: $sb-color-text-sub;
+	font-size: (14 / 16) * 1em;
+	text-align: left;
+}

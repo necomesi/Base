@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - h3
+//
+
+.#{$sb-prefix}h3 {
+	margin: 1em 0;
+
+	> h1, > h2, > h3, > h4, > h5, > h6 {
+		margin: 0;
+		padding: 0 0 0 12px;
+		border-left: 6px solid $sb-color-border;
+		font-size: 1.17em;
+		line-height: 1.3;
+	}
+}

@@ -1,0 +1,86 @@
+﻿@charset "UTF-8";
+
+/* ======================================================
+ *
+ *   Standard blocks
+ *
+ * ====================================================== */
+
+
+// ======================================================
+// Variables
+// ------------------------------------------------------
+
+@import "variables";
+@import "mixins";
+
+
+// ======================================================
+// Abstract block
+// ------------------------------------------------------
+
+// ------------------------------------------------------
+// リスト系ブロック用の抽象ブロック
+//
+// リストが入れ子になった場合のマージン調整を行うために設けている。
+// plain, ul, ol, noteList, linkList, dl が該当する。
+//
+%sb-nestableList {
+
+	%sb-nestableList {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+}
+
+
+/* ======================================================
+ * Grid
+ * ------------------------------------------------------ */
+
+@import "block/grid";
+
+
+/* ======================================================
+ * Block
+ * ------------------------------------------------------ */
+
+@import "block/h1";
+@import "block/h2";
+@import "block/h3";
+@import "block/h4";
+@import "block/h5";
+@import "block/h6";
+@import "block/p";
+@import "block/plain";
+@import "block/ul";
+@import "block/inlineList";
+@import "block/ol";
+@import "block/dl";
+@import "block/noteList";
+@import "block/linkList";
+@import "block/button";
+@import "block/hr";
+@import "block/box";
+@import "block/figure";
+@import "block/table";
+@import "block/figureFloat";
+
+
+/* ==========================================================================
+ * Form Block
+ * -------------------------------------------------------------------------- */
+
+@import "block/form";
+@import "block/form-label";
+@import "block/form-text";
+@import "block/form-radio";
+@import "block/form-checkbox";
+@import "block/form-textarea";
+@import "block/form-select";
+@import "block/form-name";
+@import "block/form-note";
+@import "block/form-errorMsg";
+@import "block/form-textareaCounter";
+@import "block/form-required";
+@import "block/form-action";

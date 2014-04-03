@@ -1,0 +1,12 @@
+﻿@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - form-label
+//
+
+.#{$sb-prefix}form-label {
+}
+
+.#{$sb-prefix}form-label_isDisabled {
+	color: lighten($sb-color-text, 60%);
+}

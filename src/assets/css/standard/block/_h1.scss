@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - h1
+//
+
+.#{$sb-prefix}h1 {
+	margin: 1em 0;
+
+	h1 {
+		margin: 0;
+		padding: 0 0 0.25em;
+		border-bottom: 3px solid $sb-color-border;
+		font-weight: bold;
+		font-size: 2em;
+		line-height: 1.1;
+	}
+}

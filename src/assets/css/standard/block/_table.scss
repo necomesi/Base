@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - table
+//
+
+.#{$sb-prefix}table {
+	margin: 1em 0;
+
+	> table {
+		margin: 0;
+		width: 100%;
+		border: 0;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+}
+
+.#{$sb-prefix}table_A01,
+.#{$sb-prefix}table_A02 {
+	> table {
+		> thead > tr > th,
+		> thead > tr > td,
+		> tbody > tr > th,
+		> tbody > tr > td,
+		> tfoot > tr > th,
+		> tfoot > tr > td {
+			padding: 0.25em 0 0 0;
+			border: 0;
+			vertical-align: top;
+		}
+
+		> thead > tr > th,
+		> tbody > tr > th,
+		> tfoot > tr > th {
+			font-weight: normal;
+			text-align: left;
+		}
+
+		> tbody > tr > th > *:first-child,
+		> tbody > tr > td > *:first-child {
+			margin-top: 0;
+		}
+
+		> tbody > tr > th > *:last-child,
+		> tbody > tr > td > *:last-child {
+			margin-bottom: 0;
+		}
+
+		> tbody > tr:first-child > th,
+		> tbody > tr:first-child > td {
+			padding-top: 0;
+		}
+	}
+}
+
+.#{$sb-prefix}table_A02 {
+	> table {
+		> thead > tr > th,
+		> tbody > tr > th,
+		> tfoot > tr > th {
+			font-weight: bold;
+		}
+	}
+}
+
+.#{$sb-prefix}table_B01 {
+	> table {
+		border-collapse: separate;
+
+		> thead > tr > th,
+		> thead > tr > td,
+		> tbody > tr > th,
+		> tbody > tr > td,
+		> tfoot > tr > th,
+		> tfoot > tr > td {
+			padding: 0.8em;
+			border: 0;
+			vertical-align: top;
+			text-align: left;
+			font-weight: normal;
+		}
+
+		> thead > tr > th,
+		> tfoot > tr > th {
+			background-color: $sb-color-border;
+			text-align: center;
+		}
+
+		> tbody > tr > th,
+		> tbody > tr > td {
+			border-bottom: 1px solid $sb-color-border;
+		}
+
+		> tbody > tr > th > *:first-child,
+		> tbody > tr > td > *:first-child {
+			margin-top: 0;
+		}
+
+		> tbody > tr > th > *:last-child,
+		> tbody > tr > td > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.#{$sb-prefix}table_C01 {
+	> table {
+		> thead > tr > th,
+		> thead > tr > td,
+		> tbody > tr > th,
+		> tbody > tr > td,
+		> tfoot > tr > th,
+		> tfoot > tr > td {
+			padding: 5px 10px;
+			border: 1px solid $sb-color-border;
+			font-weight: normal;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		> thead > tr > th,
+		> tfoot > tr > th {
+			background-color: $sb-color-border;
+		}
+
+		> tbody > tr > th > *:first-child,
+		> tbody > tr > td > *:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.#{$sb-prefix}table-caption {
+	margin: 0;
+	padding: 0 0 5px 0;
+}
+
+.#{$sb-prefix}table-caption_right {
+	text-align: right;
+}
+
+.#{$sb-prefix}table-col_1\/6 {
+	width: 16%;
+}
+
+.#{$sb-prefix}table-col_1\/5 {
+	width: 20%;
+}
+
+.#{$sb-prefix}table-col_1\/4 {
+	width: 25%;
+}
+
+.#{$sb-prefix}table-col_1\/3,
+.#{$sb-prefix}table-col_2\/6 {
+	width: 33%;
+}
+
+.#{$sb-prefix}table-col_1\/2,
+.#{$sb-prefix}table-col_2\/4,
+.#{$sb-prefix}table-col_3\/6,
+.#{$sb-prefix}table-col_4\/8 {
+	width: 50%;
+}
+
+.#{$sb-prefix}table-col_2\/3,
+.#{$sb-prefix}table-col_4\/6 {
+	width: 66%;
+}
+
+.#{$sb-prefix}table-col_3\/4,
+.#{$sb-prefix}table-col_6\/8 {
+	width: 75%;
+}
+
+.#{$sb-prefix}table-col_5\/6 {
+	width: 83%;
+}

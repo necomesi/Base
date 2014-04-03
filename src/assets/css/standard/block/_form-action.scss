@@ -1,0 +1,56 @@
+﻿@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - form-action
+//
+
+.#{$sb-prefix}form-action {
+	margin: 2em 0 1em 0;
+	text-align: center;
+}
+
+.#{$sb-prefix}form-action-agreement {
+	margin: 0 0 1em 0;
+}
+
+.#{$sb-prefix}form-action-return,
+.#{$sb-prefix}form-action-proceed {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style-type: none;
+
+	ul + & {
+		margin-left: 10px;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.#{$sb-prefix}form-action-link {
+	margin: 17px 0 0 0;
+	padding: 0;
+	list-style-type: none;
+
+	li {
+		display: inline;
+		margin: 0 0 0 10px;
+		padding: 0 0 0 10px;
+		border-left: 1px solid #ccc;
+
+		&:first-child {
+			margin-left: 0;
+			padding-left: 0;
+			border-left: 0 none;
+		}
+
+		a {
+			color: #999;
+		}
+	}
+}

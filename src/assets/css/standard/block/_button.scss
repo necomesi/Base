@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - button
+//
+
+.#{$sb-prefix}button {
+	@include sb-resetButton();
+	display: inline-block;
+	padding: 0.3em 0.7em;
+	border: 1px solid $sb-color-border;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		color: inherit;
+	}
+
+	&.#{$sb-prefix}button_isDisabled,
+	&:disabled {
+		background-color: #e1e1e1;
+		border-color: #e1e1e1;
+		color: #aaa;
+		cursor: default;
+		pointer-events: none;
+	}
+
+	&.#{$sb-prefix}button_isActive,
+	&:active {
+		box-shadow: inset 1px 4px 5px rgba(0, 0, 0, 0.125);
+	}
+}
+
+.#{$sb-prefix}button_primary {
+	border-color: darken($sb-color-primary, 10%);
+	background-color: $sb-color-primary;
+
+	&:hover {
+		border-color: darken($sb-color-primary, 15%);
+		background-color: darken($sb-color-primary, 5%);
+	}
+}
+
+.#{$sb-prefix}button_success {
+	border-color: darken($sb-color-success, 10%);
+	background-color: $sb-color-success;
+
+	&:hover {
+		border-color: darken($sb-color-success, 15%);
+		background-color: darken($sb-color-success, 5%);
+	}
+}
+
+.#{$sb-prefix}button_info {
+	border-color: darken($sb-color-info, 10%);
+	background-color: $sb-color-info;
+
+	&:hover {
+		border-color: darken($sb-color-info, 15%);
+		background-color: darken($sb-color-info, 5%);
+	}
+}
+
+.#{$sb-prefix}button_warning {
+	border-color: darken($sb-color-warning, 10%);
+	background-color: $sb-color-warning;
+
+	&:hover {
+		border-color: darken($sb-color-warning, 15%);
+		background-color: darken($sb-color-warning, 5%);
+	}
+}
+
+.#{$sb-prefix}button_danger {
+	border-color: darken($sb-color-danger, 10%);
+	background-color: $sb-color-danger;
+
+	&:hover {
+		border-color: darken($sb-color-danger, 15%);
+		background-color: darken($sb-color-danger, 5%);
+	}
+}
+
+.#{$sb-prefix}button_primary,
+.#{$sb-prefix}button_success,
+.#{$sb-prefix}button_info,
+.#{$sb-prefix}button_warning,
+.#{$sb-prefix}button_danger {
+	color: #fff;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: #fff;
+	}
+
+	&.#{$sb-prefix}button_isDisabled,
+	&:disabled {
+		background-color: #e1e1e1;
+		border-color: #e1e1e1;
+		color: #aaa;
+	}
+}

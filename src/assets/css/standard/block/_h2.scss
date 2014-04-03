@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - h2
+//
+
+.#{$sb-prefix}h2 {
+	margin: 1em 0;
+
+	> h1, > h2, > h3, > h4, > h5, > h6 {
+		margin: 0;
+		padding: 0.25em 0.5em;
+		border: 1px solid $sb-color-border;
+		background-color: $sb-color-bg-shade;
+		font-size: 1.5em;
+		line-height: 1.2;
+	}
+}
+
+// もっと読むリンク（あれば）
+.#{$sb-prefix}h2-more {
+	float: right;
+	color: $sb-color-text-sub;
+	font-size: (1em / 1.5); // 元の大きさに戻す
+	line-height: 1.5 * 1.2; // もとの行高と揃える
+	font-weight: normal;
+}

@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// ミックスイン集
+//
+
+// ---------------------------------------------
+// おなじみ clearfix
+//
+
+@mixin sb-clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// ---------------------------------------------
+// <button> 要素のリセット
+//
+
+@mixin sb-resetButton() {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	text-align: left;
+
+	&::-moz-focus-inner {
+		padding: 0;
+		border: none;
+	}
+}
+
+// ---------------------------------------------
+// プレースホルダーのスタイルを設定する
+//
+
+@mixin sb-placeholder() {
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+
+	&::-webkit-input-placeholder {
+		@content;
+	}
+}
+
+// ---------------------------------------------
+// グリッドを作る
+//
+
+@mixin sb-grid($split: 2 3 4 6 8 12, $baseClass: '.nm-sb-grid', $hMargin: 15px, $vMargin: 30px, $fontSize: 1rem) {
+
+	#{$baseClass} {
+		margin: $vMargin * -1 0 0 $hMargin * -1;
+		font-size: 0;
+	}
+
+	#{$baseClass}-unit {
+		display: inline-block;
+		padding: $vMargin 0 0 $hMargin;
+		font-size: $fontSize;
+		vertical-align: top;
+	}
+
+	//
+	// 以下は各サイズのユニットを生成するロジック
+	//
+	$map: ();
+	@each $divisor in $split {
+		@for $i from 1 through $divisor - 1 {
+			$divided: $i / $divisor;
+			$stored: map_get($map, $divided);
+			$stored: if($stored, $stored, ());
+			$stored: append($stored, ($i $divisor));
+			$map: map_merge($map, ($divided: $stored));
+		}
+	}
+	@each $key, $val in $map {
+		$selectors: ();
+		@each $value in $val {
+			$i: nth($value, 1);
+			$divisor: nth($value, 2);
+			$selectors: append($selectors, #{$baseClass}-unit_#{$i}\/#{$divisor}, comma);
+		}
+		#{$selectors} {
+			width: $key * 100%;
+		}
+	}
+}
