@@ -37,7 +37,10 @@ module.exports = function (grunt) {
 
 		sass: {
 			default: {
-				options: { style: 'expanded' },
+				options: {
+					sourcemap: 'none',
+					style: 'expanded'
+				},
 				files: [
 					{ expand: true, cwd: stylesDev, src: '**/*.scss', dest: styles, ext: '.css' }
 				]
@@ -56,9 +59,9 @@ module.exports = function (grunt) {
 		autoprefixer: {
 			options: {
 				browsers: [
-					'ie >= 10',
-					'ff >= 26',
-					'chrome >= 33',
+					'ie >= 8',
+					'ff >= 32',
+					'chrome >= 37',
 					'safari >= 6',
 					'ios >= 7',
 					'android >= 4'
