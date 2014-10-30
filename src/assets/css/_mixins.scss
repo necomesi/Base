@@ -8,7 +8,7 @@
 // おなじみ clearfix
 //
 
-@mixin nm-clearfix() {
+@mixin necobase-clearfix() {
 	&:before,
 	&:after {
 		content: "";
@@ -24,7 +24,7 @@
 // IE9 以降には不要
 //
 
-@mixin nm-opacity($opacity) {
+@mixin necobase-opacity($opacity) {
 	opacity: $opacity;
 	filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
 }
@@ -33,7 +33,7 @@
 // <pre> のようにソースコードの通りテキストを改行する
 //
 
-@mixin nm-preWrap() {
+@mixin necobase-preWrap() {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
@@ -42,7 +42,7 @@
 // `display:none' することなく要素を見えなくする
 //
 
-@mixin nm-hidden($important: false) {
+@mixin necobase-hidden($important: false) {
 	@if $important {
 		position: absolute !important;
 		clip: rect(1px, 1px, 1px, 1px) !important;
@@ -62,7 +62,7 @@
 // - pre-wrap
 //
 
-@mixin nm-whiteSpace($value:normal) {
+@mixin necobase-whiteSpace($value:normal) {
 	@if $value == normal {
 		white-space: $value;
 		word-wrap: break-word;
@@ -74,7 +74,7 @@
 		word-break: normal; // IE は、word-break:break-all  が効いてると結局折り返ししてしまうため。
 	}
 	@else if $value == pre-wrap {
-		@include nm-preWrap();
+		@include necobase-preWrap();
 	}
 	@else {
 		white-space: $value;
@@ -85,7 +85,7 @@
 // フォーカスがあたった時のアウトライン
 //
 
-@mixin nm-tabFocus() {
+@mixin necobase-tabFocus() {
 	outline: thin dotted #333;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
@@ -95,7 +95,7 @@
 // ブロックを中央に寄せる
 //
 
-@mixin nm-centerBlock() {
+@mixin necobase-centerBlock() {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -105,7 +105,7 @@
 // テキストが溢れたときに「…」などで省略されていることを示す
 //
 
-@mixin nm-textEllipsis() {
+@mixin necobase-textEllipsis() {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -115,7 +115,7 @@
 // <button> 要素のリセット
 //
 
-@mixin nm-resetButton() {
+@mixin necobase-resetButton() {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	margin: 0;
@@ -136,7 +136,7 @@
 // プレースホルダーのスタイルを設定する
 //
 
-@mixin nm-placeholder() {
+@mixin necobase-placeholder() {
 	&::-moz-placeholder {
 		@content;
 	}
@@ -154,7 +154,7 @@
 // 要素をサイズ変更可能にする
 //
 
-@mixin nm-resizable($direction) {
+@mixin necobase-resizable($direction) {
 	resize: $direction;
 	overflow: auto; // Safari fix
 }
@@ -164,7 +164,7 @@
 // http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
 //
 
-@mixin nm-fontSmoothing($value: on) {
+@mixin necobase-fontSmoothing($value: on) {
 	@if $value == on {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;

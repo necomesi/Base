@@ -1,11 +1,12 @@
 /* ======================================================
- *
- *   NM/cookie - Cookie を中央管理する
- *
- * ====================================================== */
+//
+//   necobase/cookie - Cookie を中央管理する
+//
+// ====================================================== */
 
-define([ '_', '$', 'NM', 'NM/util'],
-function (_,   $,   NM,   util) {
+
+define([ '_', '$', 'necobase', 'necobase/util'],
+function (_,   $,   necobase,   util) {
 
 
 var defaultSetting = new util.CookieOption({
@@ -13,8 +14,8 @@ var defaultSetting = new util.CookieOption({
 	path   : '/'
 });
 
-var namespace = 'nm-';
-var cookie = NM.cookie = {};
+var namespace = 'necobase-';
+var cookie = necobase.cookie = {};
 
 /**
  * CookieのGetter/Setterを定義する。
@@ -61,11 +62,11 @@ function register(name, type, settings) {
  * ------------------------------------------------------ */
 
 /**
- * @function NM.cookie.setTestCookie
+ * @function necobase.cookie.setTestCookie
  * @param {Object} obj    Object to save
  */
 /**
- * @function NM.cookie.getTestCookie
+ * @function necobase.cookie.getTestCookie
  * @returns {Object} Saved object
  */
 register('TestCookie', 'object', { expires: null });

@@ -24,7 +24,7 @@ if (myScreenId) {
 }
 
 function getScreenId() {
-	return /^nm-sid-(.+)/.test(document.body.id) ? RegExp.$1 : '';
+	return /^necobase-sid-(.+)/.test(document.body.id) ? RegExp.$1 : '';
 }
 
 

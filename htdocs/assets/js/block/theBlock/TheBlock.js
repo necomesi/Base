@@ -11,7 +11,7 @@ define([ '_', 'Backbone', '$'],
 function (_,   Backbone,   $) {
 
 
-var BASE_CLASS = 'nm-theBlock';
+var BASE_CLASS = 'necobase-theBlock';
 
 
 var TheBlock = Backbone.View.extend(

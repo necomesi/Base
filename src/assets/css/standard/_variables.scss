@@ -11,7 +11,7 @@
 // 各標準ブロックの頭につく接頭辞
 // ------------------------------------------------------
 
-$sb-prefix: "nm-sb-";
+$sb-prefix: "necobase-sb-";
 
 
 // ======================================================
@@ -23,34 +23,34 @@ $sb-prefix: "nm-sb-";
 //
 
 // プライマリカラー。サイトのシンボルとなる色を指定するといい。
-$sb-color-primary : $nm-color-primary;
+$sb-color-primary : $necobase-color-primary;
 // 強調
-$sb-color-emphasis: $nm-color-emphasis;
+$sb-color-emphasis: $necobase-color-emphasis;
 // 成功
-$sb-color-success : $nm-color-success;
+$sb-color-success : $necobase-color-success;
 // 通知
-$sb-color-info    : $nm-color-info;
+$sb-color-info    : $necobase-color-info;
 // 警告
-$sb-color-warning : $nm-color-warning;
+$sb-color-warning : $necobase-color-warning;
 // ヤバい
-$sb-color-danger  : $nm-color-danger;
+$sb-color-danger  : $necobase-color-danger;
 
 // ------------------------------------------------------
 // 前景色
 //
 
 // 通常テキスト色
-$sb-color-text       : $nm-color-text;
+$sb-color-text       : $necobase-color-text;
 // 薄いテキスト色
-$sb-color-text-sub   : $nm-color-text-sub;
+$sb-color-text-sub   : $necobase-color-text-sub;
 // ボーダー
-$sb-color-border     : $nm-color-border;
+$sb-color-border     : $necobase-color-border;
 
 // ------------------------------------------------------
 // 背景色
 //
 
 // 通常背景色
-$sb-color-bg      : $nm-color-bg;
+$sb-color-bg      : $necobase-color-bg;
 // 網掛けエリア色
-$sb-color-bg-shade: $nm-color-bg-shade;
+$sb-color-bg-shade: $necobase-color-bg-shade;

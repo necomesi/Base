@@ -8,7 +8,7 @@
 
 
 // ======================================================
-// 色 - nm-color
+// 色 - necobase-color
 // ------------------------------------------------------
 
 // ------------------------------------------------------
@@ -16,65 +16,65 @@
 //
 
 // プライマリカラー。サイトのシンボルとなる色を指定するといい。
-$nm-color-primary : #428bca;
+$necobase-color-primary : #428bca;
 // 強調
-$nm-color-emphasis: #d2322d;
+$necobase-color-emphasis: #d2322d;
 // 成功
-$nm-color-success : #5cb85c;
+$necobase-color-success : #5cb85c;
 // 通知
-$nm-color-info    : #5bc0de;
+$necobase-color-info    : #5bc0de;
 // 警告
-$nm-color-warning : #f0ad4e;
+$necobase-color-warning : #f0ad4e;
 // ヤバい
-$nm-color-danger  : #d9534f;
+$necobase-color-danger  : #d9534f;
 
 // ------------------------------------------------------
 // 前景色
 //
 
 // 通常テキスト色
-$nm-color-text    : #000;
+$necobase-color-text    : #000;
 // 薄いテキスト色
-$nm-color-text-sub: lighten($nm-color-text, 70%);
+$necobase-color-text-sub: lighten($necobase-color-text, 70%);
 // ボーダー
-$nm-color-border  : lighten($nm-color-text, 80%);
+$necobase-color-border  : lighten($necobase-color-text, 80%);
 
 // ------------------------------------------------------
 // 背景色
 //
 
 // 通常背景色
-$nm-color-bg      : #fff;
+$necobase-color-bg      : #fff;
 // 網掛けエリア色
-$nm-color-bg-shade: #f0f0f0;
+$necobase-color-bg-shade: #f0f0f0;
 
 // ------------------------------------------------------
 // リンク色
 //
 
 // 通常リンク色
-$nm-color-link-link   : #428bca;
+$necobase-color-link-link   : #428bca;
 // マウスホバー時のリンク色
-$nm-color-link-hover  : #2a6496;
+$necobase-color-link-hover  : #2a6496;
 // 押下時のリンク色
-$nm-color-link-active : #2a6496;
+$necobase-color-link-active : #2a6496;
 // タップされた時の網掛け色（iOSのみで有効）
-$nm-color-link-tap    : rgba(0, 128, 255, 0.3);
+$necobase-color-link-tap    : rgba(0, 128, 255, 0.3);
 
 
 // ======================================================
-// タイポグラフィー - nm-font
+// タイポグラフィー - necobase-font
 // ------------------------------------------------------
 
 // 既定フォントサイズ
-$nm-font-size: 16px;
+$necobase-font-size: 16px;
 
 // font-size と line-height のセットを出力する。
 // 一般的に、文字サイズが大きければ行高は小さくしたほうが見栄えが良い。
 // 引数：
 // - $fontSize    : px で指定する。
 // TODO: rem, em でも指定できるようにしたい
-@mixin nm-fontSize-lineHeight($fontSize: $nm-font-size) {
+@mixin necobase-fontSize-lineHeight($fontSize: $necobase-font-size) {
 	font-size: $fontSize;
 	@if      $fontSize > 30px { line-height: 1.1 }
 	@else if $fontSize > 24px { line-height: 1.2 }
@@ -85,7 +85,7 @@ $nm-font-size: 16px;
 
 
 // ======================================================
-// レイアウト - nm-frame
+// レイアウト - necobase-frame
 // ------------------------------------------------------
 
-$nm-frame-width: 960px;
+$necobase-frame-width: 960px;

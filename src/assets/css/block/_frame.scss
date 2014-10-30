@@ -4,11 +4,11 @@
  * Block - frame
  */
 
-.nm-frame {}
+.necobase-frame {}
 
-.nm-frame-body {
-	@include nm-clearfix();
-	@include nm-centerBlock();
-	width: $nm-frame-width + 20px;
+.necobase-frame-body {
+	@include necobase-clearfix();
+	@include necobase-centerBlock();
+	width: $necobase-frame-width + 20px;
 	padding: 0 10px;
 }

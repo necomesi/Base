@@ -62,7 +62,7 @@
 // グリッドを作る
 //
 
-@mixin sb-grid($split: 2 3 4 6 8 12, $baseClass: '.nm-sb-grid', $hMargin: 15px, $vMargin: 30px, $fontSize: 1rem) {
+@mixin sb-grid($split: 2 3 4 6 8 12, $baseClass: '.necobase-sb-grid', $hMargin: 15px, $vMargin: 30px, $fontSize: 1rem) {
 
 	#{$baseClass} {
 		margin: $vMargin * -1 0 0 $hMargin * -1;

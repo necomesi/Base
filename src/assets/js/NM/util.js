@@ -1,20 +1,20 @@
 /* ======================================================
  *
- *   NM/util - プロジェクトユーティリティ関数群
+ *   necobase/util - プロジェクトユーティリティ関数群
  *
  * ====================================================== */
 
-define([ '_', '$', 'Iroha', 'NM'],
-function (_,   $,   Iroha,   NM) {
+define([ '_', '$', 'Iroha', 'necobase'],
+function (_,   $,   Iroha,   necobase) {
 
 
 /** @namespace */
-NM.utils = {};
+necobase.utils = {};
 
 
 /**
  * クラス継承
- * @name NM.util.inherits
+ * @name necobase.util.inherits
  * @param {Function} Constructor
  * @param {Function} SuperConstructor
  * @returns {Function}
@@ -29,11 +29,11 @@ function inherits(Constructor, SuperConstructor) {
 
 /**
  * 現在のページの画面 ID を取得する
- * @name NM.util.getScreenId
+ * @name necobase.util.getScreenId
  * @returns {string} 画面 ID
  */
 function getScreenId() {
-	return /^nm-sid-(.+)/.test(document.body.id) ? RegExp.$1 : '';
+	return /^necobase-sid-(.+)/.test(document.body.id) ? RegExp.$1 : '';
 }
 
 /**
@@ -48,7 +48,7 @@ function ready() {
 
 /**
  * クッキーを取得する
- * @name NM.util.getCookie
+ * @name necobase.util.getCookie
  * @param {string} [key]    クッキー名。指定しない場合すべてをオブジェクトで返却する
  * @returns {Object|string}
  */
@@ -83,10 +83,10 @@ function getCookie(key) {
 
 /**
  * クッキーを設定する
- * @name NM.util.setCookie
+ * @name necobase.util.setCookie
  * @param {string} key
  * @param {string} value
- * @param {NM.util.CookieOption} [option]
+ * @param {necobase.util.CookieOption} [option]
  */
 function setCookie(key, value, option) {
 	if (value === undefined || _(value).isFunction()) return;
@@ -108,7 +108,7 @@ function setCookie(key, value, option) {
 
 /**
  * setCookie に使用されるオプション
- * @name NM.util.CookieOption
+ * @name necobase.util.CookieOption
  * @param {Object} [opts]
  * @constructor
  */
@@ -134,7 +134,7 @@ function CookieOption(opts) {
 }
 
 
-return NM.utils = {
+return necobase.utils = {
 	  inherits    : inherits
 	, getScreenId : getScreenId
 	, ready       : ready

@@ -18,25 +18,25 @@
 }
 
 html {
-	@include nm-fontSize-lineHeight($nm-font-size);
-	color: $nm-color-text;
-	background-color: $nm-color-bg;
-	-webkit-tap-highlight-color: $nm-color-link-tap;
+	@include necobase-fontSize-lineHeight($necobase-font-size);
+	color: $necobase-color-text;
+	background-color: $necobase-color-bg;
+	-webkit-tap-highlight-color: $necobase-color-link-tap;
 }
 
 body {
 }
 
 a {
-	color: $nm-color-link-link;
+	color: $necobase-color-link-link;
 
 	&:hover {
-		color: $nm-color-link-hover;
+		color: $necobase-color-link-hover;
 	}
 
 	&:active,
 	&:focus {
-		color: $nm-color-link-active;
+		color: $necobase-color-link-active;
 	}
 }
 
@@ -51,7 +51,7 @@ img {
 hr {
 	margin: 20px 0;
 	border: 0;
-	border-top: 1px solid $nm-color-border;
+	border-top: 1px solid $necobase-color-border;
 }
 
 table {
@@ -67,7 +67,7 @@ em {
 }
 
 strong {
-	color: $nm-color-emphasis;
+	color: $necobase-color-emphasis;
 }
 
 small {
