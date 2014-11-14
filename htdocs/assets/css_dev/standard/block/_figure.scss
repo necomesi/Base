@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - figure
+//
+
+.necobase-ss-figure {
+	margin: 1em 0;
+	text-align: center;
+}
+
+.necobase-ss-figure__image {
+	vertical-align: top;
+}
+
+.necobase-ss-figure__caption {
+	display: block;
+	margin: 0;
+	padding: 0.3em 0 0 0;
+	color: $necobase-color-text-sub;
+	font-size: (14 / 16) * 1em;
+	text-align: left;
+}

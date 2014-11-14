@@ -13,27 +13,26 @@ module.exports = function (grunt) {
 	var path = require('path');
 
 	var root = './htdocs';
-	var src = './src';
 	var asset = root + '/assets';
-	var assetDev = src + '/assets';
+	//var assetDev = root + '/assets';
 	var images = asset + '/img';
-	var imagesDev = assetDev + '/img';
+	//var imagesDev = asset + '/img';
 	var imagesDummy = asset + '/img_dummy';
-	var imagesDummyDev = assetDev + '/img_dummy';
+	//var imagesDummyDev = asset + '/img_dummy';
 	var styles = asset + '/css';
-	var stylesDev = assetDev + '/css';
+	var stylesDev = asset + '/css_dev';
 	var scripts = asset + '/js';
-	var scriptsDev = assetDev + '/js';
+	var scriptsDev = asset + '/js_dev';
 	var api = root + '/api/v1';
-	var apiDev = src + '/api/v1';
+	//var apiDev = root + '/api/v1';
 	var pageSpecificMap = grunt.file.readJSON(scriptsDev + '/pageSpecific/pageSpecificMap.json');
 
 
 	grunt.initConfig({
 
-		clean: {
-			src: [root + '**/*']
-		},
+		//clean: {
+		//	src: [root + '**/*']
+		//},
 
 		sass: {
 			default: {
@@ -91,7 +90,7 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						cwd: src,
+						cwd: root,
 						src: [
 							'**/*',
 							'!assets/{css,js}/**/*'
@@ -116,7 +115,7 @@ module.exports = function (grunt) {
 		esteWatch: {
 			options: {
 				dirs: [
-					src + '/**'
+					root + '/**'
 				],
 				livereload: {
 					enabled: false
@@ -131,8 +130,8 @@ module.exports = function (grunt) {
 				// コピーするファイルをここで指定する
 				var fileMatcher = /\.(s?html?|jpe?g|png|gif|ico|cur|js|json|php|htaccess)$/i;
 				if (fileMatcher.test(filepath)) {
-					filepath = '/' + path.relative(src, filepath);
-					grunt.file.copy(src + filepath, root + filepath);
+					filepath = '/' + path.relative(root, filepath);
+					grunt.file.copy(root + filepath, root + filepath);
 				}
 			}
 		},
@@ -177,7 +176,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('jsDevel', ['copy:js']);
 	grunt.registerTask('jsDeploy', ['requirejs', 'concat:requirejs']);
 
-	grunt.registerTask('default', ['clean', 'cssDevel', 'jsDevel', 'copy:static', 'esteWatch']);
-	grunt.registerTask('deploy' , ['clean', 'cssDeploy', 'jsDeploy', 'copy:static']);
+	grunt.registerTask('default', [/*'clean', */'cssDevel', 'jsDevel', 'copy:static', 'esteWatch']);
+	grunt.registerTask('deploy' , [/*'clean', */'cssDeploy', 'jsDeploy', 'copy:static']);
 
 };

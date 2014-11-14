@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - button
+//
+
+.necobase-ss-button {
+	@include iroha-reset-button();
+	display: inline-block;
+	padding: 0.3em 0.7em;
+	border: 1px solid $necobase-color-border;
+	border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		color: inherit;
+	}
+
+	&.necobase-ss-button--is-disabled,
+	&:disabled {
+		background-color: #e1e1e1;
+		border-color: #e1e1e1;
+		color: #aaa;
+		cursor: default;
+		pointer-events: none;
+	}
+
+	&.necobase-ss-button--is-active,
+	&:active {
+		box-shadow: inset 1px 4px 5px rgba(0, 0, 0, 0.125);
+	}
+}
+
+.necobase-ss-button--primary {
+	border-color: darken($necobase-color-primary, 10%);
+	background-color: $necobase-color-primary;
+
+	&:hover {
+		border-color: darken($necobase-color-primary, 15%);
+		background-color: darken($necobase-color-primary, 5%);
+	}
+}
+
+.necobase-ss-button--success {
+	border-color: darken($necobase-color-success, 10%);
+	background-color: $necobase-color-success;
+
+	&:hover {
+		border-color: darken($necobase-color-success, 15%);
+		background-color: darken($necobase-color-success, 5%);
+	}
+}
+
+.necobase-ss-button--info {
+	border-color: darken($necobase-color-info, 10%);
+	background-color: $necobase-color-info;
+
+	&:hover {
+		border-color: darken($necobase-color-info, 15%);
+		background-color: darken($necobase-color-info, 5%);
+	}
+}
+
+.necobase-ss-button--warning {
+	border-color: darken($necobase-color-warning, 10%);
+	background-color: $necobase-color-warning;
+
+	&:hover {
+		border-color: darken($necobase-color-warning, 15%);
+		background-color: darken($necobase-color-warning, 5%);
+	}
+}
+
+.necobase-ss-button--danger {
+	border-color: darken($necobase-color-danger, 10%);
+	background-color: $necobase-color-danger;
+
+	&:hover {
+		border-color: darken($necobase-color-danger, 15%);
+		background-color: darken($necobase-color-danger, 5%);
+	}
+}
+
+.necobase-ss-button--primary,
+.necobase-ss-button--success,
+.necobase-ss-button--info,
+.necobase-ss-button--warning,
+.necobase-ss-button--danger {
+	color: #fff;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: #fff;
+	}
+
+	&.necobase-ss-button--is-disabled,
+	&:disabled {
+		background-color: #e1e1e1;
+		border-color: #e1e1e1;
+		color: #aaa;
+	}
+}

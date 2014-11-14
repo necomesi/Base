@@ -1,0 +1,12 @@
+﻿@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - form-label
+//
+
+.necobase-ss-form-label {
+}
+
+.necobase-ss-form-label--is-disabled {
+	color: lighten($necobase-color-text, 60%);
+}

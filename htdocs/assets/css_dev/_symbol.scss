@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+// ======================================================
+//
+//   シンボル集
+//
+// ======================================================
+
+
+
+// ======================================================
+// 変数
+// ------------------------------------------------------
+
+
+// ------------------------------------------------------
+// 色 - necobase-color
+//
+
+// ----------------------------------
+// 機能を抽象化した色表現
+//
+
+// プライマリカラー。サイトのシンボルとなる色を指定するといい。
+$necobase-color-primary : #428bca;
+// 強調
+$necobase-color-emphasis: #d2322d;
+// 成功
+$necobase-color-success : #5cb85c;
+// 通知
+$necobase-color-info    : #5bc0de;
+// 警告
+$necobase-color-warning : #f0ad4e;
+// ヤバい
+$necobase-color-danger  : #d9534f;
+
+// ----------------------------------
+// 前景色
+//
+
+// 通常テキスト色
+$necobase-color-text    : #000;
+// 薄いテキスト色
+$necobase-color-text-sub: lighten($necobase-color-text, 70%);
+// ボーダー
+$necobase-color-border  : lighten($necobase-color-text, 80%);
+
+// ----------------------------------
+// 背景色
+//
+
+// 通常背景色
+$necobase-color-bg      : #fff;
+// 網掛けエリア色
+$necobase-color-bg-shade: #f0f0f0;
+
+// ----------------------------------
+// リンク色
+//
+
+// 通常リンク色
+$necobase-color-link-link   : #428bca;
+// マウスホバー時のリンク色
+$necobase-color-link-hover  : #2a6496;
+// 押下時のリンク色
+$necobase-color-link-active : #2a6496;
+// タップされた時の網掛け色（iOSのみで有効）
+$necobase-color-link-tap    : rgba(0, 128, 255, 0.3);
+
+
+// ------------------------------------------------------
+// タイポグラフィー - necobase-font
+//
+
+// 既定フォントサイズ
+$necobase-font-size: $iroha-font-size-base;
+
+// 既定フォントファミリー
+//$necobase-font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$necobase-font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+
+// ------------------------------------------------------
+// レイアウト - necobase-frame
+//
+
+$necobase-frame-width: 960px;
+
+
+
+// ======================================================
+// 関数
+// ------------------------------------------------------
+
+
+
+// ======================================================
+// ミックスイン
+// ------------------------------------------------------
+

@@ -1,12 +1,9 @@
-/* ==========================================================================
- *
- *   necobase base style sheet
- *
- * ========================================================================== */
-/* ==========================================================================
- * Reset/Normalize
- * -------------------------------------------------------------------------- */
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/* ======================================================
+//
+//   necobase base styles sheet
+//
+// ====================================================== */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -31,7 +28,10 @@ body {
 /* HTML5 display definitions
    ========================================================================== */
 /**
- * Correct `block` display not defined in IE 8/9.
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
  */
 article,
 aside,
@@ -42,6 +42,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -72,8 +73,8 @@ audio:not([controls]) {
 }
 
 /**
- * Address `[hidden]` styling not present in IE 8/9.
- * Hide the `template` element in IE, Safari, and Firefox < 22.
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
 [hidden],
 template {
@@ -86,7 +87,7 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background: transparent;
+  background-color: transparent;
 }
 
 /**
@@ -100,14 +101,14 @@ a:hover {
 /* Text-level semantics
    ========================================================================== */
 /**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
 b,
 strong {
@@ -115,7 +116,7 @@ strong {
 }
 
 /**
- * Address styling not present in Safari 5 and Chrome.
+ * Address styling not present in Safari and Chrome.
  */
 dfn {
   font-style: italic;
@@ -123,7 +124,7 @@ dfn {
 
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
+ * contexts in Firefox 4+, Safari, and Chrome.
  */
 h1 {
   font-size: 2em;
@@ -167,14 +168,14 @@ sub {
 /* Embedded content
    ========================================================================== */
 /**
- * Remove border when inside `a` element in IE 8/9.
+ * Remove border when inside `a` element in IE 8/9/10.
  */
 img {
   border: 0;
 }
 
 /**
- * Correct overflow displayed oddly in IE 9.
+ * Correct overflow not hidden in IE 9/10/11.
  */
 svg:not(:root) {
   overflow: hidden;
@@ -183,7 +184,7 @@ svg:not(:root) {
 /* Grouping content
    ========================================================================== */
 /**
- * Address margin not present in IE 8/9 and Safari 5.
+ * Address margin not present in IE 8/9 and Safari.
  */
 figure {
   margin: 1em 40px;
@@ -225,7 +226,7 @@ samp {
  * 1. Correct color not being inherited.
  *    Known issue: affects color of disabled elements.
  * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
 button,
 input,
@@ -241,7 +242,7 @@ textarea {
 }
 
 /**
- * Address `overflow` set to `hidden` in IE 8/9/10.
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
 button {
   overflow: visible;
@@ -250,7 +251,7 @@ button {
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8+, and Opera
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
 button,
@@ -326,8 +327,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
 input[type="search"] {
@@ -357,7 +358,7 @@ fieldset {
 }
 
 /**
- * 1. Correct `color` not being inherited in IE 8/9.
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 legend {
@@ -368,7 +369,7 @@ legend {
 }
 
 /**
- * Remove default vertical scrollbar in IE 8/9.
+ * Remove default vertical scrollbar in IE 8/9/10/11.
  */
 textarea {
   overflow: auto;
@@ -397,12 +398,8 @@ th {
   padding: 0;
 }
 
-/* ==========================================================================
- * Base
- * -------------------------------------------------------------------------- */
 * {
   box-sizing: border-box;
-  word-wrap: break-word;
 }
 
 :before,
@@ -411,20 +408,22 @@ th {
 }
 
 html {
-  font-size: 16px;
-  line-height: 1.5;
   color: #000;
   background-color: #fff;
+  font-size: 16px;
+  line-height: 1.618;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  word-wrap: break-word;
   -webkit-tap-highlight-color: rgba(0, 128, 255, 0.3);
 }
 
 a {
   color: #428bca;
 }
-a:hover {
+a:hover, a:focus {
   color: #2a6496;
 }
-a:active, a:focus {
+a:active {
   color: #2a6496;
 }
 
@@ -433,7 +432,7 @@ figure {
 }
 
 img {
-  vertical-align: middle;
+  max-width: 100%;
 }
 
 hr {
@@ -456,916 +455,16 @@ strong {
 }
 
 /* ======================================================
- *
- *   Standard blocks
- *
- * ====================================================== */
-.necobase-sb-plain .necobase-sb-plain, .necobase-sb-ul .necobase-sb-plain, .necobase-sb-ol .necobase-sb-plain, .necobase-sb-dl .necobase-sb-plain, .necobase-sb-noteList .necobase-sb-plain, .necobase-sb-linkList .necobase-sb-plain, .necobase-sb-plain .necobase-sb-ul, .necobase-sb-ul .necobase-sb-ul, .necobase-sb-ol .necobase-sb-ul, .necobase-sb-dl .necobase-sb-ul, .necobase-sb-noteList .necobase-sb-ul, .necobase-sb-linkList .necobase-sb-ul, .necobase-sb-plain .necobase-sb-ol, .necobase-sb-ul .necobase-sb-ol, .necobase-sb-ol .necobase-sb-ol, .necobase-sb-dl .necobase-sb-ol, .necobase-sb-noteList .necobase-sb-ol, .necobase-sb-linkList .necobase-sb-ol, .necobase-sb-plain .necobase-sb-dl, .necobase-sb-ul .necobase-sb-dl, .necobase-sb-ol .necobase-sb-dl, .necobase-sb-dl .necobase-sb-dl, .necobase-sb-noteList .necobase-sb-dl, .necobase-sb-linkList .necobase-sb-dl, .necobase-sb-plain .necobase-sb-noteList, .necobase-sb-ul .necobase-sb-noteList, .necobase-sb-ol .necobase-sb-noteList, .necobase-sb-dl .necobase-sb-noteList, .necobase-sb-noteList .necobase-sb-noteList, .necobase-sb-linkList .necobase-sb-noteList, .necobase-sb-plain .necobase-sb-linkList, .necobase-sb-ul .necobase-sb-linkList, .necobase-sb-ol .necobase-sb-linkList, .necobase-sb-dl .necobase-sb-linkList, .necobase-sb-noteList .necobase-sb-linkList, .necobase-sb-linkList .necobase-sb-linkList {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-/* ======================================================
- * Grid
- * ------------------------------------------------------ */
-.necobase-sb-grid {
-  margin: -30px 0 0 -15px;
-  font-size: 0;
-}
-
-.necobase-sb-grid-unit {
-  display: inline-block;
-  padding: 30px 0 0 15px;
-  font-size: 1rem;
-  vertical-align: top;
-}
-
-.necobase-sb-grid-unit_1\/2, .necobase-sb-grid-unit_2\/4, .necobase-sb-grid-unit_3\/6, .necobase-sb-grid-unit_4\/8, .necobase-sb-grid-unit_6\/12 {
-  width: 50%;
-}
-
-.necobase-sb-grid-unit_1\/3, .necobase-sb-grid-unit_2\/6, .necobase-sb-grid-unit_4\/12 {
-  width: 33.33333%;
-}
-
-.necobase-sb-grid-unit_2\/3, .necobase-sb-grid-unit_4\/6, .necobase-sb-grid-unit_8\/12 {
-  width: 66.66667%;
-}
-
-.necobase-sb-grid-unit_1\/4, .necobase-sb-grid-unit_2\/8, .necobase-sb-grid-unit_3\/12 {
-  width: 25%;
-}
-
-.necobase-sb-grid-unit_3\/4, .necobase-sb-grid-unit_6\/8, .necobase-sb-grid-unit_9\/12 {
-  width: 75%;
-}
-
-.necobase-sb-grid-unit_1\/6, .necobase-sb-grid-unit_2\/12 {
-  width: 16.66667%;
-}
-
-.necobase-sb-grid-unit_5\/6, .necobase-sb-grid-unit_10\/12 {
-  width: 83.33333%;
-}
-
-.necobase-sb-grid-unit_1\/8 {
-  width: 12.5%;
-}
-
-.necobase-sb-grid-unit_3\/8 {
-  width: 37.5%;
-}
-
-.necobase-sb-grid-unit_5\/8 {
-  width: 62.5%;
-}
-
-.necobase-sb-grid-unit_7\/8 {
-  width: 87.5%;
-}
-
-.necobase-sb-grid-unit_1\/12 {
-  width: 8.33333%;
-}
-
-.necobase-sb-grid-unit_5\/12 {
-  width: 41.66667%;
-}
-
-.necobase-sb-grid-unit_7\/12 {
-  width: 58.33333%;
-}
-
-.necobase-sb-grid-unit_11\/12 {
-  width: 91.66667%;
-}
-
-.necobase-sb-grid_noGutter {
-  margin: 0;
-}
-.necobase-sb-grid_noGutter .necobase-sb-grid-unit {
-  padding: 0;
-}
-
-/* ======================================================
- * Block
- * ------------------------------------------------------ */
-.necobase-sb-h1 {
-  margin: 1em 0;
-}
-.necobase-sb-h1 h1 {
-  margin: 0;
-  padding: 0 0 0.25em;
-  border-bottom: 3px solid #cccccc;
-  font-weight: bold;
-  font-size: 2em;
-  line-height: 1.1;
-}
-
-.necobase-sb-h2 {
-  margin: 1em 0;
-}
-.necobase-sb-h2 > h1, .necobase-sb-h2 > h2, .necobase-sb-h2 > h3, .necobase-sb-h2 > h4, .necobase-sb-h2 > h5, .necobase-sb-h2 > h6 {
-  margin: 0;
-  padding: 0.25em 0.5em;
-  border: 1px solid #cccccc;
-  background-color: #f0f0f0;
-  font-size: 1.5em;
-  line-height: 1.2;
-}
-
-.necobase-sb-h2-more {
-  float: right;
-  color: #b3b3b3;
-  font-size: 0.66667em;
-  line-height: 1.8;
-  font-weight: normal;
-}
-
-.necobase-sb-h3 {
-  margin: 1em 0;
-}
-.necobase-sb-h3 > h1, .necobase-sb-h3 > h2, .necobase-sb-h3 > h3, .necobase-sb-h3 > h4, .necobase-sb-h3 > h5, .necobase-sb-h3 > h6 {
-  margin: 0;
-  padding: 0 0 0 12px;
-  border-left: 6px solid #cccccc;
-  font-size: 1.17em;
-  line-height: 1.3;
-}
-
-.necobase-sb-h4 {
-  margin: 1em 0;
-}
-.necobase-sb-h4 > h1, .necobase-sb-h4 > h2, .necobase-sb-h4 > h3, .necobase-sb-h4 > h4, .necobase-sb-h4 > h5, .necobase-sb-h4 > h6 {
-  margin: 0;
-}
-
-.necobase-sb-h5 {
-  margin: 1em 0;
-}
-.necobase-sb-h5 > h1, .necobase-sb-h5 > h2, .necobase-sb-h5 > h3, .necobase-sb-h5 > h4, .necobase-sb-h5 > h5, .necobase-sb-h5 > h6 {
-  margin: 0;
-}
-
-.necobase-sb-h6 {
-  margin: 1em 0;
-}
-.necobase-sb-h6 > h1, .necobase-sb-h6 > h2, .necobase-sb-h6 > h3, .necobase-sb-h6 > h4, .necobase-sb-h6 > h5, .necobase-sb-h6 > h6 {
-  margin: 0;
-}
-
-.necobase-sb-p {
-  margin: 1em 0;
-}
-
-.necobase-sb-plain {
-  margin: 1em 0;
-  padding: 0;
-}
-.necobase-sb-plain > li {
-  margin: 0.5em 0;
-  list-style-type: none;
-}
-.necobase-sb-plain > li:first-child {
-  margin-top: 0;
-}
-.necobase-sb-plain > li:last-child {
-  margin-bottom: 0;
-}
-
-.necobase-sb-ul {
-  margin: 1em 0;
-  padding: 0 0 0 1em;
-}
-.necobase-sb-ul > li {
-  margin: 0.5em 0;
-  list-style: none;
-}
-.necobase-sb-ul > li:before {
-  content: "";
-  display: inline-block;
-  width: 0.25em;
-  height: 0.25em;
-  margin: 0 0.75em 0 -1em;
-  background-color: #000;
-  vertical-align: 0.25em;
-}
-.necobase-sb-ul > li:first-child {
-  margin-top: 0;
-}
-.necobase-sb-ul > li:last-child {
-  margin-bottom: 0;
-}
-
-.necobase-sb-inlineList {
-  margin: 1em 0 -0.5em 0;
-  padding: 0;
-}
-.necobase-sb-inlineList > li {
-  display: inline-block;
-  margin: 0 1em 0.5em 0;
-  list-style-type: none;
-}
-
-.necobase-sb-ol {
-  margin: 1em 0 1em 1.5em;
-  padding: 0;
-}
-.necobase-sb-ol > li {
-  margin: 0.5em 0;
-  list-style-type: decimal;
-}
-.necobase-sb-ol > li:first-child {
-  margin-top: 0;
-}
-.necobase-sb-ol > li:last-child {
-  margin-bottom: 0;
-}
-
-.necobase-sb-dl {
-  margin: 1.5em 0;
-}
-.necobase-sb-dl > dt {
-  margin: 0.75em 0 0.25em 0;
-  font-weight: bold;
-}
-.necobase-sb-dl > dd {
-  margin: 0;
-}
-.necobase-sb-dl > *:first-child {
-  margin-top: 0;
-}
-.necobase-sb-dl > *:last-child {
-  margin-bottom: 0;
-}
-
-.necobase-sb-noteList {
-  margin: 1em 0 1.5em 1em;
-  padding: 0;
-}
-.necobase-sb-noteList > li {
-  position: relative;
-  margin: 0.5em 0;
-  padding: 0;
-  list-style-type: none;
-}
-.necobase-sb-noteList > li:first-child {
-  margin-top: 0;
-}
-.necobase-sb-noteList > li:last-child {
-  margin-bottom: 0;
-}
-
-.necobase-sb-noteList_A02 {
-  margin-left: 2em;
-}
-
-.necobase-sb-noteList_A03 {
-  margin-left: 4em;
-}
-
-.necobase-sb-noteList-marker {
-  position: absolute;
-  left: -1em;
-  width: 1em;
-}
-.necobase-sb-noteList_A02 .necobase-sb-noteList-marker {
-  left: -2em;
-  width: 2em;
-}
-.necobase-sb-noteList_A03 .necobase-sb-noteList-marker {
-  left: -4em;
-  width: 4em;
-}
-
-.necobase-sb-linkList {
-  margin: 1em 0;
-  padding: 0 0 0 1em;
-}
-.necobase-sb-linkList > li {
-  margin: 0.5em 0;
-  list-style: none;
-}
-.necobase-sb-linkList > li:before {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-width: 0.25em 0 0.25em 0.25em;
-  border-style: solid;
-  border-color: transparent #000;
-  margin: 0 0.75em 0 -1em;
-  vertical-align: 0.125em;
-}
-.necobase-sb-linkList > li:first-child {
-  margin-top: 0;
-}
-.necobase-sb-linkList > li:last-child {
-  margin-bottom: 0;
-}
-
-.necobase-sb-button {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  text-align: left;
-  display: inline-block;
-  padding: 0.3em 0.7em;
-  border: 1px solid #cccccc;
-  border-radius: 3px;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-}
-.necobase-sb-button::-moz-focus-inner {
-  padding: 0;
-  border: none;
-}
-.necobase-sb-button:hover {
-  color: inherit;
-}
-.necobase-sb-button.necobase-sb-button_isDisabled, .necobase-sb-button:disabled {
-  background-color: #e1e1e1;
-  border-color: #e1e1e1;
-  color: #aaa;
-  cursor: default;
-  pointer-events: none;
-}
-.necobase-sb-button.necobase-sb-button_isActive, .necobase-sb-button:active {
-  box-shadow: inset 1px 4px 5px rgba(0, 0, 0, 0.125);
-}
-
-.necobase-sb-button_primary {
-  border-color: #3071a9;
-  background-color: #428bca;
-}
-.necobase-sb-button_primary:hover {
-  border-color: #2a6496;
-  background-color: #357ebd;
-}
-
-.necobase-sb-button_success {
-  border-color: #449d44;
-  background-color: #5cb85c;
-}
-.necobase-sb-button_success:hover {
-  border-color: #3d8b3d;
-  background-color: #4cae4c;
-}
-
-.necobase-sb-button_info {
-  border-color: #31b0d5;
-  background-color: #5bc0de;
-}
-.necobase-sb-button_info:hover {
-  border-color: #28a1c5;
-  background-color: #46b8da;
-}
-
-.necobase-sb-button_warning {
-  border-color: #ec971f;
-  background-color: #f0ad4e;
-}
-.necobase-sb-button_warning:hover {
-  border-color: #df8a13;
-  background-color: #eea236;
-}
-
-.necobase-sb-button_danger {
-  border-color: #c9302c;
-  background-color: #d9534f;
-}
-.necobase-sb-button_danger:hover {
-  border-color: #b52b27;
-  background-color: #d43f3a;
-}
-
-.necobase-sb-button_primary,
-.necobase-sb-button_success,
-.necobase-sb-button_info,
-.necobase-sb-button_warning,
-.necobase-sb-button_danger {
-  color: #fff;
-}
-.necobase-sb-button_primary:hover, .necobase-sb-button_primary:active, .necobase-sb-button_primary:focus,
-.necobase-sb-button_success:hover,
-.necobase-sb-button_success:active,
-.necobase-sb-button_success:focus,
-.necobase-sb-button_info:hover,
-.necobase-sb-button_info:active,
-.necobase-sb-button_info:focus,
-.necobase-sb-button_warning:hover,
-.necobase-sb-button_warning:active,
-.necobase-sb-button_warning:focus,
-.necobase-sb-button_danger:hover,
-.necobase-sb-button_danger:active,
-.necobase-sb-button_danger:focus {
-  color: #fff;
-}
-.necobase-sb-button_primary.necobase-sb-button_isDisabled, .necobase-sb-button_primary:disabled,
-.necobase-sb-button_success.necobase-sb-button_isDisabled,
-.necobase-sb-button_success:disabled,
-.necobase-sb-button_info.necobase-sb-button_isDisabled,
-.necobase-sb-button_info:disabled,
-.necobase-sb-button_warning.necobase-sb-button_isDisabled,
-.necobase-sb-button_warning:disabled,
-.necobase-sb-button_danger.necobase-sb-button_isDisabled,
-.necobase-sb-button_danger:disabled {
-  background-color: #e1e1e1;
-  border-color: #e1e1e1;
-  color: #aaa;
-}
-
-.necobase-sb-hr {
-  margin: 1.5em 0;
-  height: 0;
-  border-top: 1px solid #cccccc;
-}
-.necobase-sb-hr > hr {
-  display: none;
-}
-
-.necobase-sb-box {
-  margin: 1.5em 0 0 0;
-  padding: 1em 0.8em 0.8em;
-}
-.necobase-sb-box > *:first-child {
-  margin-top: 0;
-}
-.necobase-sb-box > *:last-child {
-  margin-bottom: 0;
-}
-
-.necobase-sb-box_A01 {
-  border: 3px solid #cccccc;
-}
-
-.necobase-sb-box_C01 {
-  border: 1px solid #cccccc;
-}
-
-.necobase-sb-box-heading {
-  margin: 0 0 0.5em 0;
-  padding: 0;
-  font-size: 1.2em;
-}
-.necobase-sb-box_C01 .necobase-sb-box-heading {
-  font-size: 1em;
-}
-.necobase-sb-box-heading + * {
-  margin-top: 0;
-}
-
-.necobase-sb-figure {
-  margin: 1em 0;
-  text-align: center;
-}
-
-.necobase-sb-figure-image {
-  vertical-align: top;
-}
-
-.necobase-sb-figure-caption {
-  display: block;
-  margin: 0;
-  padding: 0.3em 0 0 0;
-  color: #b3b3b3;
-  font-size: 0.875em;
-  text-align: left;
-}
-
-.necobase-sb-table {
-  margin: 1em 0;
-}
-.necobase-sb-table > table {
-  margin: 0;
-  width: 100%;
-  border: 0;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.necobase-sb-table_A01 > table > thead > tr > th,
-.necobase-sb-table_A01 > table > thead > tr > td,
-.necobase-sb-table_A01 > table > tbody > tr > th,
-.necobase-sb-table_A01 > table > tbody > tr > td,
-.necobase-sb-table_A01 > table > tfoot > tr > th,
-.necobase-sb-table_A01 > table > tfoot > tr > td,
-.necobase-sb-table_A02 > table > thead > tr > th,
-.necobase-sb-table_A02 > table > thead > tr > td,
-.necobase-sb-table_A02 > table > tbody > tr > th,
-.necobase-sb-table_A02 > table > tbody > tr > td,
-.necobase-sb-table_A02 > table > tfoot > tr > th,
-.necobase-sb-table_A02 > table > tfoot > tr > td {
-  padding: 0.25em 0 0 0;
-  border: 0;
-  vertical-align: top;
-}
-.necobase-sb-table_A01 > table > thead > tr > th,
-.necobase-sb-table_A01 > table > tbody > tr > th,
-.necobase-sb-table_A01 > table > tfoot > tr > th,
-.necobase-sb-table_A02 > table > thead > tr > th,
-.necobase-sb-table_A02 > table > tbody > tr > th,
-.necobase-sb-table_A02 > table > tfoot > tr > th {
-  font-weight: normal;
-  text-align: left;
-}
-.necobase-sb-table_A01 > table > tbody > tr > th > *:first-child,
-.necobase-sb-table_A01 > table > tbody > tr > td > *:first-child,
-.necobase-sb-table_A02 > table > tbody > tr > th > *:first-child,
-.necobase-sb-table_A02 > table > tbody > tr > td > *:first-child {
-  margin-top: 0;
-}
-.necobase-sb-table_A01 > table > tbody > tr > th > *:last-child,
-.necobase-sb-table_A01 > table > tbody > tr > td > *:last-child,
-.necobase-sb-table_A02 > table > tbody > tr > th > *:last-child,
-.necobase-sb-table_A02 > table > tbody > tr > td > *:last-child {
-  margin-bottom: 0;
-}
-.necobase-sb-table_A01 > table > tbody > tr:first-child > th,
-.necobase-sb-table_A01 > table > tbody > tr:first-child > td,
-.necobase-sb-table_A02 > table > tbody > tr:first-child > th,
-.necobase-sb-table_A02 > table > tbody > tr:first-child > td {
-  padding-top: 0;
-}
-
-.necobase-sb-table_A02 > table > thead > tr > th,
-.necobase-sb-table_A02 > table > tbody > tr > th,
-.necobase-sb-table_A02 > table > tfoot > tr > th {
-  font-weight: bold;
-}
-
-.necobase-sb-table_B01 > table {
-  border-collapse: separate;
-}
-.necobase-sb-table_B01 > table > thead > tr > th,
-.necobase-sb-table_B01 > table > thead > tr > td,
-.necobase-sb-table_B01 > table > tbody > tr > th,
-.necobase-sb-table_B01 > table > tbody > tr > td,
-.necobase-sb-table_B01 > table > tfoot > tr > th,
-.necobase-sb-table_B01 > table > tfoot > tr > td {
-  padding: 0.8em;
-  border: 0;
-  vertical-align: top;
-  text-align: left;
-  font-weight: normal;
-}
-.necobase-sb-table_B01 > table > thead > tr > th,
-.necobase-sb-table_B01 > table > tfoot > tr > th {
-  background-color: #cccccc;
-  text-align: center;
-}
-.necobase-sb-table_B01 > table > tbody > tr > th,
-.necobase-sb-table_B01 > table > tbody > tr > td {
-  border-bottom: 1px solid #cccccc;
-}
-.necobase-sb-table_B01 > table > tbody > tr > th > *:first-child,
-.necobase-sb-table_B01 > table > tbody > tr > td > *:first-child {
-  margin-top: 0;
-}
-.necobase-sb-table_B01 > table > tbody > tr > th > *:last-child,
-.necobase-sb-table_B01 > table > tbody > tr > td > *:last-child {
-  margin-bottom: 0;
-}
-
-.necobase-sb-table_C01 > table > thead > tr > th,
-.necobase-sb-table_C01 > table > thead > tr > td,
-.necobase-sb-table_C01 > table > tbody > tr > th,
-.necobase-sb-table_C01 > table > tbody > tr > td,
-.necobase-sb-table_C01 > table > tfoot > tr > th,
-.necobase-sb-table_C01 > table > tfoot > tr > td {
-  padding: 5px 10px;
-  border: 1px solid #cccccc;
-  font-weight: normal;
-  vertical-align: top;
-  text-align: left;
-}
-.necobase-sb-table_C01 > table > thead > tr > th,
-.necobase-sb-table_C01 > table > tfoot > tr > th {
-  background-color: #cccccc;
-}
-.necobase-sb-table_C01 > table > tbody > tr > th > *:first-child,
-.necobase-sb-table_C01 > table > tbody > tr > td > *:first-child {
-  margin-top: 0;
-}
-
-.necobase-sb-table-caption {
-  margin: 0;
-  padding: 0 0 5px 0;
-}
-
-.necobase-sb-table-caption_right {
-  text-align: right;
-}
-
-.necobase-sb-table-col_1\/6 {
-  width: 16%;
-}
-
-.necobase-sb-table-col_1\/5 {
-  width: 20%;
-}
-
-.necobase-sb-table-col_1\/4 {
-  width: 25%;
-}
-
-.necobase-sb-table-col_1\/3,
-.necobase-sb-table-col_2\/6 {
-  width: 33%;
-}
-
-.necobase-sb-table-col_1\/2,
-.necobase-sb-table-col_2\/4,
-.necobase-sb-table-col_3\/6,
-.necobase-sb-table-col_4\/8 {
-  width: 50%;
-}
-
-.necobase-sb-table-col_2\/3,
-.necobase-sb-table-col_4\/6 {
-  width: 66%;
-}
-
-.necobase-sb-table-col_3\/4,
-.necobase-sb-table-col_6\/8 {
-  width: 75%;
-}
-
-.necobase-sb-table-col_5\/6 {
-  width: 83%;
-}
-
-.necobase-sb-figureFloat {
-  margin: 1em 0;
-  padding: 0;
-}
-.necobase-sb-figureFloat:before, .necobase-sb-figureFloat:after {
-  content: "";
-  display: table;
-}
-.necobase-sb-figureFloat:after {
-  clear: both;
-}
-
-.necobase-sb-figureFloat-figure {
-  margin-bottom: 1em;
-  padding-top: 0.25em;
-}
-.necobase-sb-figureFloat-figure > *:first-child {
-  margin-top: 0;
-}
-.necobase-sb-figureFloat-figure > *:last-child {
-  margin-bottom: 0;
-}
-.necobase-sb-figureFloat_left .necobase-sb-figureFloat-figure {
-  float: left;
-  margin-right: 20px;
-}
-.necobase-sb-figureFloat_right .necobase-sb-figureFloat-figure {
-  float: right;
-  margin-left: 20px;
-}
-
-.necobase-sb-figureFloat-description > *:first-child {
-  margin-top: 0;
-}
-
-/* ==========================================================================
- * Form Block
- * -------------------------------------------------------------------------- */
-.necobase-sb-form-label_isDisabled {
-  color: #999999;
-}
-
-.necobase-sb-form-text {
-  padding: 0.5em;
-  width: 100%;
-  border-radius: 3px;
-  border: 1px solid #cccccc;
-  background-color: #fff;
-}
-.necobase-sb-form-text::-moz-placeholder {
-  color: #b3b3b3;
-}
-.necobase-sb-form-text:-ms-input-placeholder {
-  color: #b3b3b3;
-}
-.necobase-sb-form-text::-webkit-input-placeholder {
-  color: #b3b3b3;
-}
-.necobase-sb-form-text:focus {
-  outline: none;
-}
-.necobase-sb-form-text:disabled {
-  color: #b3b3b3;
-  background-color: #f6f6f6;
-}
-.necobase-sb-form-text[size] {
-  width: auto;
-}
-
-.necobase-sb-form-radio {
-  margin-right: 0.4em;
-}
-
-.necobase-sb-form-checkbox {
-  margin-right: 0.4em;
-}
-
-.necobase-sb-form-textarea {
-  padding: 0.5em;
-  width: 100%;
-  height: 100px;
-  min-height: 100px;
-  border-radius: 3px;
-  border: 1px solid #cccccc;
-  background-color: #fff;
-  vertical-align: top;
-  resize: none;
-}
-.necobase-sb-form-textarea::-moz-placeholder {
-  color: #b3b3b3;
-}
-.necobase-sb-form-textarea:-ms-input-placeholder {
-  color: #b3b3b3;
-}
-.necobase-sb-form-textarea::-webkit-input-placeholder {
-  color: #b3b3b3;
-}
-.necobase-sb-form-textarea:focus {
-  outline: none;
-}
-.necobase-sb-form-textarea:disabled {
-  color: #b3b3b3;
-  background-color: #f6f6f6;
-}
-.necobase-sb-form-textarea[cols] {
-  width: auto;
-}
-.necobase-sb-form-textarea[rows] {
-  height: auto;
-}
-
-.necobase-sb-form-select {
-  margin: 0px 10px 0 0;
-  padding: 0.5em;
-  border: 1px solid #cccccc;
-  border-radius: 3px;
-}
-
-.necobase-sb-form-name {
-  margin: 0;
-}
-.necobase-sb-form-name > dt {
-  display: inline-block;
-  width: 2em;
-  margin: 0 5px 0 0;
-  font-weight: normal;
-}
-.necobase-sb-form-name > dd {
-  display: inline;
-  margin: 0 10px 0 0;
-}
-.necobase-sb-form-name > dd input.necobase-sb-form-text {
-  width: 15em;
-}
-.necobase-sb-form-name > dd:last-child {
-  margin-right: 0;
-}
-
-.necobase-sb-form-name_typeNoLabel > dt {
-  display: none;
-}
-
-.necobase-sb-form-note {
-  margin-top: 8px;
-  font-size: 0.875em;
-}
-
-.necobase-sb-form-errorMsg {
-  display: inline-block;
-  margin: 0 0 0.3em 0;
-  color: #d9534f;
-}
-.necobase-sb-form-errorMsg + * {
-  margin-top: 0;
-}
-
-.necobase-sb-form-textareaCounter-num {
-  display: block;
-  margin: 3px 0 0;
-  font-size: 0.875em;
-  text-align: right;
-}
-.necobase-sb-form-textareaCounter_isOver .necobase-sb-form-textareaCounter-num {
-  color: #d9534f;
-}
-
-.necobase-sb-form-required {
-  float: right;
-  margin: 0 10px 0 0;
-  padding: 3px 5px;
-  color: #fff;
-  background-color: #999;
-  font-size: 0.875em;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.necobase-sb-form-action {
-  margin: 2em 0 1em 0;
-  text-align: center;
-}
-
-.necobase-sb-form-action-agreement {
-  margin: 0 0 1em 0;
-}
-
-.necobase-sb-form-action-return,
-.necobase-sb-form-action-proceed {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  list-style-type: none;
-}
-ul + .necobase-sb-form-action-return, ul +
-.necobase-sb-form-action-proceed {
-  margin-left: 10px;
-}
-.necobase-sb-form-action-return li,
-.necobase-sb-form-action-proceed li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-.necobase-sb-form-action-link {
-  margin: 17px 0 0 0;
-  padding: 0;
-  list-style-type: none;
-}
-.necobase-sb-form-action-link li {
-  display: inline;
-  margin: 0 0 0 10px;
-  padding: 0 0 0 10px;
-  border-left: 1px solid #ccc;
-}
-.necobase-sb-form-action-link li:first-child {
-  margin-left: 0;
-  padding-left: 0;
-  border-left: 0 none;
-}
-.necobase-sb-form-action-link li a {
-  color: #999;
-}
-
-/* ==========================================================================
- * Block
- * -------------------------------------------------------------------------- */
-/* --------------------------------------------------------------------------
- * Block - frame
- */
-.necobase-frame-body {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 980px;
-  padding: 0 10px;
-}
-.necobase-frame-body:before, .necobase-frame-body:after {
-  content: "";
-  display: table;
-}
-.necobase-frame-body:after {
-  clear: both;
-}
-
-/* --------------------------------------------------------------------------
- * Block - header
- */
-/* --------------------------------------------------------------------------
- * Block - mainNav
- */
-/* --------------------------------------------------------------------------
- * Block - main
- */
-/* --------------------------------------------------------------------------
- * Block - footer
- */
-/* ==========================================================================
- * General classes
- * -------------------------------------------------------------------------- */
+// General classes
+// ------------------------------------------------------ */
 .necobase-x-hidden {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  pointer-events: none;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
 }
 
 .necobase-x-mtn30 {
@@ -1794,4 +893,866 @@ ul + .necobase-sb-form-action-return, ul +
 
 .necobase-x-w500 {
   width: 500px !important;
+}
+
+/* ======================================================
+// Standard styles
+// ------------------------------------------------------ */
+.necobase-ss-plain .necobase-ss-plain, .necobase-ss-ul .necobase-ss-plain, .necobase-ss-ol .necobase-ss-plain, .necobase-ss-dl .necobase-ss-plain, .necobase-ss-note-list .necobase-ss-plain, .necobase-ss-link-list .necobase-ss-plain, .necobase-ss-plain .necobase-ss-ul, .necobase-ss-ul .necobase-ss-ul, .necobase-ss-ol .necobase-ss-ul, .necobase-ss-dl .necobase-ss-ul, .necobase-ss-note-list .necobase-ss-ul, .necobase-ss-link-list .necobase-ss-ul, .necobase-ss-plain .necobase-ss-ol, .necobase-ss-ul .necobase-ss-ol, .necobase-ss-ol .necobase-ss-ol, .necobase-ss-dl .necobase-ss-ol, .necobase-ss-note-list .necobase-ss-ol, .necobase-ss-link-list .necobase-ss-ol, .necobase-ss-plain .necobase-ss-dl, .necobase-ss-ul .necobase-ss-dl, .necobase-ss-ol .necobase-ss-dl, .necobase-ss-dl .necobase-ss-dl, .necobase-ss-note-list .necobase-ss-dl, .necobase-ss-link-list .necobase-ss-dl, .necobase-ss-plain .necobase-ss-note-list, .necobase-ss-ul .necobase-ss-note-list, .necobase-ss-ol .necobase-ss-note-list, .necobase-ss-dl .necobase-ss-note-list, .necobase-ss-note-list .necobase-ss-note-list, .necobase-ss-link-list .necobase-ss-note-list, .necobase-ss-plain .necobase-ss-link-list, .necobase-ss-ul .necobase-ss-link-list, .necobase-ss-ol .necobase-ss-link-list, .necobase-ss-dl .necobase-ss-link-list, .necobase-ss-note-list .necobase-ss-link-list, .necobase-ss-link-list .necobase-ss-link-list {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* ------------------------------------------------------
+// Grid
+*/
+.necobase-ss-grid {
+  margin: -30px 0 0 -15px;
+  font-size: 0;
+}
+
+.necobase-ss-grid__unit {
+  display: inline-block;
+  padding: 30px 0 0 15px;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.necobase-ss-grid__unit--1\/2, .necobase-ss-grid__unit--2\/4, .necobase-ss-grid__unit--3\/6, .necobase-ss-grid__unit--4\/8, .necobase-ss-grid__unit--6\/12 {
+  width: 50%;
+}
+
+.necobase-ss-grid__unit--1\/3, .necobase-ss-grid__unit--2\/6, .necobase-ss-grid__unit--4\/12 {
+  width: 33.33333%;
+}
+
+.necobase-ss-grid__unit--2\/3, .necobase-ss-grid__unit--4\/6, .necobase-ss-grid__unit--8\/12 {
+  width: 66.66667%;
+}
+
+.necobase-ss-grid__unit--1\/4, .necobase-ss-grid__unit--2\/8, .necobase-ss-grid__unit--3\/12 {
+  width: 25%;
+}
+
+.necobase-ss-grid__unit--3\/4, .necobase-ss-grid__unit--6\/8, .necobase-ss-grid__unit--9\/12 {
+  width: 75%;
+}
+
+.necobase-ss-grid__unit--1\/6, .necobase-ss-grid__unit--2\/12 {
+  width: 16.66667%;
+}
+
+.necobase-ss-grid__unit--5\/6, .necobase-ss-grid__unit--10\/12 {
+  width: 83.33333%;
+}
+
+.necobase-ss-grid__unit--1\/8 {
+  width: 12.5%;
+}
+
+.necobase-ss-grid__unit--3\/8 {
+  width: 37.5%;
+}
+
+.necobase-ss-grid__unit--5\/8 {
+  width: 62.5%;
+}
+
+.necobase-ss-grid__unit--7\/8 {
+  width: 87.5%;
+}
+
+.necobase-ss-grid__unit--1\/12 {
+  width: 8.33333%;
+}
+
+.necobase-ss-grid__unit--5\/12 {
+  width: 41.66667%;
+}
+
+.necobase-ss-grid__unit--7\/12 {
+  width: 58.33333%;
+}
+
+.necobase-ss-grid__unit--11\/12 {
+  width: 91.66667%;
+}
+
+.necobase-ss-grid--no-gutter {
+  margin: 0;
+}
+.necobase-ss-grid--no-gutter .necobase-ss-grid__unit {
+  padding: 0;
+}
+
+/* ------------------------------------------------------
+// Block
+*/
+.necobase-ss-h1 {
+  margin: 1em 0;
+}
+.necobase-ss-h1 h1 {
+  margin: 0;
+  padding: 0 0 0.25em;
+  border-bottom: 3px solid #cccccc;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 1.1;
+}
+
+.necobase-ss-h2 {
+  margin: 1em 0;
+}
+.necobase-ss-h2 > h1, .necobase-ss-h2 > h2, .necobase-ss-h2 > h3, .necobase-ss-h2 > h4, .necobase-ss-h2 > h5, .necobase-ss-h2 > h6 {
+  margin: 0;
+  padding: 0.25em 0.5em;
+  border: 1px solid #cccccc;
+  background-color: #f0f0f0;
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+.necobase-ss-h2__more {
+  float: right;
+  color: #b3b3b3;
+  font-size: 0.66667em;
+  line-height: 1.8;
+  font-weight: normal;
+}
+
+.necobase-ss-h3 {
+  margin: 1em 0;
+}
+.necobase-ss-h3 > h1, .necobase-ss-h3 > h2, .necobase-ss-h3 > h3, .necobase-ss-h3 > h4, .necobase-ss-h3 > h5, .necobase-ss-h3 > h6 {
+  margin: 0;
+  padding: 0 0 0 12px;
+  border-left: 6px solid #cccccc;
+  font-size: 1.17em;
+  line-height: 1.3;
+}
+
+.necobase-ss-h4 {
+  margin: 1em 0;
+}
+.necobase-ss-h4 > h1, .necobase-ss-h4 > h2, .necobase-ss-h4 > h3, .necobase-ss-h4 > h4, .necobase-ss-h4 > h5, .necobase-ss-h4 > h6 {
+  margin: 0;
+}
+
+.necobase-ss-h5 {
+  margin: 1em 0;
+}
+.necobase-ss-h5 > h1, .necobase-ss-h5 > h2, .necobase-ss-h5 > h3, .necobase-ss-h5 > h4, .necobase-ss-h5 > h5, .necobase-ss-h5 > h6 {
+  margin: 0;
+}
+
+.necobase-ss-h6 {
+  margin: 1em 0;
+}
+.necobase-ss-h6 > h1, .necobase-ss-h6 > h2, .necobase-ss-h6 > h3, .necobase-ss-h6 > h4, .necobase-ss-h6 > h5, .necobase-ss-h6 > h6 {
+  margin: 0;
+}
+
+.necobase-ss-p {
+  margin: 1em 0;
+}
+
+.necobase-ss-plain {
+  margin: 1em 0;
+  padding: 0;
+}
+.necobase-ss-plain > li {
+  margin: 0.5em 0;
+  list-style: none;
+}
+.necobase-ss-plain > li:first-child {
+  margin-top: 0;
+}
+.necobase-ss-plain > li:last-child {
+  margin-bottom: 0;
+}
+
+.necobase-ss-ul {
+  margin: 1em 0;
+  padding: 0 0 0 1em;
+}
+.necobase-ss-ul > li {
+  margin: 0.5em 0;
+  list-style: none;
+}
+.necobase-ss-ul > li:before {
+  content: "";
+  display: inline-block;
+  width: 0.25em;
+  height: 0.25em;
+  margin: 0 0.75em 0 -1em;
+  background-color: #000;
+  vertical-align: 0.25em;
+}
+.necobase-ss-ul > li:first-child {
+  margin-top: 0;
+}
+.necobase-ss-ul > li:last-child {
+  margin-bottom: 0;
+}
+
+.necobase-ss-inline-list {
+  margin: 1em 0 -0.5em 0;
+  padding: 0;
+}
+.necobase-ss-inline-list > li {
+  display: inline-block;
+  margin: 0 1em 0.5em 0;
+  list-style-type: none;
+}
+
+.necobase-ss-ol {
+  margin: 1em 0 1em 1.5em;
+  padding: 0;
+}
+.necobase-ss-ol > li {
+  margin: 0.5em 0;
+  list-style-type: decimal;
+}
+.necobase-ss-ol > li:first-child {
+  margin-top: 0;
+}
+.necobase-ss-ol > li:last-child {
+  margin-bottom: 0;
+}
+
+.necobase-ss-dl {
+  margin: 1.5em 0;
+}
+.necobase-ss-dl > dt {
+  margin: 0.75em 0 0.25em 0;
+  font-weight: bold;
+}
+.necobase-ss-dl > dd {
+  margin: 0;
+}
+.necobase-ss-dl > *:first-child {
+  margin-top: 0;
+}
+.necobase-ss-dl > *:last-child {
+  margin-bottom: 0;
+}
+
+.necobase-ss-note-list {
+  margin: 1em 0 1.5em 1em;
+  padding: 0;
+}
+.necobase-ss-note-list > li {
+  position: relative;
+  margin: 0.5em 0;
+  padding: 0;
+  list-style-type: none;
+}
+.necobase-ss-note-list > li:first-child {
+  margin-top: 0;
+}
+.necobase-ss-note-list > li:last-child {
+  margin-bottom: 0;
+}
+
+.necobase-ss-note-list--a02 {
+  margin-left: 2em;
+}
+
+.necobase-ss-note-list--a03 {
+  margin-left: 4em;
+}
+
+.necobase-ss-note-list__marker {
+  position: absolute;
+  left: -1em;
+  width: 1em;
+}
+.necobase-ss-note-list--a02 .necobase-ss-note-list__marker {
+  left: -2em;
+  width: 2em;
+}
+.necobase-ss-note-list--a03 .necobase-ss-note-list__marker {
+  left: -4em;
+  width: 4em;
+}
+
+.necobase-ss-link-list {
+  margin: 1em 0;
+  padding: 0 0 0 1em;
+}
+.necobase-ss-link-list > li {
+  margin: 0.5em 0;
+  list-style: none;
+}
+.necobase-ss-link-list > li:before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 0.25em 0 0.25em 0.25em;
+  border-style: solid;
+  border-color: transparent #000;
+  margin: 0 0.75em 0 -1em;
+  vertical-align: 0.125em;
+}
+.necobase-ss-link-list > li:first-child {
+  margin-top: 0;
+}
+.necobase-ss-link-list > li:last-child {
+  margin-bottom: 0;
+}
+
+.necobase-ss-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  display: inline-block;
+  padding: 0.3em 0.7em;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.necobase-ss-button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+.necobase-ss-button:hover {
+  color: inherit;
+}
+.necobase-ss-button.necobase-ss-button--is-disabled, .necobase-ss-button:disabled {
+  background-color: #e1e1e1;
+  border-color: #e1e1e1;
+  color: #aaa;
+  cursor: default;
+  pointer-events: none;
+}
+.necobase-ss-button.necobase-ss-button--is-active, .necobase-ss-button:active {
+  box-shadow: inset 1px 4px 5px rgba(0, 0, 0, 0.125);
+}
+
+.necobase-ss-button--primary {
+  border-color: #3071a9;
+  background-color: #428bca;
+}
+.necobase-ss-button--primary:hover {
+  border-color: #2a6496;
+  background-color: #357ebd;
+}
+
+.necobase-ss-button--success {
+  border-color: #449d44;
+  background-color: #5cb85c;
+}
+.necobase-ss-button--success:hover {
+  border-color: #3d8b3d;
+  background-color: #4cae4c;
+}
+
+.necobase-ss-button--info {
+  border-color: #31b0d5;
+  background-color: #5bc0de;
+}
+.necobase-ss-button--info:hover {
+  border-color: #28a1c5;
+  background-color: #46b8da;
+}
+
+.necobase-ss-button--warning {
+  border-color: #ec971f;
+  background-color: #f0ad4e;
+}
+.necobase-ss-button--warning:hover {
+  border-color: #df8a13;
+  background-color: #eea236;
+}
+
+.necobase-ss-button--danger {
+  border-color: #c9302c;
+  background-color: #d9534f;
+}
+.necobase-ss-button--danger:hover {
+  border-color: #b52b27;
+  background-color: #d43f3a;
+}
+
+.necobase-ss-button--primary,
+.necobase-ss-button--success,
+.necobase-ss-button--info,
+.necobase-ss-button--warning,
+.necobase-ss-button--danger {
+  color: #fff;
+}
+.necobase-ss-button--primary:hover, .necobase-ss-button--primary:active, .necobase-ss-button--primary:focus,
+.necobase-ss-button--success:hover,
+.necobase-ss-button--success:active,
+.necobase-ss-button--success:focus,
+.necobase-ss-button--info:hover,
+.necobase-ss-button--info:active,
+.necobase-ss-button--info:focus,
+.necobase-ss-button--warning:hover,
+.necobase-ss-button--warning:active,
+.necobase-ss-button--warning:focus,
+.necobase-ss-button--danger:hover,
+.necobase-ss-button--danger:active,
+.necobase-ss-button--danger:focus {
+  color: #fff;
+}
+.necobase-ss-button--primary.necobase-ss-button--is-disabled, .necobase-ss-button--primary:disabled,
+.necobase-ss-button--success.necobase-ss-button--is-disabled,
+.necobase-ss-button--success:disabled,
+.necobase-ss-button--info.necobase-ss-button--is-disabled,
+.necobase-ss-button--info:disabled,
+.necobase-ss-button--warning.necobase-ss-button--is-disabled,
+.necobase-ss-button--warning:disabled,
+.necobase-ss-button--danger.necobase-ss-button--is-disabled,
+.necobase-ss-button--danger:disabled {
+  background-color: #e1e1e1;
+  border-color: #e1e1e1;
+  color: #aaa;
+}
+
+.necobase-ss-hr {
+  margin: 1.5em 0;
+  height: 0;
+  border-top: 1px solid #cccccc;
+}
+.necobase-ss-hr > hr {
+  display: none;
+}
+
+.necobase-ss-box {
+  margin: 1.5em 0 0 0;
+  padding: 1em 0.8em 0.8em;
+}
+.necobase-ss-box > *:first-child {
+  margin-top: 0;
+}
+.necobase-ss-box > *:last-child {
+  margin-bottom: 0;
+}
+
+.necobase-ss-box--a01 {
+  border: 3px solid #cccccc;
+}
+
+.necobase-ss-box--c01 {
+  border: 1px solid #cccccc;
+}
+
+.necobase-ss-box-heading {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  font-size: 1.2em;
+}
+.necobase-ss-box--c01 .necobase-ss-box-heading {
+  font-size: 1em;
+}
+.necobase-ss-box-heading + * {
+  margin-top: 0;
+}
+
+.necobase-ss-figure {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.necobase-ss-figure__image {
+  vertical-align: top;
+}
+
+.necobase-ss-figure__caption {
+  display: block;
+  margin: 0;
+  padding: 0.3em 0 0 0;
+  color: #b3b3b3;
+  font-size: 0.875em;
+  text-align: left;
+}
+
+.necobase-ss-table {
+  margin: 1em 0;
+}
+.necobase-ss-table > table {
+  margin: 0;
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.necobase-ss-table--a01 > table > thead > tr > th,
+.necobase-ss-table--a01 > table > thead > tr > td,
+.necobase-ss-table--a01 > table > tbody > tr > th,
+.necobase-ss-table--a01 > table > tbody > tr > td,
+.necobase-ss-table--a01 > table > tfoot > tr > th,
+.necobase-ss-table--a01 > table > tfoot > tr > td,
+.necobase-ss-table--a02 > table > thead > tr > th,
+.necobase-ss-table--a02 > table > thead > tr > td,
+.necobase-ss-table--a02 > table > tbody > tr > th,
+.necobase-ss-table--a02 > table > tbody > tr > td,
+.necobase-ss-table--a02 > table > tfoot > tr > th,
+.necobase-ss-table--a02 > table > tfoot > tr > td {
+  padding: 0.25em 0 0 0;
+  border: 0;
+  vertical-align: top;
+}
+.necobase-ss-table--a01 > table > thead > tr > th,
+.necobase-ss-table--a01 > table > tbody > tr > th,
+.necobase-ss-table--a01 > table > tfoot > tr > th,
+.necobase-ss-table--a02 > table > thead > tr > th,
+.necobase-ss-table--a02 > table > tbody > tr > th,
+.necobase-ss-table--a02 > table > tfoot > tr > th {
+  font-weight: normal;
+  text-align: left;
+}
+.necobase-ss-table--a01 > table > tbody > tr > th > *:first-child,
+.necobase-ss-table--a01 > table > tbody > tr > td > *:first-child,
+.necobase-ss-table--a02 > table > tbody > tr > th > *:first-child,
+.necobase-ss-table--a02 > table > tbody > tr > td > *:first-child {
+  margin-top: 0;
+}
+.necobase-ss-table--a01 > table > tbody > tr > th > *:last-child,
+.necobase-ss-table--a01 > table > tbody > tr > td > *:last-child,
+.necobase-ss-table--a02 > table > tbody > tr > th > *:last-child,
+.necobase-ss-table--a02 > table > tbody > tr > td > *:last-child {
+  margin-bottom: 0;
+}
+.necobase-ss-table--a01 > table > tbody > tr:first-child > th,
+.necobase-ss-table--a01 > table > tbody > tr:first-child > td,
+.necobase-ss-table--a02 > table > tbody > tr:first-child > th,
+.necobase-ss-table--a02 > table > tbody > tr:first-child > td {
+  padding-top: 0;
+}
+
+.necobase-ss-table--a02 > table > thead > tr > th,
+.necobase-ss-table--a02 > table > tbody > tr > th,
+.necobase-ss-table--a02 > table > tfoot > tr > th {
+  font-weight: bold;
+}
+
+.necobase-ss-table--b01 > table {
+  border-collapse: separate;
+}
+.necobase-ss-table--b01 > table > thead > tr > th,
+.necobase-ss-table--b01 > table > thead > tr > td,
+.necobase-ss-table--b01 > table > tbody > tr > th,
+.necobase-ss-table--b01 > table > tbody > tr > td,
+.necobase-ss-table--b01 > table > tfoot > tr > th,
+.necobase-ss-table--b01 > table > tfoot > tr > td {
+  padding: 0.8em;
+  border: 0;
+  vertical-align: top;
+  text-align: left;
+  font-weight: normal;
+}
+.necobase-ss-table--b01 > table > thead > tr > th,
+.necobase-ss-table--b01 > table > tfoot > tr > th {
+  background-color: #cccccc;
+  text-align: center;
+}
+.necobase-ss-table--b01 > table > tbody > tr > th,
+.necobase-ss-table--b01 > table > tbody > tr > td {
+  border-bottom: 1px solid #cccccc;
+}
+.necobase-ss-table--b01 > table > tbody > tr > th > *:first-child,
+.necobase-ss-table--b01 > table > tbody > tr > td > *:first-child {
+  margin-top: 0;
+}
+.necobase-ss-table--b01 > table > tbody > tr > th > *:last-child,
+.necobase-ss-table--b01 > table > tbody > tr > td > *:last-child {
+  margin-bottom: 0;
+}
+
+.necobase-ss-table--c01 > table > thead > tr > th,
+.necobase-ss-table--c01 > table > thead > tr > td,
+.necobase-ss-table--c01 > table > tbody > tr > th,
+.necobase-ss-table--c01 > table > tbody > tr > td,
+.necobase-ss-table--c01 > table > tfoot > tr > th,
+.necobase-ss-table--c01 > table > tfoot > tr > td {
+  padding: 5px 10px;
+  border: 1px solid #cccccc;
+  font-weight: normal;
+  vertical-align: top;
+  text-align: left;
+}
+.necobase-ss-table--c01 > table > thead > tr > th,
+.necobase-ss-table--c01 > table > tfoot > tr > th {
+  background-color: #cccccc;
+}
+.necobase-ss-table--c01 > table > tbody > tr > th > *:first-child,
+.necobase-ss-table--c01 > table > tbody > tr > td > *:first-child {
+  margin-top: 0;
+}
+
+.necobase-ss-table__caption {
+  margin: 0;
+  padding: 0 0 5px 0;
+}
+
+.necobase-ss-table__caption--right {
+  text-align: right;
+}
+
+.necobase-ss-table-col--1\/6 {
+  width: 16%;
+}
+
+.necobase-ss-table-col--1\/5 {
+  width: 20%;
+}
+
+.necobase-ss-table-col--1\/4 {
+  width: 25%;
+}
+
+.necobase-ss-table-col--1\/3,
+.necobase-ss-table-col--2\/6 {
+  width: 33%;
+}
+
+.necobase-ss-table-col--1\/2,
+.necobase-ss-table-col--2\/4,
+.necobase-ss-table-col--3\/6,
+.necobase-ss-table-col--4\/8 {
+  width: 50%;
+}
+
+.necobase-ss-table-col--2\/3,
+.necobase-ss-table-col--4\/6 {
+  width: 66%;
+}
+
+.necobase-ss-table-col--3\/4,
+.necobase-ss-table-col--6\/8 {
+  width: 75%;
+}
+
+.necobase-ss-table-col--5\/6 {
+  width: 83%;
+}
+
+/* ------------------------------------------------------
+// Form block
+*/
+.necobase-ss-form-label--is-disabled {
+  color: #999999;
+}
+
+.necobase-ss-form-required {
+  float: right;
+  margin: 0 10px 0 0;
+  padding: 3px 5px;
+  color: #fff;
+  background-color: #999;
+  font-size: 0.875em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.necobase-ss-form-note {
+  margin-top: 8px;
+  font-size: 0.875em;
+}
+
+.necobase-ss-form-error-message {
+  display: inline-block;
+  margin: 0 0 0.3em 0;
+  color: #d9534f;
+}
+.necobase-ss-form-error-message + * {
+  margin-top: 0;
+}
+
+.necobase-ss-form-action {
+  margin: 2em 0 1em 0;
+  text-align: center;
+}
+
+.necobase-ss-form-action__agreement {
+  margin: 0 0 1em 0;
+}
+
+.necobase-ss-form-action__return,
+.necobase-ss-form-action__proceed {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+ul + .necobase-ss-form-action__return, ul +
+.necobase-ss-form-action__proceed {
+  margin-left: 10px;
+}
+.necobase-ss-form-action__return li,
+.necobase-ss-form-action__proceed li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.necobase-ss-form-action__link {
+  margin: 17px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+.necobase-ss-form-action__link li {
+  display: inline;
+  margin: 0 0 0 10px;
+  padding: 0 0 0 10px;
+  border-left: 1px solid #ccc;
+}
+.necobase-ss-form-action__link li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0 none;
+}
+.necobase-ss-form-action__link li a {
+  color: #999;
+}
+
+.necobase-ss-form-name {
+  margin: 0;
+}
+.necobase-ss-form-name > dt {
+  display: inline-block;
+  width: 2em;
+  margin: 0 5px 0 0;
+  font-weight: normal;
+}
+.necobase-ss-form-name > dd {
+  display: inline;
+  margin: 0 10px 0 0;
+}
+.necobase-ss-form-name > dd .necobase-ss-form-text {
+  width: 15em;
+}
+.necobase-ss-form-name > dd:last-child {
+  margin-right: 0;
+}
+
+.necobase-ss-form-name--no-label > dt {
+  display: none;
+}
+
+.necobase-ss-form-text {
+  padding: 0.5em;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+  background-color: #fff;
+}
+.necobase-ss-form-text::-moz-placeholder {
+  color: #b3b3b3;
+}
+.necobase-ss-form-text:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+.necobase-ss-form-text::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+.necobase-ss-form-text:focus {
+  outline: none;
+}
+.necobase-ss-form-text:disabled {
+  color: #b3b3b3;
+  background-color: #f6f6f6;
+}
+.necobase-ss-form-text[disabled] {
+  color: #b3b3b3;
+  background-color: #f6f6f6;
+}
+.necobase-ss-form-text[size] {
+  width: auto;
+}
+
+.necobase-ss-form-textarea {
+  padding: 0.5em;
+  width: 100%;
+  height: 100px;
+  min-height: 100px;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+  background-color: #fff;
+  vertical-align: top;
+  resize: none;
+}
+.necobase-ss-form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.necobase-ss-form-textarea:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+.necobase-ss-form-textarea::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+.necobase-ss-form-textarea:focus {
+  outline: none;
+}
+.necobase-ss-form-textarea:disabled {
+  color: #b3b3b3;
+  background-color: #f6f6f6;
+}
+.necobase-ss-form-textarea[disabled] {
+  color: #b3b3b3;
+  background-color: #f6f6f6;
+}
+.necobase-ss-form-textarea[cols] {
+  width: auto;
+}
+.necobase-ss-form-textarea[rows] {
+  height: auto;
+}
+
+.necobase-ss-form-textarea-counter__num {
+  display: block;
+  margin: 3px 0 0;
+  font-size: 0.875em;
+  text-align: right;
+}
+.necobase-ss-form-textarea-counter--is-over .necobase-ss-form-textarea-counter__num {
+  color: #d9534f;
+}
+
+.necobase-ss-form-select {
+  margin: 0px 10px 0 0;
+  padding: 0.5em;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+
+.necobase-ss-form-checkbox {
+  margin-right: 0.4em;
+}
+
+.necobase-ss-form-radio {
+  margin-right: 0.4em;
+}
+
+/* ======================================================
+// Block
+// ------------------------------------------------------ */
+/* --------------------------------------------------------------------------
+ * Block - frame
+ */
+.necobase-frame-body {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+}
+.necobase-frame-body:before, .necobase-frame-body:after {
+  content: "";
+  display: block;
+}
+.necobase-frame-body:after {
+  clear: both;
 }

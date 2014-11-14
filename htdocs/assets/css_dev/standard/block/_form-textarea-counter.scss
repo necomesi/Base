@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - textareaCounter
+//
+
+.necobase-ss-form-textarea-counter {
+}
+
+.necobase-ss-form-textarea-counter__num {
+	display: block;
+	margin: 3px 0 0;
+	font-size: (14 / 16) * 1em;
+	text-align: right;
+
+	.necobase-ss-form-textarea-counter--is-over & {
+		color: $necobase-color-danger;
+	}
+}

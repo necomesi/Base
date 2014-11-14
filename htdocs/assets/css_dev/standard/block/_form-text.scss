@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - text
+//
+
+.necobase-ss-form-text {
+	@include iroha-placeholder() {
+		color: $necobase-color-text-sub;
+	};
+	padding: 0.5em;
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid $necobase-color-border;
+	background-color: #fff;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled {
+		color: $necobase-color-text-sub;
+		background-color: #f6f6f6;
+	}
+
+	// IE8
+	&[disabled] {
+		color: $necobase-color-text-sub;
+		background-color: #f6f6f6;
+	}
+
+	&[readonly] {
+	}
+
+	&[size] {
+		width: auto;
+	}
+}

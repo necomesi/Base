@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* --------------------------------------------------------------------------
+ * Block - frame
+ */
+
+.necobase-frame {}
+
+.necobase-frame-body {
+	@include iroha-clearfix();
+	width: $necobase-frame-width + 20px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 10px;
+}

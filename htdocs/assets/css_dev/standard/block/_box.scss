@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - box
+//
+
+.necobase-ss-box {
+	margin: 1.5em 0 0 0;
+	padding: 1em 0.8em 0.8em;
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.necobase-ss-box--a01 {
+	border: 3px solid $necobase-color-border;
+}
+
+.necobase-ss-box--c01 {
+	border: 1px solid $necobase-color-border;
+}
+
+.necobase-ss-box-heading {
+	margin: 0 0 0.5em 0;
+	padding: 0;
+	font-size: 1.2em;
+
+	.necobase-ss-box--c01 & {
+		font-size: 1em;
+	}
+
+	& + * {
+		margin-top: 0;
+	}
+}

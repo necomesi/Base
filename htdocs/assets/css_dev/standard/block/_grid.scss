@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// --------------------------------------------------------------------------
+// Standard block - grid
+//
+
+@include iroha-grid();
+
+.necobase-ss-grid--no-gutter {
+	margin: 0;
+
+	.necobase-ss-grid__unit {
+		padding: 0;
+	}
+}
