@@ -1,50 +1,90 @@
 module.exports = function (grunt) {
 
 	// load all grunt tasks matching the `grunt-*` pattern
-	require('load-grunt-tasks')(grunt);
+	grunt.file.expand({cwd: 'node_modules'}, 'grunt-*').forEach(grunt.loadNpmTasks);
 
 	var path = require('path');
 
-	var dir = {
-		root  : './htdocs',
-		assets: '<%= dir.root %>/assets',
-		css   : '<%= dir.assets %>/css',
-		cssDev: '<%= dir.assets %>/cssDev',
-		js    : '<%= dir.assets %>/js',
-		jsDev : '<%= dir.assets %>/jsDev',
-		gid   : '<%= dir.assets %>/gid',
-		api   : '<%= dir.root %>/api/v1'
-	};
-	var gidMap = grunt.file.readJSON('<%= dir.gid %>/gid-map.json');
+	//var gidMap = grunt.file.readJSON(grunt.template.process('<%= dir.gid %>/gid.json', {data: {dir: dir}}));
 
 
 	grunt.initConfig({
+		path: {
+			root  : './htdocs',
+			assets: '<%= path.root %>/assets',
+			css   : '<%= path.assets %>/css',
+			cssDev: '<%= path.assets %>/css_dev',
+			js    : '<%= path.assets %>/js',
+			jsDev : '<%= path.assets %>/js_dev',
+			gid   : '<%= path.jsDev %>/gid',
+			api   : '<%= path.root %>/api/v1'
+		},
+
+		//gidMap: grunt.file.readJSON(grunt.template.process('<%= path.gid %>/gid.json', {data: {dir: dir}})),
 
 		clean: {
-			src: [
-				'<%= dir.css %>/**/*',
-				'<%= dir.js %>/**/*'
-			]
+			clean: {
+				src: [
+					//dir.css + '/**/*'
+					'<%= path.css %>/**/*',
+					'<%= path.js %>/**/*'
+				]
+			}
+		},
+
+		copy: {
+			options: {
+				timestamp: true
+			},
+			js: {
+				files: [{
+					expand: true,
+					cwd: '<%= path.jsDev %>',
+					src: [
+						'**/*.js',
+						'**/*.json'
+					],
+					dest: '<%= path.js %>'
+				}]
+			}
+		},
+
+		concat: {
+			requirejs: {
+
+			}
 		},
 
 		watch: {
 			options: {
 				interrupt: true,
 				debounceDelay: 250
+			},
+			scss: {
+				files: [
+					'<%= path.cssDev %>/**/*.scss'
+				],
+				task: ['cssDev']
+			},
+			js: {
+				files: [
+					'<%= path.jsDev %>/**/*.js'
+				],
+				task: ['jsDev']
 			}
 		},
 
 		sass: {
-			sass_devel: {
+			sass_dev: {
 				options: {
 					sourcemap: 'none',
 					style    : 'expanded'
 				},
 				files: [{
 					expand: true,
-					cwd   : '<%= dir.cssDev %>',
+					cwd   : '<%= path.cssDev %>',
 					src   : '**/*.scss',
-					dest  : '<%= dir.css %>',
+					dest  : '<%= path.css %>',
 					ext   : '.css'
 				}]
 			},
@@ -55,9 +95,9 @@ module.exports = function (grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd   : '<%= dir.cssDev %>',
+					cwd   : '<%= path.cssDev %>',
 					src   : '**/*.scss',
-					dest  : '<%= dir.css %>',
+					dest  : '<%= path.css %>',
 					ext   : '.css'
 				}]
 			}
@@ -77,21 +117,49 @@ module.exports = function (grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd   : '<%= dir.css %>',
+					cwd   : '<%= path.css %>',
 					src   : '**/*.css',
-					dest  : '<%= dir.css %>'
+					dest  : '<%= path.css %>'
 				}]
+			}
+		},
+
+		requirejs: {
+			options: {
+				generateSourceMaps: false,
+				preserveLicenseComments: true
+			},
+			requirejs: {
+				options: {
+					appDir: '<%= path.jsDev %>',
+					mainConfigFile: '<%= path.jsDev %>/common.js',
+					baseUrl: './',
+					optimize: 'uglify2',
+					dir: '<%= path.js %>',
+					modules: (function() {
+						var modules = [{name: 'common'}];
+						var baseDir = 'htdocs/assets/js_dev/gid/';
+						var fnames = grunt.file.expand({cwd: baseDir}, '*.js');
+						fnames.forEach(function(fname) {
+							modules.push({
+								name: 'gid/' + fname.replace(/\.js$/, ''),
+								exclude: ['common']
+							});
+						});
+						return modules;
+					})()
+				}
 			}
 		}
 
 	});
 
-	grunt.registerTask('cssDevel', ['sass:sass_devel', 'autoprefixer']);
+	grunt.registerTask('cssDev', ['sass:sass_dev', 'autoprefixer']);
 	grunt.registerTask('cssDeploy', ['sass:sass_deploy', 'autoprefixer']);
-	grunt.registerTask('jsDevel', []);
-	grunt.registerTask('jsDeploy', []);
+	grunt.registerTask('jsDev', ['copy:js']);
+	grunt.registerTask('jsDeploy', ['copy:js', 'requirejs', 'concat:requirejs']);
 
-	grunt.registerTask('default', ['clean', 'cssDevel', 'jsDevel', 'watch']);
+	grunt.registerTask('default', ['clean', 'cssDev', 'jsDev', 'watch']);
 	grunt.registerTask('deploy' , ['clean', 'cssDeploy', 'jsDeploy']);
 
 };
