@@ -49,28 +49,25 @@ module.exports = function (grunt) {
 			}
 		},
 
-		concat: {
-			requirejs: {
-
-			}
-		},
-
 		watch: {
 			options: {
 				interrupt: true,
 				debounceDelay: 250
 			},
+			gruntfile: {
+				files: ['Gruntfile.js']
+			},
 			scss: {
 				files: [
 					'<%= path.cssDev %>/**/*.scss'
 				],
-				task: ['cssDev']
+				tasks: ['cssDev']
 			},
 			js: {
 				files: [
 					'<%= path.jsDev %>/**/*.js'
 				],
-				task: ['jsDev']
+				tasks: ['jsDev']
 			}
 		},
 

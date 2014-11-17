@@ -25,6 +25,9 @@ function(  Iroha,   $  ) {
 //	Iroha.injectWeinre();
 
 
+		console.log('all');
+
+
 	});
 
 });

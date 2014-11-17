@@ -13,6 +13,7 @@
 // ------------------------------------------------------ */
 
 require.config({
+	//urlArgs: '2014011701',
 	baseUrl: '/assets/js',
 	shim: {
 		'modernizr': {
@@ -36,11 +37,11 @@ require.config({
 		'_'        : 'lib/underscore',
 		'jquery'   : 'lib/jquery-1.11.1',
 		'$'        : 'lib/jquery-1.11.1',
-		'Iroha'    : 'lib/iroha'
+		'Iroha'    : 'lib/iroha',
 
 		// ブロックの JS は使用頻度が多い割に階層が深いのでここでまとめて登録する。
 		// アルファベット順に並べるといいかも。
-		, TheBlock: 'block/theBlock/TheBlock'
+		TheBlock: 'block/theBlock/TheBlock'
 	}
 });
 
