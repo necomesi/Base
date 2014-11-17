@@ -1,182 +1,97 @@
 module.exports = function (grunt) {
 
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-requirejs');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-csso');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-bless');
-	grunt.loadNpmTasks('grunt-este-watch');
+	// load all grunt tasks matching the `grunt-*` pattern
+	require('load-grunt-tasks')(grunt);
 
 	var path = require('path');
 
-	var root = './htdocs';
-	var asset = root + '/assets';
-	//var assetDev = root + '/assets';
-	var images = asset + '/img';
-	//var imagesDev = asset + '/img';
-	var imagesDummy = asset + '/img_dummy';
-	//var imagesDummyDev = asset + '/img_dummy';
-	var styles = asset + '/css';
-	var stylesDev = asset + '/css_dev';
-	var scripts = asset + '/js';
-	var scriptsDev = asset + '/js_dev';
-	var api = root + '/api/v1';
-	//var apiDev = root + '/api/v1';
-	var pageSpecificMap = grunt.file.readJSON(scriptsDev + '/pageSpecific/pageSpecificMap.json');
+	var dir = {
+		root  : './htdocs',
+		assets: '<%= dir.root %>/assets',
+		css   : '<%= dir.assets %>/css',
+		cssDev: '<%= dir.assets %>/cssDev',
+		js    : '<%= dir.assets %>/js',
+		jsDev : '<%= dir.assets %>/jsDev',
+		gid   : '<%= dir.assets %>/gid',
+		api   : '<%= dir.root %>/api/v1'
+	};
+	var gidMap = grunt.file.readJSON('<%= dir.gid %>/gid-map.json');
 
 
 	grunt.initConfig({
 
-		//clean: {
-		//	src: [root + '**/*']
-		//},
+		clean: {
+			src: [
+				'<%= dir.css %>/**/*',
+				'<%= dir.js %>/**/*'
+			]
+		},
 
-		sass: {
-			default: {
-				options: {
-					sourcemap: 'none',
-					style: 'expanded'
-				},
-				files: [
-					{ expand: true, cwd: stylesDev, src: '**/*.scss', dest: styles, ext: '.css' }
-				]
+		watch: {
+			options: {
+				interrupt: true,
+				debounceDelay: 250
 			}
 		},
 
-		csso: {
-			default: {
-				restructure: true,
-				files: [
-					{ expand: true, cwd: styles, src: '**/*.css', dest: styles }
-				]
+		sass: {
+			sass_devel: {
+				options: {
+					sourcemap: 'none',
+					style    : 'expanded'
+				},
+				files: [{
+					expand: true,
+					cwd   : '<%= dir.cssDev %>',
+					src   : '**/*.scss',
+					dest  : '<%= dir.css %>',
+					ext   : '.css'
+				}]
+			},
+			sass_deploy: {
+				options: {
+					sourcemap: 'auto',
+					style    : 'compressed'
+				},
+				files: [{
+					expand: true,
+					cwd   : '<%= dir.cssDev %>',
+					src   : '**/*.scss',
+					dest  : '<%= dir.css %>',
+					ext   : '.css'
+				}]
 			}
 		},
 
 		autoprefixer: {
-			options: {
-				browsers: [
-					'ie >= 8',
-					'ff >= 32',
-					'chrome >= 37',
-					'safari >= 6',
-					'ios >= 7',
-					'android >= 4'
-				]
-			},
 			autoprefixer: {
-				files: [
-					{ expand: true, cwd: styles, src: '**/*.css', dest: styles }
-				]
-			}
-		},
-
-		bless: {
-			bless: {
 				options: {
-					compress: false,
-					cacheBuster: false
+					browsers: [
+						'ie >= 8',
+						'ff >= 32',
+						'chrome >= 37',
+						'safari >= 6',
+						'ios >= 7',
+						'android >= 4'
+					]
 				},
-				files: [
-					{ expand: true, cwd: styles, src: '**/*.css', dest: styles }
-				]
-			}
-		},
-
-		copy: {
-			static: {
-				files: [
-					{
-						expand: true,
-						cwd: root,
-						src: [
-							'**/*',
-							'!assets/{css,js}/**/*'
-						],
-						dest: root,
-						dot: true
-					}
-				]
-			},
-			css: {
-				files: [
-					{ expand: true, cwd: stylesDev, src: '**/*.css', dest: styles }
-				]
-			},
-			js: {
-				files: [
-					{ expand: true, cwd: scriptsDev, src: '**', dest: scripts }
-				]
-			}
-		},
-
-		esteWatch: {
-			options: {
-				dirs: [
-					root + '/**'
-				],
-				livereload: {
-					enabled: false
-				}
-			},
-			// SCSS はコンパイルし直しが必要
-			scss: function () {
-				return 'cssDevel';
-			},
-			// いずれにも引っかからなければ
-			'*': function (filepath) {
-				// コピーするファイルをここで指定する
-				var fileMatcher = /\.(s?html?|jpe?g|png|gif|ico|cur|js|json|php|htaccess)$/i;
-				if (fileMatcher.test(filepath)) {
-					filepath = '/' + path.relative(root, filepath);
-					grunt.file.copy(root + filepath, root + filepath);
-				}
-			}
-		},
-
-		requirejs: {
-			js: {
-				options: {
-					appDir: scriptsDev,
-					baseUrl: './',
-					mainConfigFile: scriptsDev + '/main.js',
-					optimize: 'uglify2',
-					generateSourceMaps: false,
-					dir: scripts,
-					modules: (function () {
-						var modules = [{ name: 'main' }];
-						for (var key in pageSpecificMap) {
-							if (pageSpecificMap.hasOwnProperty(key)) {
-								modules.push({
-									name: 'pageSpecific/' + key,
-									exclude: ['main']
-								});
-							}
-						}
-						return modules;
-					})(),
-					preserveLicenseComments: true
-				}
-			}
-		},
-
-		concat: {
-			requirejs: {
-				src: [scripts + '/lib/require.js', scripts + '/main.js'],
-				dest: scripts + '/lib/require.js'
+				files: [{
+					expand: true,
+					cwd   : '<%= dir.css %>',
+					src   : '**/*.css',
+					dest  : '<%= dir.css %>'
+				}]
 			}
 		}
 
 	});
 
-	grunt.registerTask('cssDevel', ['sass', 'autoprefixer', 'bless', 'copy:css']);
-	grunt.registerTask('cssDeploy', ['sass', 'autoprefixer', 'csso', 'bless', 'copy:css']);
-	grunt.registerTask('jsDevel', ['copy:js']);
-	grunt.registerTask('jsDeploy', ['requirejs', 'concat:requirejs']);
+	grunt.registerTask('cssDevel', ['sass:sass_devel', 'autoprefixer']);
+	grunt.registerTask('cssDeploy', ['sass:sass_deploy', 'autoprefixer']);
+	grunt.registerTask('jsDevel', []);
+	grunt.registerTask('jsDeploy', []);
 
-	grunt.registerTask('default', [/*'clean', */'cssDevel', 'jsDevel', 'copy:static', 'esteWatch']);
-	grunt.registerTask('deploy' , [/*'clean', */'cssDeploy', 'jsDeploy', 'copy:static']);
+	grunt.registerTask('default', ['clean', 'cssDevel', 'jsDevel', 'watch']);
+	grunt.registerTask('deploy' , ['clean', 'cssDeploy', 'jsDeploy']);
 
 };
