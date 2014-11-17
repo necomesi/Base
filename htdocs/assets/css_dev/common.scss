@@ -6,7 +6,7 @@
 //
 // ====================================================== */
 
-@import "iroha/_iroha";
+@import "iroha/iroha";
 @import "symbol";
 //@import "reset";
 @import "normalize";
@@ -32,8 +32,8 @@
 // ------------------------------------------------------ */
 
 // フレーム系
-@import "block/_frame";
-@import "block/_header";
-@import "block/_mainNav";
-@import "block/_main";
-@import "block/_footer";
+@import "block/frame";
+@import "block/header";
+@import "block/mainNav";
+@import "block/main";
+@import "block/footer";
