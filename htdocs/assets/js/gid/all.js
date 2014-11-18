@@ -21,6 +21,29 @@ function(  Iroha,   $  ) {
 		}
 
 
+		/* ======================================================
+		// グリッドユニットの間にあるホワイトスペースを除去
+		// ------------------------------------------------------ */
+
+		$(function() {
+			var count = 0;
+			$('.necobase-ss-grid').each(function() {
+				var i = this.childNodes.length - 1;
+				var child;
+				for (; i >= 0; --i) {
+					child = this.childNodes[i];
+					if (child.nodeType === Node.TEXT_NODE) {
+						this.removeChild(child);
+						++count;
+					}
+				}
+			});
+			if (count) {p
+				console.warn('グリッドユニットの間にテキストノードがあります。(' + count + '箇所)');
+			}
+		});
+
+
 		// Weinre
 //	Iroha.injectWeinre();
 
