@@ -154,7 +154,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('cssDev', ['sass:sass_dev', 'autoprefixer']);
 	grunt.registerTask('cssDeploy', ['sass:sass_deploy', 'autoprefixer']);
 	grunt.registerTask('jsDev', ['copy:js']);
-	grunt.registerTask('jsDeploy', ['copy:js', 'requirejs', 'concat:requirejs']);
+	grunt.registerTask('jsDeploy', ['copy:js', 'requirejs']);
 
 	grunt.registerTask('default', ['clean', 'cssDev', 'jsDev', 'watch']);
 	grunt.registerTask('deploy' , ['clean', 'cssDeploy', 'jsDeploy']);

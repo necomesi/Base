@@ -32,12 +32,12 @@ require.config({
 	},
 	paths: {
 		// JS ライブラリ
-		'text'     : 'lib/text',
-		'Modernizr': 'lib/modernizr',
-		'_'        : 'lib/underscore',
-		'jquery'   : 'lib/jquery-1.11.1',
-		'$'        : 'lib/jquery-1.11.1',
-		'Iroha'    : 'lib/iroha',
+		'text'     : '../vendor/requirejs-text/text',
+		'Modernizr': '../vendor/modernizr/modernizr',
+		'_'        : '../vendor/underscore/underscore',
+		'jquery'   : '../vendor/jquery/dist/jquery',
+		'$'        : '../vendor/jquery/dist/jquery',
+		'Iroha'    : 'iroha/iroha',
 
 		// ブロックの JS は使用頻度が多い割に階層が深いのでここでまとめて登録する。
 		// アルファベット順に並べるといいかも。
