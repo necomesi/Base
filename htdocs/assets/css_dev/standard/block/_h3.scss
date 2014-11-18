@@ -5,13 +5,13 @@
 //
 
 .necobase-ss-h3 {
-	margin: 1em 0;
+	margin: 2em 0 1em;
+}
 
-	> h1, > h2, > h3, > h4, > h5, > h6 {
-		margin: 0;
-		padding: 0 0 0 12px;
-		border-left: 6px solid $necobase-color-border;
-		font-size: 1.17em;
-		line-height: 1.3;
-	}
+.necobase-ss-h3__heading {
+	margin: 0;
+	padding: 0 0 0 12px;
+	border-left: 6px solid $necobase-color-border;
+	font-size: 1.17em;
+	line-height: 1.3;
 }

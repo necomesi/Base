@@ -989,9 +989,10 @@ strong {
 // Block
 */
 .necobase-ss-h1 {
-  margin: 1em 0;
+  margin: 5em 0 1em;
 }
-.necobase-ss-h1 h1 {
+
+.necobase-ss-h1__heading {
   margin: 0;
   padding: 0 0 0.25em;
   border-bottom: 3px solid #cccccc;
@@ -1001,9 +1002,10 @@ strong {
 }
 
 .necobase-ss-h2 {
-  margin: 1em 0;
+  margin: 3em 0 1em;
 }
-.necobase-ss-h2 > h1, .necobase-ss-h2 > h2, .necobase-ss-h2 > h3, .necobase-ss-h2 > h4, .necobase-ss-h2 > h5, .necobase-ss-h2 > h6 {
+
+.necobase-ss-h2__heading {
   margin: 0;
   padding: 0.25em 0.5em;
   border: 1px solid #cccccc;
@@ -1021,9 +1023,10 @@ strong {
 }
 
 .necobase-ss-h3 {
-  margin: 1em 0;
+  margin: 2em 0 1em;
 }
-.necobase-ss-h3 > h1, .necobase-ss-h3 > h2, .necobase-ss-h3 > h3, .necobase-ss-h3 > h4, .necobase-ss-h3 > h5, .necobase-ss-h3 > h6 {
+
+.necobase-ss-h3__heading {
   margin: 0;
   padding: 0 0 0 12px;
   border-left: 6px solid #cccccc;
@@ -1034,21 +1037,24 @@ strong {
 .necobase-ss-h4 {
   margin: 1em 0;
 }
-.necobase-ss-h4 > h1, .necobase-ss-h4 > h2, .necobase-ss-h4 > h3, .necobase-ss-h4 > h4, .necobase-ss-h4 > h5, .necobase-ss-h4 > h6 {
+
+.necobase-ss-h4__heading {
   margin: 0;
 }
 
 .necobase-ss-h5 {
   margin: 1em 0;
 }
-.necobase-ss-h5 > h1, .necobase-ss-h5 > h2, .necobase-ss-h5 > h3, .necobase-ss-h5 > h4, .necobase-ss-h5 > h5, .necobase-ss-h5 > h6 {
+
+.necobase-ss-h5__heading {
   margin: 0;
 }
 
 .necobase-ss-h6 {
   margin: 1em 0;
 }
-.necobase-ss-h6 > h1, .necobase-ss-h6 > h2, .necobase-ss-h6 > h3, .necobase-ss-h6 > h4, .necobase-ss-h6 > h5, .necobase-ss-h6 > h6 {
+
+.necobase-ss-h6__heading {
   margin: 0;
 }
 
