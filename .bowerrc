@@ -1,4 +1,4 @@
 {
-	"directory": "htdocs/assets/js_dev/vendor",
+	"directory": "htdocs/assets/vendor",
 	"analytics": false
 }
