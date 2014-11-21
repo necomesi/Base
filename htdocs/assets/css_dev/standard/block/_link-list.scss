@@ -12,17 +12,29 @@
 	> li {
 		margin: 0.5em 0;
 		list-style: none;
+		text-indent: -1em;
 
-		&:before {
-			content: "";
-			display: inline-block;
-			width: 0;
-			height: 0;
-			border-width: 0.25em 0 0.25em 0.25em;
-			border-style: solid;
-			border-color: transparent $necobase-color-text;
-			margin: 0 0.75em 0 -1em;
-			vertical-align: 0.125em;
+		> a {
+			padding-left: 1em;
+
+			&:before {
+				content: "";
+				display: inline-block;
+				width: 0;
+				height: 0;
+				border-width: 0.25em 0 0.25em 0.25em;
+				border-style: solid;
+				border-color: transparent $necobase-color-link-link;
+				margin: 0 0.75em 0 -1em;
+				vertical-align: 0.125em;
+			}
+
+			&:hover {
+
+				&:before {
+					border-color: transparent $necobase-color-link-hover;
+				}
+			}
 		}
 
 		&:first-child {

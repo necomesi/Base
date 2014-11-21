@@ -1185,17 +1185,24 @@ strong {
 .necobase-ss-link-list > li {
   margin: 0.5em 0;
   list-style: none;
+  text-indent: -1em;
 }
-.necobase-ss-link-list > li:before {
+.necobase-ss-link-list > li > a {
+  padding-left: 1em;
+}
+.necobase-ss-link-list > li > a:before {
   content: "";
   display: inline-block;
   width: 0;
   height: 0;
   border-width: 0.25em 0 0.25em 0.25em;
   border-style: solid;
-  border-color: transparent #000;
+  border-color: transparent #225ca6;
   margin: 0 0.75em 0 -1em;
   vertical-align: 0.125em;
+}
+.necobase-ss-link-list > li > a:hover:before {
+  border-color: transparent #4a88c0;
 }
 .necobase-ss-link-list > li:first-child {
   margin-top: 0;
