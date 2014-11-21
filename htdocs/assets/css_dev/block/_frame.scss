@@ -6,7 +6,7 @@
 
 .necobase-frame {}
 
-.necobase-frame-body {
+.necobase-frame__body {
 	@include iroha-clearfix();
 	width: $necobase-frame-width + 20px;
 	margin-right: auto;

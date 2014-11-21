@@ -1749,17 +1749,17 @@ ul + .necobase-ss-form-action__return, ul +
 /* --------------------------------------------------------------------------
  * Block - frame
  */
-.necobase-frame-body {
+.necobase-frame__body {
   width: 980px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 10px;
 }
-.necobase-frame-body:before, .necobase-frame-body:after {
+.necobase-frame__body:before, .necobase-frame__body:after {
   content: "";
   display: block;
 }
-.necobase-frame-body:after {
+.necobase-frame__body:after {
   clear: both;
 }
 
@@ -1767,7 +1767,7 @@ ul + .necobase-ss-form-action__return, ul +
  * Block - header
  */
 /* --------------------------------------------------------------------------
- * Block - mainNav
+ * Block - main-nav
  */
 /* --------------------------------------------------------------------------
  * Block - main
