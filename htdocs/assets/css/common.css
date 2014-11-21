@@ -994,8 +994,6 @@ strong {
 
 .necobase-ss-h1__heading {
   margin: 0;
-  padding: 0 0 0.25em;
-  border-bottom: 3px solid #cccccc;
   font-weight: bold;
   font-size: 2em;
   line-height: 1.1;
@@ -1007,19 +1005,8 @@ strong {
 
 .necobase-ss-h2__heading {
   margin: 0;
-  padding: 0.25em 0.5em;
-  border: 1px solid #cccccc;
-  background-color: #f0f0f0;
   font-size: 1.5em;
   line-height: 1.2;
-}
-
-.necobase-ss-h2__more {
-  float: right;
-  color: #b3b3b3;
-  font-size: 0.66667em;
-  line-height: 1.8;
-  font-weight: normal;
 }
 
 .necobase-ss-h3 {
@@ -1028,8 +1015,6 @@ strong {
 
 .necobase-ss-h3__heading {
   margin: 0;
-  padding: 0 0 0 12px;
-  border-left: 6px solid #cccccc;
   font-size: 1.17em;
   line-height: 1.3;
 }

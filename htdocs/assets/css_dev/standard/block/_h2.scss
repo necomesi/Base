@@ -10,18 +10,6 @@
 
 .necobase-ss-h2__heading {
 	margin: 0;
-	padding: 0.25em 0.5em;
-	border: 1px solid $necobase-color-border;
-	background-color: $necobase-color-bg-shade;
 	font-size: 1.5em;
 	line-height: 1.2;
-}
-
-// もっと読むリンク（あれば）
-.necobase-ss-h2__more {
-	float: right;
-	color: $necobase-color-text-sub;
-	font-size: (1em / 1.5); // 元の大きさに戻す
-	line-height: 1.5 * 1.2; // もとの行高と揃える
-	font-weight: normal;
 }
