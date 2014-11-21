@@ -418,13 +418,13 @@ html {
 }
 
 a {
-  color: #428bca;
+  color: #225ca6;
 }
 a:hover, a:focus {
-  color: #2a6496;
+  color: #4a88c0;
 }
 a:active {
-  color: #2a6496;
+  color: #4a88c0;
 }
 
 figure {
@@ -452,6 +452,16 @@ em {
 
 strong {
   color: #d2322d;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #bb2a21;
+}
+
+::selection {
+  color: #fff;
+  background: #bb2a21;
 }
 
 /* ======================================================
@@ -1120,6 +1130,7 @@ strong {
 }
 .necobase-ss-dl > dd {
   margin: 0;
+  padding-left: 2em;
 }
 .necobase-ss-dl > *:first-child {
   margin-top: 0;

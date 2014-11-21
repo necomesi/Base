@@ -75,3 +75,8 @@ strong {
 
 small {
 }
+
+::selection {
+	color: $necomesi-color-selection-text;
+	background: $necomesi-color-selection-bg;
+}
