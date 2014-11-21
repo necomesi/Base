@@ -1758,6 +1758,7 @@ ul + .necobase-ss-form-action__return, ul +
 .necobase-frame__body:before, .necobase-frame__body:after {
   content: "";
   display: block;
+  overflow: hidden;
 }
 .necobase-frame__body:after {
   clear: both;

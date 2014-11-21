@@ -21,6 +21,7 @@ $iroha-grid-prefix: '.necobase-ss-grid';
 	&:after {
 		content: "";
 		display: block;
+		overflow: hidden;
 	}
 
 	&:after {
