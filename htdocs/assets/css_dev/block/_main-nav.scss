@@ -8,13 +8,28 @@
 }
 
 .necobase-main-nav__list {
+	@include iroha-clearfix;
+	margin: 40px 0 15px -15px;
+	padding-left: 0;
+	list-style-type: none;
 }
 
 .necobase-main-nav__item {
-
-	&.necobase-main-nav__item--is-current {
-	}
+	float: left;
+	width: 25%;
+	padding-left: 15px;
 
 	> a {
+		display: block;
+		padding: 10px;
+		background-color: #fff;
+		text-align: center;
+	}
+}
+
+.necobase-main-nav__item--is-current {
+
+	> a {
+
 	}
 }

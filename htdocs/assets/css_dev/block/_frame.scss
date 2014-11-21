@@ -4,7 +4,9 @@
  * Block - frame
  */
 
-.necobase-frame {}
+.necobase-frame {
+	min-width: $necobase-frame-width + 20px;
+}
 
 .necobase-frame__body {
 	@include iroha-clearfix();

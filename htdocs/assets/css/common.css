@@ -1749,6 +1749,10 @@ ul + .necobase-ss-form-action__return, ul +
 /* --------------------------------------------------------------------------
  * Block - frame
  */
+.necobase-frame {
+  min-width: 980px;
+}
+
 .necobase-frame__body {
   width: 980px;
   margin-right: auto;
@@ -1767,12 +1771,68 @@ ul + .necobase-ss-form-action__return, ul +
 /* --------------------------------------------------------------------------
  * Block - header
  */
+.necobase-header {
+  background-color: #ddd;
+}
+
+.necobase-header__logo {
+  margin: 30px 0 0;
+}
+.necobase-header__logo > a {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.necobase-header__logo > a > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 /* --------------------------------------------------------------------------
  * Block - main-nav
  */
+.necobase-main-nav__list {
+  margin: 40px 0 15px -15px;
+  padding-left: 0;
+  list-style-type: none;
+}
+.necobase-main-nav__list:before, .necobase-main-nav__list:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+}
+.necobase-main-nav__list:after {
+  clear: both;
+}
+
+.necobase-main-nav__item {
+  float: left;
+  width: 25%;
+  padding-left: 15px;
+}
+.necobase-main-nav__item > a {
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
 /* --------------------------------------------------------------------------
  * Block - main
  */
 /* --------------------------------------------------------------------------
  * Block - footer
  */
+#necobase-footer {
+  background-color: #ddd;
+}
+
+.necobase-footer__copyright {
+  margin: 30px 0;
+  text-align: right;
+}
