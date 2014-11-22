@@ -95,6 +95,16 @@ $necobase-font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 $necobase-frame-width: 960px;
 
 
+// ------------------------------------------------------
+// デバイスの切り分け
+//
+
+// PC版よりも幅の狭いデバイス（タブレット？）
+$necobase-device-narrow : 768px;
+// さらに小型デバイス（スマホ？）
+$necobase-device-compact: 480px;
+
+
 
 // ======================================================
 // 関数
@@ -106,3 +116,21 @@ $necobase-frame-width: 960px;
 // ミックスイン
 // ------------------------------------------------------
 
+
+// ------------------------------------------------------
+// メディアクエリー
+//
+
+// PC版よりも幅の狭いデバイス（タブレット？）
+@mixin necobase-mq-narrow {
+	@media screen and (max-width: ($necobase-device-narrow)) {
+		@content
+	}
+}
+
+// さらに小型デバイス（スマホ？）
+@mixin necobase-mq-compact {
+	@media screen and (max-width: ($necobase-device-compact)) {
+		@content
+	}
+}
