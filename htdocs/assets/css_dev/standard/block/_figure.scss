@@ -9,7 +9,7 @@
 	text-align: center;
 }
 
-.necobase-ss-figure__image {
+.necobase-ss-figure__figure {
 	vertical-align: top;
 }
 
@@ -20,4 +20,18 @@
 	color: $necobase-color-text-sub;
 	font-size: (14 / 16) * 1em;
 	text-align: left;
+
+	> p {
+		margin: 0;
+	}
+}
+
+.necobase-ss-figure--bordered {
+	border: 1px solid $necobase-color-border;
+
+	.necobase-ss-figure__caption {
+		padding-right: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+	}
 }
