@@ -917,13 +917,13 @@ strong {
 // Grid
 */
 .necobase-ss-grid {
-  margin: -30px 0 0 -15px;
+  margin: 0 0 0 -20px;
   font-size: 0;
 }
 
 .necobase-ss-grid__unit {
   display: inline-block;
-  padding: 30px 0 0 15px;
+  padding: 0 0 0 20px;
   font-size: 1rem;
   vertical-align: top;
 }
