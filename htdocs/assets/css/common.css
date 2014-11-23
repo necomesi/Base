@@ -814,7 +814,7 @@ strong {
 }
 
 .necobase-x-left {
-  text-align: left !important;
+  text-align: left   !important;
 }
 
 .necobase-x-center {
@@ -822,7 +822,7 @@ strong {
 }
 
 .necobase-x-right {
-  text-align: right !important;
+  text-align: right  !important;
 }
 
 .necobase-x-top {
@@ -883,26 +883,6 @@ strong {
 
 .necobase-x-wauto {
   width: auto  !important;
-}
-
-.necobase-x-w100 {
-  width: 100px !important;
-}
-
-.necobase-x-w200 {
-  width: 200px !important;
-}
-
-.necobase-x-w300 {
-  width: 300px !important;
-}
-
-.necobase-x-w400 {
-  width: 400px !important;
-}
-
-.necobase-x-w500 {
-  width: 500px !important;
 }
 
 /* ======================================================
@@ -988,6 +968,13 @@ strong {
   width: 91.66667%;
 }
 
+.necobase-ss-grid__unit > *:first-child {
+  margin-top: 0;
+}
+.necobase-ss-grid__unit > *:last-child {
+  margin-bottom: 0;
+}
+
 .necobase-ss-grid--no-gutter {
   margin: 0;
 }
@@ -995,6 +982,12 @@ strong {
   padding: 0;
 }
 
+@media screen and (max-width: 480px) {
+  .necobase-ss-grid--break-on-sp .necobase-ss-grid__unit {
+    display: block;
+    width: 100%;
+  }
+}
 /* ------------------------------------------------------
 // Block
 */
@@ -1248,12 +1241,12 @@ strong {
 }
 
 .necobase-ss-button--primary {
-  border-color: #3071a9;
-  background-color: #428bca;
+  border-color: #902019;
+  background-color: #bb2a21;
 }
 .necobase-ss-button--primary:hover {
-  border-color: #2a6496;
-  background-color: #357ebd;
+  border-color: #7a1b16;
+  background-color: #a5251d;
 }
 
 .necobase-ss-button--success {
@@ -1818,7 +1811,7 @@ ul + .necobase-ss-form-action__return, ul +
 /* ======================================================
 // Block
 // ------------------------------------------------------ */
-/* --------------------------------------------------------------------------
+/* ------------------------------------------------------
  * Block - frame
  */
 .necobase-frame {
@@ -1832,7 +1825,7 @@ ul + .necobase-ss-form-action__return, ul +
   padding: 0 10px;
 }
 
-/* --------------------------------------------------------------------------
+/* ------------------------------------------------------
  * Block - header
  */
 .necobase-header {
@@ -1858,7 +1851,7 @@ ul + .necobase-ss-form-action__return, ul +
   height: 100%;
 }
 
-/* --------------------------------------------------------------------------
+/* ------------------------------------------------------
  * Block - main-nav
  */
 .necobase-main-nav__list {
@@ -1887,7 +1880,7 @@ ul + .necobase-ss-form-action__return, ul +
   text-align: center;
 }
 
-/* --------------------------------------------------------------------------
+/* ------------------------------------------------------
  * Block - main
  */
 .necobase-main__body {
@@ -1895,7 +1888,7 @@ ul + .necobase-ss-form-action__return, ul +
   margin-bottom: 60px;
 }
 
-/* --------------------------------------------------------------------------
+/* ------------------------------------------------------
  * Block - footer
  */
 #necobase-footer {

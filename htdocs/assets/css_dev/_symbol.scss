@@ -1,28 +1,24 @@
 @charset "UTF-8";
 
 // ======================================================
-//
-//   シンボル集
-//
-// ======================================================
-
-
-
-// ======================================================
-// 変数
+// Symbols
 // ------------------------------------------------------
 
 
 // ------------------------------------------------------
-// 色 - necobase-color
+// Variables
 //
 
 // ----------------------------------
+// Color - $necobase-color
+//
+
+//
 // 機能を抽象化した色表現
 //
 
 // プライマリカラー。サイトのシンボルとなる色を指定するといい。
-$necobase-color-primary : #428bca;
+$necobase-color-primary : #bb2a21;
 // 強調
 $necobase-color-emphasis: #d2322d;
 // 成功
@@ -34,7 +30,7 @@ $necobase-color-warning : #f0ad4e;
 // ヤバい
 $necobase-color-danger  : #d9534f;
 
-// ----------------------------------
+//
 // 前景色
 //
 
@@ -45,7 +41,7 @@ $necobase-color-text-sub: lighten($necobase-color-text, 70%);
 // ボーダー
 $necobase-color-border  : lighten($necobase-color-text, 80%);
 
-// ----------------------------------
+//
 // 背景色
 //
 
@@ -54,7 +50,7 @@ $necobase-color-bg      : #fff;
 // 網掛けエリア色
 $necobase-color-bg-shade: #f0f0f0;
 
-// ----------------------------------
+//
 // リンク色
 //
 
@@ -67,7 +63,7 @@ $necobase-color-link-active : #4a88c0;
 // タップされた時の網掛け色（iOSのみで有効）
 $necobase-color-link-tap    : rgba(0, 128, 255, 0.3);
 
-// ----------------------------------
+//
 // その他の色
 //
 
@@ -75,9 +71,8 @@ $necobase-color-link-tap    : rgba(0, 128, 255, 0.3);
 $necomesi-color-selection-text: #fff;
 $necomesi-color-selection-bg  : #bb2a21;
 
-
-// ------------------------------------------------------
-// タイポグラフィー - necobase-font
+// ----------------------------------
+// Typography - $necobase-font
 //
 
 // 既定フォントサイズ
@@ -87,16 +82,14 @@ $necobase-font-size: $iroha-font-size-base;
 //$necobase-font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 $necobase-font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 
-
-// ------------------------------------------------------
-// レイアウト - necobase-frame
+// ----------------------------------
+// Layout - $necobase-frame
 //
 
 $necobase-frame-width: 960px;
 
-
-// ------------------------------------------------------
-// デバイスの切り分け
+// ----------------------------------
+// Divice definition - $necobase-device
 //
 
 // PC版よりも幅の狭いデバイス（タブレット？）
@@ -105,19 +98,16 @@ $necobase-device-narrow : 768px;
 $necobase-device-compact: 480px;
 
 
-
-// ======================================================
-// 関数
 // ------------------------------------------------------
-
-
-
-// ======================================================
-// ミックスイン
-// ------------------------------------------------------
+// Functions
+//
 
 
 // ------------------------------------------------------
+// Mixins
+//
+
+// ----------------------------------
 // メディアクエリー
 //
 
@@ -134,3 +124,7 @@ $necobase-device-compact: 480px;
 		@content
 	}
 }
+
+// ------------------------------------------------------
+// Placeholder Selectors
+//
