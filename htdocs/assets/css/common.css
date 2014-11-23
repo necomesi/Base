@@ -1348,24 +1348,28 @@ strong {
   margin-bottom: 0;
 }
 
-.necobase-ss-box--a01 {
-  border: 3px solid #cccccc;
-}
-
-.necobase-ss-box--c01 {
-  border: 1px solid #cccccc;
-}
-
-.necobase-ss-box-heading {
+.necobase-ss-box__heading {
   margin: 0 0 0.5em 0;
   padding: 0;
   font-size: 1.2em;
 }
-.necobase-ss-box--c01 .necobase-ss-box-heading {
+.necobase-ss-box__heading + * {
+  margin-top: 0;
+}
+
+.necobase-ss-box--a01 {
+  border: 3px solid #cccccc;
+}
+
+.necobase-ss-box--a02 {
+  border: 1px solid #cccccc;
+}
+.necobase-ss-box--a02 .necobase-ss-box__heading {
   font-size: 1em;
 }
-.necobase-ss-box-heading + * {
-  margin-top: 0;
+
+.necobase-ss-box--b01 {
+  border: 3px solid #bb2a21;
 }
 
 .necobase-ss-figure {
