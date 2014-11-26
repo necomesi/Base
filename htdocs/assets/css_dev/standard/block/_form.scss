@@ -19,12 +19,14 @@
 }
 
 .necobase-ss-form__required {
+	display: inline-block;
 	margin-left: 10px;
-	padding: 3px 5px;
+	padding: 2px 5px;
 	border: 1px solid $necobase-color-border;
 	background-color: $necobase-color-bg-shade;
 	font-size: iroha-em-size(14px);
 	line-height: 1.1;
+	vertical-align: 2px;
 }
 
 .necobase-ss-form__note {

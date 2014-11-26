@@ -33,3 +33,20 @@
 
 	}
 }
+
+// ----------------------------------
+// デバイス幅に応じたスタイル
+//
+
+@include necobase-mq-compact {
+
+	.necobase-main-nav__item {
+		float: none;
+		width: auto;
+		margin-top: 10px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}

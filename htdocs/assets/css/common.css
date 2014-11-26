@@ -977,10 +977,6 @@ label {
   width: 91.66667%;
 }
 
-.necobase-ss-grid__unit > *:first-child {
-  margin-top: 0;
-}
-
 .necobase-ss-grid--no-gutter {
   margin: 0;
 }
@@ -1357,7 +1353,7 @@ label {
 }
 
 .necobase-ss-figure {
-  margin: 1em 0 0;
+  margin: 1.3em 0 0;
   text-align: center;
 }
 
@@ -1550,33 +1546,39 @@ label {
 }
 
 @media screen and (max-width: 480px) {
-  .necobase-ss-table--break-on-sp > table, .necobase-ss-table--break-on-sp > table > thead,
-  .necobase-ss-table--break-on-sp > table > tbody,
-  .necobase-ss-table--break-on-sp > table > tfoot, .necobase-ss-table--break-on-sp > table > thead > tr,
-  .necobase-ss-table--break-on-sp > table > tbody > tr,
-  .necobase-ss-table--break-on-sp > table > tfoot > tr, .necobase-ss-table--break-on-sp > table > thead > tr > th,
-  .necobase-ss-table--break-on-sp > table > thead > tr > td,
-  .necobase-ss-table--break-on-sp > table > tbody > tr > th,
-  .necobase-ss-table--break-on-sp > table > tbody > tr > td,
-  .necobase-ss-table--break-on-sp > table > tfoot > tr > th,
-  .necobase-ss-table--break-on-sp > table > tfoot > tr > td {
+  .necobase-ss-table__caption {
     display: block;
   }
 
+  .necobase-ss-table--break-on-sp > table, .necobase-ss-table--break-on-sp > table > tbody, .necobase-ss-table--break-on-sp > table > tbody > tr, .necobase-ss-table--break-on-sp > table > tbody > tr > th,
+  .necobase-ss-table--break-on-sp > table > tbody > tr > td {
+    display: block;
+  }
+
+  .necobase-ss-table--break-on-sp > table > thead,
+  .necobase-ss-table--break-on-sp > table > tfoot {
+    display: none;
+  }
   .necobase-ss-table--break-on-sp.necobase-ss-table--a01 > table > tbody > tr ~ tr > th, .necobase-ss-table--break-on-sp.necobase-ss-table--a02 > table > tbody > tr ~ tr > th {
     margin-top: 1em;
   }
-  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr > td:first-child,
-  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr > th:first-child {
-    padding-bottom: 0;
+  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr > th,
+  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr > td {
+    padding: 0 0.5em 0.8em;
+    border-top-width: 0;
   }
-  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr > th {
-    border-top: 0;
+  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr > th:first-child,
+  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr > td:first-child {
+    padding-top: 0.8em;
+    border-top-width: 1px;
   }
-  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr > th ~ th, .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr > th ~ td,
-  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr > td ~ th,
-  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr > td ~ td {
+  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr:first-child > th:first-child,
+  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr:first-child > td:first-child {
     padding-top: 0;
+  }
+  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr:last-child > th:last-child,
+  .necobase-ss-table--break-on-sp.necobase-ss-table--b01 > table > tbody > tr:last-child > td:last-child {
+    padding-bottom: 0;
   }
   .necobase-ss-table--break-on-sp.necobase-ss-table--c01 > table > tbody > tr > th,
   .necobase-ss-table--break-on-sp.necobase-ss-table--c01 > table > tbody > tr > td {
@@ -1592,12 +1594,14 @@ label {
 }
 
 .necobase-ss-form__required {
+  display: inline-block;
   margin-left: 10px;
-  padding: 3px 5px;
+  padding: 2px 5px;
   border: 1px solid #cccccc;
   background-color: #f0f0f0;
   font-size: 0.875em;
   line-height: 1.1;
+  vertical-align: 2px;
 }
 
 .necobase-ss-form__note {
@@ -1838,6 +1842,16 @@ label {
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  .necobase-main-nav__item {
+    float: none;
+    width: auto;
+    margin-top: 10px;
+  }
+  .necobase-main-nav__item:first-child {
+    margin-top: 0;
+  }
+}
 /* ------------------------------------------------------
  * Block - main
  */
