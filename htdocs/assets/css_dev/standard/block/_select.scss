@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+// ------------------------------------------------------
+// Block - select
+//
+
+.necobase-ss-select {
+	margin: 0;
+	padding: 0.5em;
+	border: 1px solid $necobase-color-border;
+	border-radius: 3px;
+
+	&:focus {
+	}
+
+	&:disabled {
+		color: $necobase-color-text-sub;
+		background-color: #f6f6f6;
+	}
+
+	// IE8
+	[disabled] {
+		color: $necobase-color-text-sub;
+		background-color: #f6f6f6;
+	}
+}

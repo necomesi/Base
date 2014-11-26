@@ -13,6 +13,7 @@
 	@include iroha-hidden();
 }
 
+
 // ------------------------------------------------------
 // マージン調整
 //
@@ -27,6 +28,7 @@
 	}
 }
 
+
 // ------------------------------------------------------
 // text-align 調整
 //
@@ -34,6 +36,7 @@
 .necobase-x-left   { text-align: left   !important; }
 .necobase-x-center { text-align: center !important; }
 .necobase-x-right  { text-align: right  !important; }
+
 
 // ------------------------------------------------------
 // vertical-align 調整
@@ -50,6 +53,7 @@
 	}
 }
 
+
 // ------------------------------------------------------
 // 幅調整
 //
@@ -60,3 +64,33 @@
 //.necobase-x-w300  { width: 300px !important; }
 //.necobase-x-w400  { width: 400px !important; }
 //.necobase-x-w500  { width: 500px !important; }
+
+
+// ------------------------------------------------------
+// 各種状態
+//
+// 一覧する目的で羅列している。ここでスタイルを定義しないこと。
+
+// 「選択されている」状態
+.necobase-x-selected {}
+
+// 「チェックされている」状態
+.necobase-x-checked {}
+
+// 「押されている」状態
+.necobase-x-pushed {}
+
+// 「活性」状態 <-> disabled
+.necobase-x-enabled {}
+
+// 「非活性」状態 <-> enabled
+.necobase-x-disabled {}
+
+// 「展開されている」状態 <-> collapsed
+.necobase-x-expanded {}
+
+// 「仕舞われている」状態 <-> expanded
+.necobase-x-collapsed {}
+
+// 「エラー」状態
+.necobase-x-error {}

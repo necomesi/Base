@@ -21,7 +21,7 @@ $necobase-ss-grid-prefix: '.necobase-ss-grid';
 // Mixins
 //
 
-@mixin necobase-ss-grid($split: 2 3 4 6 8 12, $base-class: $necobase-ss-grid-prefix, $margin-h: 20px, $margin-v: 0, $font-size: 1rem) {
+@mixin necobase-ss-grid($split: 2 3 4 6 8 12, $base-class: $necobase-ss-grid-prefix, $margin-h: 20px, $margin-v: 0, $font-size: $necobase-font-size) {
 
 	#{$base-class} {
 		margin: $margin-v * -1 0 0 $margin-h * -1;

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<title>PAGE_TITLE</title>
+<!--#include virtual="/assets/inc/head.html"-->
+<style>
+	.necobase-template-component {
+		margin: 0;
+		padding: 2px 5px;
+		color: #fff;
+		background-color: #333;
+		font-size: 12px;
+	}
+	.necobase-template-component > b {
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.necobase-template-grid-inner {
+		margin-bottom: 16px;
+		padding: 10px;
+		background-color: #dedede;
+		text-align: center;
+	}
+	figure img {
+		width: 100%;
+	}
+</style>
+</head>
+
+<body id="necobase-gid--XX-template-form">
+
+<!-- ==================== [[[ HEADER AREA ]]] ==================== -->
+<!--#include virtual="/assets/inc/header.html"-->
+<!-- ==================== /[[[ HEADER AREA ]]] ==================== -->
+
+<!-- ==================== [[[ CONTENT AREA ]]] ==================== -->
+<main class="necobase-frame necobase-main" id="necobase-main">
+<div class="necobase-frame__body necobase-main__body">
+	<section role="main">
+
+		<div class="necobase-ss-h1">
+			<h1 class="necobase-ss-h1__heading">フォーム系</h1>
+		</div>
+
+		<p class="necobase-template-component">
+			<b>テキスト入力 [.necobase-ss-text]</b>
+		</p>
+
+		<p class="necobase-ss-p">
+			<input class="necobase-ss-text" type="text" value=""/>
+		</p>
+
+		<p class="necobase-ss-p">
+			<input class="necobase-ss-text" type="text" value="" placeholder="テキストを入力"/>
+		</p>
+
+		<p class="necobase-template-component">
+			<b>テキスト入力--サイズ指定 [.necobase-ss-text]</b>
+			size 属性値を設定する
+		</p>
+
+		<p class="necobase-ss-p">
+			<input class="necobase-ss-text" type="text" value="" size="10"/>
+		</p>
+
+		<p class="necobase-ss-p">
+			<input class="necobase-ss-text" type="text" value="" size="30"/>
+		</p>
+
+		<p class="necobase-ss-p">
+			<input class="necobase-ss-text" type="text" value="" size="60"/>
+		</p>
+
+		<p class="necobase-template-component">
+			<b>テキストエリア [.necobase-ss-textarea]</b>
+		</p>
+
+		<p class="necobase-ss-p">
+			<textarea class="necobase-ss-textarea"></textarea>
+		</p>
+
+		<p class="necobase-ss-p">
+			<textarea class="necobase-ss-textarea" placeholder="テキストを入力"></textarea>
+		</p>
+
+		<p class="necobase-template-component">
+			<b>テキストエリア--サイズ指定 [.necobase-ss-textarea]</b>
+			rows, cols 属性値を設定する
+		</p>
+
+		<p class="necobase-ss-p">
+			<textarea class="necobase-ss-textarea" rows="2"></textarea>
+		</p>
+
+		<p class="necobase-ss-p">
+			<textarea class="necobase-ss-textarea" cols="40" rows="7"></textarea>
+		</p>
+
+		<p class="necobase-template-component">
+			<b>テキストエリア--リサイズさせない [.necobase-ss-textarea.necobase-ss-textarea--no-resize]</b>
+		</p>
+
+		<p class="necobase-ss-p">
+			<textarea class="necobase-ss-textarea necobase-ss-textarea--no-resize"></textarea>
+		</p>
+
+		<p class="necobase-template-component">
+			<b>フォーム [.necobase-ss-form] [.necobase-ss-table--b01]</b>
+		</p>
+
+		<form class="necobase-ss-form">
+			<div class="necobase-ss-form__table necobase-ss-table necobase-ss-table--b01">
+				<table>
+					<colgroup>
+						<col class="necobase-ss-table__col--1/4"/>
+						<col/>
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">テキスト <mark class="necobase-ss-form__required">必須</mark></th>
+						<td>
+							<p class="necobase-ss-p">
+								<input class="necobase-ss-text" type="text" name="" value=""/>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">テキストエリア</th>
+						<td>
+							<p class="necobase-ss-p">
+								<textarea class="necobase-ss-textarea necobase-ss-textarea--no-resize"></textarea>
+							</p>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+
+		<p class="necobase-template-component">
+			<b>テキスト [.necobase-ss-text]</b>
+		</p>
+
+		<form class="necobase-ss-form">
+			<div class="necobase-ss-form__table necobase-ss-table necobase-ss-table--b01">
+				<table>
+					<colgroup>
+						<col class="necobase-ss-table__col--1/4"/>
+						<col/>
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">テキスト <mark class="necobase-ss-form__required">必須</mark></th>
+						<td>
+							<p class="necobase-ss-p">
+								<input class="necobase-ss-text" type="text" name="" value=""/>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th>テキスト（placeholderあり）</th>
+						<td>
+							<p class="necobase-ss-p">
+								<input class="necobase-ss-text" type="text" name="" value="" placeholder="プレースホルダ"/>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th>テキスト（disabled）</th>
+						<td>
+							<p class="necobase-ss-p">
+								<input class="necobase-ss-text" type="text" name="" value="非活性状態" disabled="disabled"/>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th>テキスト（readonly）</th>
+						<td>
+							<p class="necobase-ss-p">
+								<input class="necobase-ss-text" type="text" name="" value="書込不可状態" readonly="readonly"/>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">名前</th>
+						<td>
+							<dl class="necobase-ss-form__name">
+								<dt>姓</dt>
+								<dd><input class="necobase-ss-text" type="text" name="" value=""/></dd>
+								<dt>名</dt>
+								<dd><input class="necobase-ss-text" type="text" name="" value=""/></dd>
+							</dl>
+							<dl class="necobase-ss-form__name">
+								<dt>セイ</dt>
+								<dd><input class="necobase-ss-text" type="text" name="" value=""/></dd>
+								<dt>メイ</dt>
+								<dd><input class="necobase-ss-text" type="text" name="" value=""/></dd>
+							</dl>
+						</td>
+					</tr>
+					<tr>
+						<th>生年月日</th>
+						<td>
+							<p class="necobase-ss-p">
+								<input class="necobase-ss-text" type="number" name="" value="1985" size="4" min="1900" max="2100"/> 年
+								<input class="necobase-ss-text" type="number" name="" value="1" size="2" min="1" max="12"/> 月
+								<input class="necobase-ss-text" type="number" name="" value="1" size="2" min="1" max="31"/> 日
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">郵便番号</th>
+						<td>
+							<p class="necobase-ss-p">
+								<input class="necobase-ss-text" type="text" name="" value="" size="4"/> -
+								<input class="necobase-ss-text" type="text" name="" value="" size="5"/>
+								<button class="necobase-ss-button " type="button">住所検索</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th>電話番号</th>
+						<td>
+							<p class="necobase-ss-p">
+								<input class="necobase-ss-text" type="text" name="" value="" size="5"/> -
+								<input class="necobase-ss-text" type="text" name="" value="" size="5"/> -
+								<input class="necobase-ss-text" type="text" name="" value="" size="5"/>
+							</p>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+
+		<p class="necobase-template-component">
+			<b>テキストエリア [necobase-ss-textarea]</b>
+		</p>
+
+		<form class="necobase-ss-form">
+			<div class="necobase-ss-form__table necobase-ss-table necobase-ss-table--b01">
+				<table>
+					<colgroup>
+						<col class="necobase-ss-table__col--1/4"/>
+						<col/>
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">テキストエリア</th>
+						<td>
+							<p class="necobase-ss-p">
+								<textarea class="necobase-ss-textarea necobase-ss-textarea--no-resize"></textarea>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th>テキストエリア（placeholderあり）</th>
+						<td>
+							<p class="necobase-ss-p">
+								<textarea class="necobase-ss-textarea necobase-ss-textarea--no-resize" placeholder="プレースホルダ"></textarea>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th>テキストエリア（disabled）</th>
+						<td>
+							<p class="necobase-ss-p">
+								<textarea class="necobase-ss-textarea necobase-ss-textarea--no-resize" disabled="disabled">非活性状態</textarea>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th>テキストエリア（readonly）</th>
+						<td>
+							<p class="necobase-ss-p">
+								<textarea class="necobase-ss-textarea necobase-ss-textarea--no-resize" readonly="readonly">書込不可状態</textarea>
+							</p>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+
+		<p class="necobase-template-component">
+			<b>セレクトボックス [necobase-ss-select]</b>
+		</p>
+
+		<form class="necobase-ss-form">
+			<div class="necobase-ss-form__table necobase-ss-table necobase-ss-table--b01">
+				<table>
+					<colgroup>
+						<col class="necobase-ss-table__col--1/4"/>
+						<col/>
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">セレクトメニュー</th>
+						<td>
+							<p class="necobase-ss-p">
+								<select class="necobase-ss-select" name="">
+									<option selected="selected">未選択</option>
+									<option>会社員</option>
+									<option disabled="disabled">会社員</option>
+									<option>会社員</option>
+									<optgroup label="会社員">
+										<option>会社員</option>
+										<option>会社員</option>
+									</optgroup>
+								</select>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">セレクトメニュー（disabled）</th>
+						<td>
+							<p class="necobase-ss-p">
+								<select class="necobase-ss-select" name="" disabled="disabled">
+									<option selected="selected">未選択</option>
+									<option>会社員</option>
+									<option disabled="disabled">会社員</option>
+									<option>会社員</option>
+									<optgroup label="会社員">
+										<option>会社員</option>
+										<option>会社員</option>
+									</optgroup>
+								</select>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">セレクトメニュー（縦）</th>
+						<td>
+							<ul class="necobase-ss-plain">
+								<li>
+									<select class="necobase-ss-select" name="">
+										<option selected="selected">未選択</option>
+										<option>会社員</option>
+										<option disabled="disabled">会社員</option>
+										<option>会社員</option>
+										<optgroup label="会社員">
+											<option>会社員</option>
+											<option>会社員</option>
+										</optgroup>
+									</select>
+								</li>
+								<li>
+									<select class="necobase-ss-select" name="">
+										<option selected="selected">未選択</option>
+										<option>会社員</option>
+										<option disabled="disabled">会社員</option>
+										<option>会社員</option>
+										<optgroup label="会社員">
+											<option>会社員</option>
+											<option>会社員</option>
+										</optgroup>
+									</select>
+								</li>
+								<li>
+									<select class="necobase-ss-select" name="">
+										<option selected="selected">未選択</option>
+										<option>会社員</option>
+										<option disabled="disabled">会社員</option>
+										<option>会社員</option>
+										<optgroup label="会社員">
+											<option>会社員</option>
+											<option>会社員</option>
+										</optgroup>
+									</select>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">セレクトメニュー（横）</th>
+						<td>
+							<ul class="necobase-ss-inline-list">
+								<li>
+									<select class="necobase-ss-select" name="">
+										<option>2010年</option>
+										<option selected="selected">2012年</option>
+										<option>2013年</option>
+										<option>2014年</option>
+										<option>2015年</option>
+									</select>
+								</li>
+								<li>
+									<select class="necobase-ss-select" name="">
+										<option>1月</option>
+										<option>2月</option>
+										<option>3月</option>
+										<option>4月</option>
+										<option selected="selected">5月</option>
+									</select>
+								</li>
+								<li>
+									<select class="necobase-ss-select" name="">
+										<option>1日</option>
+										<option>2日</option>
+										<option selected="selected">3日</option>
+										<option>4日</option>
+										<option>5日</option>
+									</select>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+
+		<p class="necobase-template-component">
+			<b>ラジオボタン [necobase-ss-radio]</b>
+		</p>
+
+		<form class="necobase-ss-form">
+			<div class="necobase-ss-form__table necobase-ss-table necobase-ss-table--b01">
+				<table>
+					<colgroup>
+						<col class="necobase-ss-table__col--1/4"/>
+						<col/>
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">ラジオボタン</th>
+						<td>
+							<p class="necobase-ss-p">
+								<label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">ラジオボタン（disabled）</th>
+						<td>
+							<p class="necobase-ss-p">
+								<label class="necobase-ss-label necobase-x-disabled"><input class="necobase-ss-radio" type="radio" name="" value="" disabled="disabled"/>ラジオボタン</label>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">ラジオボタン（縦）</th>
+						<td>
+							<ul class="necobase-ss-plain">
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">ラジオボタン（横）</th>
+						<td>
+							<ul class="necobase-ss-inline-list">
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタンラジオボタンラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">ラジオボタン（3列）</th>
+						<td>
+							<div class="necobase-ss-grid"><div class="necobase-ss-grid__unit necobase-ss-grid__unit--1/3">
+								<ul class="necobase-ss-plain">
+									<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+									<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+									<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								</ul>
+							</div><div class="necobase-ss-grid__unit necobase-ss-grid__unit--1/3">
+								<ul class="necobase-ss-plain">
+									<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタンラジオボタンラジオボタンラジオボタン</label></li>
+									<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+									<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								</ul>
+							</div><div class="necobase-ss-grid__unit necobase-ss-grid__unit--1/3">
+								<ul class="necobase-ss-plain">
+									<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+									<li><label class="necobase-ss-label"><input class="necobase-ss-radio" type="radio" name="" value=""/>ラジオボタン</label></li>
+								</ul>
+							</div></div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+
+		<p class="necobase-template-component">
+			<b>チェックボックス [.necobase-ss-checkbox]</b>
+		</p>
+
+		<form class="necobase-ss-form">
+			<div class="necobase-ss-form__table necobase-ss-table necobase-ss-table--b01">
+				<table>
+					<colgroup>
+						<col class="necobase-ss-table__col--1/4"/>
+						<col/>
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">チェックボックス</th>
+						<td>
+							<p class="necobase-ss-p">
+								<label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">チェックボックス（disabled）</th>
+						<td>
+							<p class="necobase-ss-p">
+								<label class="necobase-ss-label necobase-x-disabled"><input class="necobase-ss-checkbox" type="checkbox" name="" value="" disabled="disabled"/>チェックボックス</label>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">チェックボックス（縦）</th>
+						<td>
+							<ul class="necobase-ss-plain">
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">チェックボックス（横）</th>
+						<td>
+							<ul class="necobase-ss-inline-list">
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックスラジオボタンラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">チェックボックス（3列）</th>
+						<td>
+							<div class="necobase-ss-grid"><div class="necobase-ss-grid__unit necobase-ss-grid__unit--1/3">
+								<ul class="necobase-ss-plain">
+									<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+									<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+									<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								</ul>
+							</div><div class="necobase-ss-grid__unit necobase-ss-grid__unit--1/3">
+								<ul class="necobase-ss-plain">
+									<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックスチェックボックスチェックボックス</label></li>
+									<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+									<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								</ul>
+							</div><div class="necobase-ss-grid__unit necobase-ss-grid__unit--1/3">
+								<ul class="necobase-ss-plain">
+									<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+									<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								</ul>
+							</div></div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+
+		<p class="necobase-template-component">
+			<b>入力エラー [.necobase-ss-form__error-message]</b>
+		</p>
+
+		<form class="necobase-ss-form">
+			<div class="necobase-ss-form__table necobase-ss-table necobase-ss-table--b01">
+				<table>
+					<colgroup>
+						<col class="necobase-ss-table__col--1/4"/>
+						<col/>
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">エラーメッセージ</th>
+						<td>
+							<p class="necobase-ss-p">
+								<span class="necobase-ss-form__error-message">メールアドレスはすでに使用されています。</span>
+							</p>
+							<p class="necobase-ss-p">
+								<input class="necobase-ss-text" type="email" name="" value="foo@example.com"/>
+							</p>
+						</td>
+					</tr>
+					<tr class="necobase-x-error">
+						<th scope="row">行ごと色を変える</th>
+						<td>
+							<p class="necobase-ss-p">
+								<span class="necobase-ss-form__error-message">メールアドレスはすでに使用されています。メールアドレスはすでに使用されています。メールアドレスはすでに使用されています。メールアドレスはすでに使用されています。</span>
+							</p>
+							<p class="necobase-ss-p">
+								<input class="necobase-ss-text" type="email" name="" value="foo@example.com"/>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">エラーメッセージ <mark class="necobase-ss-form__required">必須</mark></th>
+						<td>
+							<p class="necobase-ss-p">
+								<span class="necobase-ss-form__error-message">ひとつ以上の項目を選択してください。</span>
+							</p>
+							<ul class="necobase-ss-inline-list">
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックスラジオボタンラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+							</ul>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+
+		<p class="necobase-template-component">
+			<b>補足情報 [.necobase-ss-form__note]</b>
+		</p>
+
+		<form class="necobase-ss-form">
+			<div class="necobase-ss-form__table necobase-ss-table necobase-ss-table--b01">
+				<table>
+					<colgroup>
+						<col class="necobase-ss-table__col--1/4"/>
+						<col/>
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">補足情報（前方）</th>
+						<td>
+							<p class="necobase-ss-p">
+								<input class="necobase-ss-text" type="email" name="" value="foo@example.com"/>
+							</p>
+							<p class="necobase-ss-form__note">Yahoo等のフリーメールでメールが届かないケースがあるようです。<br/>
+								確実に届くメールアドレスを入力してください。</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">補足情報（後方） <mark class="necobase-ss-form__required">必須</mark></th>
+						<td>
+							<p class="necobase-ss-form__note">ひとつ以上の項目を選択してください。</p>
+							<ul class="necobase-ss-inline-list">
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックスラジオボタンラジオボタン</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+								<li><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>チェックボックス</label></li>
+							</ul>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+
+		<p class="necobase-template-component">
+			<b>その他</b>
+		</p>
+
+		<form class="necobase-ss-form">
+			<div class="necobase-ss-form__table necobase-ss-table necobase-ss-table--b01">
+				<table>
+					<colgroup>
+						<col class="necobase-ss-table__col--1/4"/>
+						<col/>
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">トリガーボタン</th>
+						<td>
+							<p class="necobase-ss-p">
+								<button class="necobase-ss-button" type="button">Default</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">トリガーボタン</th>
+						<td>
+							<p class="necobase-ss-p">
+								<button class="necobase-ss-button necobase-ss-button--primary" type="button">Primary</button>
+							</p>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+
+		<p class="necobase-template-component">
+			<b>ボタン--input要素 [.necobase-ss-button]</b>
+		</p>
+
+		<p class="necobase-ss-p">
+			<input class="necobase-ss-button" type="button" value="Default">
+			<input class="necobase-ss-button necobase-ss-button--primary" type="button" value="Primary">
+			<input class="necobase-ss-button necobase-ss-button--success" type="button" value="Success">
+			<input class="necobase-ss-button necobase-ss-button--info" type="button" value="Info">
+			<input class="necobase-ss-button necobase-ss-button--warning" type="button" value="Warning">
+			<input class="necobase-ss-button necobase-ss-button--danger" type="button" value="Danger">
+			<input class="necobase-ss-button necobase-ss-button--primary" type="button" value="Disabled" disabled="disabled">
+		</p>
+
+		<p class="necobase-template-component">
+			<b>ボタン--button要素 [.necobase-ss-button]</b>
+		</p>
+
+		<p class="necobase-ss-p">
+			<button class="necobase-ss-button" type="button">Default</button>
+			<button class="necobase-ss-button necobase-ss-button--primary" type="button">Primary</button>
+			<button class="necobase-ss-button necobase-ss-button--success" type="button">Success</button>
+			<button class="necobase-ss-button necobase-ss-button--info" type="button">Info</button>
+			<button class="necobase-ss-button necobase-ss-button--warning" type="button">Warning</button>
+			<button class="necobase-ss-button necobase-ss-button--danger" type="button">Danger</button>
+			<button class="necobase-ss-button necobase-ss-button--primary" type="button" disabled="disabled">Disabled</button>
+		</p>
+
+		<p class="necobase-template-component">
+			<b>ボタン--a要素 [.necobase-ss-button]</b>
+		</p>
+
+		<p class="necobase-ss-p">
+			<a class="necobase-ss-button" href="#">Default</a>
+			<a class="necobase-ss-button necobase-ss-button--primary" href="#">Primary</a>
+			<a class="necobase-ss-button necobase-ss-button--success" href="#">Success</a>
+			<a class="necobase-ss-button necobase-ss-button--info" href="#">Info</a>
+			<a class="necobase-ss-button necobase-ss-button--warning" href="#">Warning</a>
+			<a class="necobase-ss-button necobase-ss-button--danger" href="#">Danger</a>
+			<a class="necobase-ss-button necobase-ss-button--primary necobase-ss-button--is-disabled" href="#">Disabled</a>
+		</p>
+
+		<p class="necobase-template-component">
+			<b>アクションボタン [.necobase-ss-action]</b>
+		</p>
+
+		<div class="necobase-ss-action">
+			<p class="necobase-ss-action__agreement"><label class="necobase-ss-label"><input class="necobase-ss-checkbox" type="checkbox" name="" value=""/>規約に同意の上、次へすすむ</label></p>
+			<ul class="necobase-ss-action__buttons"><li>
+				<a class="necobase-ss-button" href="#">戻る (a要素)</a>
+			</li><li>
+				<a class="necobase-ss-button necobase-ss-button--primary" href="#">次へ (a要素)</a>
+			</li></ul>
+		</div>
+
+	</section>
+</div>
+</main>
+<!-- ==================== /[[[ CONTENT AREA ]]] ==================== -->
+
+<!-- ==================== [[[ FOOTER AREA ]]] ==================== -->
+<!--#include virtual="/assets/inc/footer.html"-->
+<!-- ==================== /[[[ FOOTER AREA ]]] ==================== -->
+
+</body>
+</html>

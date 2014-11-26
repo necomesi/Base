@@ -75,6 +75,15 @@ strong {
 small {
 }
 
+mark {
+	background: transparent;
+	color: inherit;
+}
+
+label {
+	cursor: pointer;
+}
+
 ::selection {
 	color: $necomesi-color-selection-text;
 	background: $necomesi-color-selection-bg;

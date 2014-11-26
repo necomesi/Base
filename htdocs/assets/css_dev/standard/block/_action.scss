@@ -1,0 +1,27 @@
+﻿@charset "UTF-8";
+
+// ------------------------------------------------------
+// Block - action
+//
+
+.necobase-ss-action {
+	margin: 2em 0 1em 0;
+	text-align: center;
+}
+
+.necobase-ss-action__agreement {
+	margin: 0 0 1em 0;
+}
+
+.necobase-ss-action__buttons {
+	margin-left: -20px;
+	padding-left: 0;
+	font-size: 0;
+
+	> li {
+		display: inline-block;
+		max-width: 50%;
+		padding: 20px 0 0 20px;
+		font-size: 16px;
+	}
+}

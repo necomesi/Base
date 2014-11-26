@@ -1,21 +1,22 @@
 @charset "UTF-8";
 
 // ------------------------------------------------------
-// Block - text
+// Block - textarea
 //
 
-.necobase-ss-form-text {
+.necobase-ss-textarea {
 	@include iroha-placeholder() {
 		color: $necobase-color-text-sub;
 	};
 	padding: 0.5em;
 	width: 100%;
+	height: 100px;
 	border-radius: 3px;
 	border: 1px solid $necobase-color-border;
 	background-color: #fff;
+	vertical-align: top;
 
 	&:focus {
-		outline: none;
 	}
 
 	&:disabled {
@@ -32,7 +33,15 @@
 	&[readonly] {
 	}
 
-	&[size] {
+	&[cols] {
 		width: auto;
 	}
+	&[rows] {
+		height: auto;
+	}
 }
+
+.necobase-ss-textarea--no-resize {
+	resize: none;
+}
+

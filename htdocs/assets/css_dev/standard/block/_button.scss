@@ -27,6 +27,13 @@
 		pointer-events: none;
 	}
 
+	&[disabled] {
+		background-color: #e1e1e1;
+		border-color: #e1e1e1;
+		color: #aaa;
+		cursor: default;
+	}
+
 	&.necobase-ss-button--is-active,
 	&:active {
 		box-shadow: inset 1px 4px 5px rgba(0, 0, 0, 0.125);

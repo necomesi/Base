@@ -454,6 +454,15 @@ strong {
   color: #d2322d;
 }
 
+mark {
+  background: transparent;
+  color: inherit;
+}
+
+label {
+  cursor: pointer;
+}
+
 ::-moz-selection {
   color: #fff;
   background: #bb2a21;
@@ -904,7 +913,7 @@ strong {
 .necobase-ss-grid__unit {
   display: inline-block;
   padding: 0 0 0 20px;
-  font-size: 1rem;
+  font-size: 16px;
   vertical-align: top;
 }
 
@@ -1235,6 +1244,12 @@ strong {
   color: #aaa;
   cursor: default;
   pointer-events: none;
+}
+.necobase-ss-button[disabled] {
+  background-color: #e1e1e1;
+  border-color: #e1e1e1;
+  color: #aaa;
+  cursor: default;
 }
 .necobase-ss-button.necobase-ss-button--is-active, .necobase-ss-button:active {
   box-shadow: inset 1px 4px 5px rgba(0, 0, 0, 0.125);
@@ -1599,199 +1614,174 @@ strong {
 /* ------------------------------------------------------
 // Form block
 */
-.necobase-ss-form-label--is-disabled {
+.necobase-ss-form__table > table > tbody > tr.necobase-x-error {
+  color: #761c19;
+  background-color: #f4cecd;
+}
+
+.necobase-ss-form__required {
+  margin-left: 10px;
+  padding: 3px 5px;
+  border: 1px solid #cccccc;
+  background-color: #f0f0f0;
+  font-size: 0.875em;
+  line-height: 1.1;
+}
+
+.necobase-ss-form__note {
+  margin-top: 0.5em;
+  font-size: 0.875em;
+}
+
+.necobase-ss-form__error-message {
+  display: inline-block;
+  position: relative;
+  padding: 5px 10px;
+  color: #fff;
+  background-color: #d9534f;
+  font-size: 0.75em;
+  line-height: 1.4;
+}
+.necobase-ss-form__error-message:after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  left: 16px;
+  width: 0;
+  height: 0;
+  margin-left: -6px;
+  border: 10px solid transparent;
+  border-top-color: #d9534f;
+}
+
+.necobase-ss-form__name {
+  display: table;
+  width: 100%;
+  margin: 1em 0 0;
+}
+.necobase-ss-form__name > dt,
+.necobase-ss-form__name > dd {
+  display: table-cell;
+}
+.necobase-ss-form__name > dt {
+  width: 3em;
+  text-align: right;
+}
+.necobase-ss-form__name > dd {
+  padding-left: 1em;
+}
+
+.necobase-ss-label.necobase-x-disabled {
   color: #999999;
 }
 
-.necobase-ss-form-required {
-  float: right;
-  margin: 0 10px 0 0;
-  padding: 3px 5px;
-  color: #fff;
-  background-color: #999;
-  font-size: 0.875em;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.necobase-ss-form-note {
-  margin-top: 8px;
-  font-size: 0.875em;
-}
-
-.necobase-ss-form-error-message {
-  display: inline-block;
-  margin: 0 0 0.3em 0;
-  color: #d9534f;
-}
-.necobase-ss-form-error-message + * {
-  margin-top: 0;
-}
-
-.necobase-ss-form-action {
-  margin: 2em 0 1em 0;
-  text-align: center;
-}
-
-.necobase-ss-form-action__agreement {
-  margin: 0 0 1em 0;
-}
-
-.necobase-ss-form-action__return,
-.necobase-ss-form-action__proceed {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  list-style-type: none;
-}
-ul + .necobase-ss-form-action__return, ul +
-.necobase-ss-form-action__proceed {
-  margin-left: 10px;
-}
-.necobase-ss-form-action__return li,
-.necobase-ss-form-action__proceed li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-.necobase-ss-form-action__link {
-  margin: 17px 0 0 0;
-  padding: 0;
-  list-style-type: none;
-}
-.necobase-ss-form-action__link li {
-  display: inline;
-  margin: 0 0 0 10px;
-  padding: 0 0 0 10px;
-  border-left: 1px solid #ccc;
-}
-.necobase-ss-form-action__link li:first-child {
-  margin-left: 0;
-  padding-left: 0;
-  border-left: 0 none;
-}
-.necobase-ss-form-action__link li a {
-  color: #999;
-}
-
-.necobase-ss-form-name {
-  margin: 0;
-}
-.necobase-ss-form-name > dt {
-  display: inline-block;
-  width: 2em;
-  margin: 0 5px 0 0;
-  font-weight: normal;
-}
-.necobase-ss-form-name > dd {
-  display: inline;
-  margin: 0 10px 0 0;
-}
-.necobase-ss-form-name > dd .necobase-ss-form-text {
-  width: 15em;
-}
-.necobase-ss-form-name > dd:last-child {
-  margin-right: 0;
-}
-
-.necobase-ss-form-name--no-label > dt {
-  display: none;
-}
-
-.necobase-ss-form-text {
+.necobase-ss-text {
   padding: 0.5em;
   width: 100%;
   border-radius: 3px;
   border: 1px solid #cccccc;
   background-color: #fff;
 }
-.necobase-ss-form-text::-moz-placeholder {
+.necobase-ss-text::-moz-placeholder {
   color: #b3b3b3;
 }
-.necobase-ss-form-text:-ms-input-placeholder {
+.necobase-ss-text:-ms-input-placeholder {
   color: #b3b3b3;
 }
-.necobase-ss-form-text::-webkit-input-placeholder {
+.necobase-ss-text::-webkit-input-placeholder {
   color: #b3b3b3;
 }
-.necobase-ss-form-text:focus {
-  outline: none;
-}
-.necobase-ss-form-text:disabled {
+.necobase-ss-text:disabled {
   color: #b3b3b3;
   background-color: #f6f6f6;
 }
-.necobase-ss-form-text[disabled] {
+.necobase-ss-text[disabled] {
   color: #b3b3b3;
   background-color: #f6f6f6;
 }
-.necobase-ss-form-text[size] {
+.necobase-ss-text[size] {
   width: auto;
 }
 
-.necobase-ss-form-textarea {
+.necobase-ss-textarea {
   padding: 0.5em;
   width: 100%;
   height: 100px;
-  min-height: 100px;
   border-radius: 3px;
   border: 1px solid #cccccc;
   background-color: #fff;
   vertical-align: top;
-  resize: none;
 }
-.necobase-ss-form-textarea::-moz-placeholder {
+.necobase-ss-textarea::-moz-placeholder {
   color: #b3b3b3;
 }
-.necobase-ss-form-textarea:-ms-input-placeholder {
+.necobase-ss-textarea:-ms-input-placeholder {
   color: #b3b3b3;
 }
-.necobase-ss-form-textarea::-webkit-input-placeholder {
+.necobase-ss-textarea::-webkit-input-placeholder {
   color: #b3b3b3;
 }
-.necobase-ss-form-textarea:focus {
-  outline: none;
-}
-.necobase-ss-form-textarea:disabled {
+.necobase-ss-textarea:disabled {
   color: #b3b3b3;
   background-color: #f6f6f6;
 }
-.necobase-ss-form-textarea[disabled] {
+.necobase-ss-textarea[disabled] {
   color: #b3b3b3;
   background-color: #f6f6f6;
 }
-.necobase-ss-form-textarea[cols] {
+.necobase-ss-textarea[cols] {
   width: auto;
 }
-.necobase-ss-form-textarea[rows] {
+.necobase-ss-textarea[rows] {
   height: auto;
 }
 
-.necobase-ss-form-textarea-counter__num {
-  display: block;
-  margin: 3px 0 0;
-  font-size: 0.875em;
-  text-align: right;
-}
-.necobase-ss-form-textarea-counter--is-over .necobase-ss-form-textarea-counter__num {
-  color: #d9534f;
+.necobase-ss-textarea--no-resize {
+  resize: none;
 }
 
-.necobase-ss-form-select {
-  margin: 0px 10px 0 0;
+.necobase-ss-radio {
+  margin-right: 0.4em;
+}
+
+.necobase-ss-checkbox {
+  margin-right: 0.4em;
+}
+
+.necobase-ss-select {
+  margin: 0;
   padding: 0.5em;
   border: 1px solid #cccccc;
   border-radius: 3px;
 }
-
-.necobase-ss-form-checkbox {
-  margin-right: 0.4em;
+.necobase-ss-select:disabled {
+  color: #b3b3b3;
+  background-color: #f6f6f6;
+}
+.necobase-ss-select [disabled] {
+  color: #b3b3b3;
+  background-color: #f6f6f6;
 }
 
-.necobase-ss-form-radio {
-  margin-right: 0.4em;
+.necobase-ss-action {
+  margin: 2em 0 1em 0;
+  text-align: center;
+}
+
+.necobase-ss-action__agreement {
+  margin: 0 0 1em 0;
+}
+
+.necobase-ss-action__buttons {
+  margin-left: -20px;
+  padding-left: 0;
+  font-size: 0;
+}
+.necobase-ss-action__buttons > li {
+  display: inline-block;
+  max-width: 50%;
+  padding: 20px 0 0 20px;
+  font-size: 16px;
 }
 
 /* ------------------------------------------------------
