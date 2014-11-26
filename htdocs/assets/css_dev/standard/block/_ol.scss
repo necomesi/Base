@@ -6,19 +6,15 @@
 
 .necobase-ss-ol {
 	@extend %sb-nestableList;
-	margin: 1em 0 1em 1.8em;
+	margin: 1em 0 0 1.8em;
 	padding: 0;
 
 	> li {
-		margin: 0.5em 0;
+		margin: 0.5em 0 0;
 		list-style-type: decimal;
 
 		&:first-child {
 			margin-top: 0;
-		}
-
-		&:last-child {
-			margin-bottom: 0;
 		}
 	}
 }

@@ -980,9 +980,6 @@ label {
 .necobase-ss-grid__unit > *:first-child {
   margin-top: 0;
 }
-.necobase-ss-grid__unit > *:last-child {
-  margin-bottom: 0;
-}
 
 .necobase-ss-grid--no-gutter {
   margin: 0;
@@ -1032,7 +1029,7 @@ label {
 }
 
 .necobase-ss-h4 {
-  margin: 1em 0;
+  margin: 1em 0 0;
 }
 
 .necobase-ss-h4__heading {
@@ -1040,7 +1037,7 @@ label {
 }
 
 .necobase-ss-h5 {
-  margin: 1em 0;
+  margin: 1em 0 0;
 }
 
 .necobase-ss-h5__heading {
@@ -1048,7 +1045,7 @@ label {
 }
 
 .necobase-ss-h6 {
-  margin: 1em 0;
+  margin: 1em 0 0;
 }
 
 .necobase-ss-h6__heading {
@@ -1056,30 +1053,27 @@ label {
 }
 
 .necobase-ss-p {
-  margin: 1em 0;
+  margin: 1em 0 0;
 }
 
 .necobase-ss-plain {
-  margin: 1em 0;
+  margin: 1em 0 0;
   padding: 0;
 }
 .necobase-ss-plain > li {
-  margin: 0.5em 0;
+  margin: 0.5em 0 0;
   list-style: none;
 }
 .necobase-ss-plain > li:first-child {
   margin-top: 0;
 }
-.necobase-ss-plain > li:last-child {
-  margin-bottom: 0;
-}
 
 .necobase-ss-ul {
-  margin: 1em 0;
+  margin: 1em 0 0;
   padding: 0 0 0 1em;
 }
 .necobase-ss-ul > li {
-  margin: 0.5em 0;
+  margin: 0.5em 0 0;
   list-style: none;
 }
 .necobase-ss-ul > li:before {
@@ -1094,9 +1088,6 @@ label {
 .necobase-ss-ul > li:first-child {
   margin-top: 0;
 }
-.necobase-ss-ul > li:last-child {
-  margin-bottom: 0;
-}
 
 .necobase-ss-inline-list {
   margin: 1em 0 -0.5em 0;
@@ -1109,22 +1100,19 @@ label {
 }
 
 .necobase-ss-ol {
-  margin: 1em 0 1em 1.8em;
+  margin: 1em 0 0 1.8em;
   padding: 0;
 }
 .necobase-ss-ol > li {
-  margin: 0.5em 0;
+  margin: 0.5em 0 0;
   list-style-type: decimal;
 }
 .necobase-ss-ol > li:first-child {
   margin-top: 0;
 }
-.necobase-ss-ol > li:last-child {
-  margin-bottom: 0;
-}
 
 .necobase-ss-dl {
-  margin: 1.5em 0;
+  margin: 1.5em 0 0;
 }
 .necobase-ss-dl > dt {
   margin: 0.75em 0 0.25em 0;
@@ -1137,25 +1125,19 @@ label {
 .necobase-ss-dl > *:first-child {
   margin-top: 0;
 }
-.necobase-ss-dl > *:last-child {
-  margin-bottom: 0;
-}
 
 .necobase-ss-note-list {
-  margin: 1em 0 1.5em 1em;
+  margin: 1em 0 0 1em;
   padding: 0;
 }
 .necobase-ss-note-list > li {
   position: relative;
-  margin: 0.5em 0;
+  margin: 0.5em 0 0;
   padding: 0;
   list-style-type: none;
 }
 .necobase-ss-note-list > li:first-child {
   margin-top: 0;
-}
-.necobase-ss-note-list > li:last-child {
-  margin-bottom: 0;
 }
 
 .necobase-ss-note-list--a02 {
@@ -1181,11 +1163,11 @@ label {
 }
 
 .necobase-ss-link-list {
-  margin: 1em 0;
+  margin: 1em 0 0;
   padding: 0 0 0 1em;
 }
 .necobase-ss-link-list > li {
-  margin: 0.5em 0;
+  margin: 0.5em 0 0;
   list-style: none;
   text-indent: -1em;
 }
@@ -1208,9 +1190,6 @@ label {
 }
 .necobase-ss-link-list > li:first-child {
   margin-top: 0;
-}
-.necobase-ss-link-list > li:last-child {
-  margin-bottom: 0;
 }
 
 .necobase-ss-button {
@@ -1346,14 +1325,11 @@ label {
 }
 
 .necobase-ss-box {
-  margin: 1.5em 0 0 0;
+  margin: 1.5em 0 0;
   padding: 1em 0.8em 0.8em;
 }
 .necobase-ss-box > *:first-child {
   margin-top: 0;
-}
-.necobase-ss-box > *:last-child {
-  margin-bottom: 0;
 }
 
 .necobase-ss-box__heading {
@@ -1381,7 +1357,7 @@ label {
 }
 
 .necobase-ss-figure {
-  margin: 1em 0;
+  margin: 1em 0 0;
   text-align: center;
 }
 
@@ -1411,7 +1387,7 @@ label {
 }
 
 .necobase-ss-table {
-  margin: 1em 0;
+  margin: 1em 0 0;
 }
 .necobase-ss-table > table {
   width: 100%;
@@ -1437,10 +1413,6 @@ label {
 .necobase-ss-table > table > tbody > tr > th > *:first-child,
 .necobase-ss-table > table > tbody > tr > td > *:first-child {
   margin-top: 0;
-}
-.necobase-ss-table > table > tbody > tr > th > *:last-child,
-.necobase-ss-table > table > tbody > tr > td > *:last-child {
-  margin-bottom: 0;
 }
 
 .necobase-ss-table__caption {
@@ -1764,7 +1736,7 @@ label {
 }
 
 .necobase-ss-action {
-  margin: 2em 0 1em 0;
+  margin: 2em 0 0;
   text-align: center;
 }
 

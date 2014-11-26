@@ -5,7 +5,7 @@
 //
 
 .necobase-ss-table {
-	margin: 1em 0;
+	margin: 1em 0 0;
 
 	> table {
 		width: 100%;
@@ -34,11 +34,6 @@
 		> tbody > tr > th > *:first-child,
 		> tbody > tr > td > *:first-child {
 			margin-top: 0;
-		}
-
-		> tbody > tr > th > *:last-child,
-		> tbody > tr > td > *:last-child {
-			margin-bottom: 0;
 		}
 	}
 }

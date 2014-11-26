@@ -6,7 +6,7 @@
 
 .necobase-ss-dl {
 	@extend %sb-nestableList;
-	margin: 1.5em 0;
+	margin: 1.5em 0 0;
 
 	> dt {
 		margin: 0.75em 0 0.25em 0;
@@ -20,9 +20,5 @@
 
 	> *:first-child {
 		margin-top: 0;
-	}
-
-	> *:last-child {
-		margin-bottom: 0;
 	}
 }
