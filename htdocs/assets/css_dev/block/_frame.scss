@@ -5,11 +5,10 @@
  */
 
 .necobase-frame {
-	min-width: $necobase-frame-width + 20px;
 }
 
 .necobase-frame__body {
-	width: $necobase-frame-width + 20px;
+	max-width: $necobase-frame-width + 20px;
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0 10px;
