@@ -84,6 +84,12 @@ label {
   cursor: pointer;
 }
 
+input,
+textarea,
+select {
+  font: inherit;
+}
+
 ::selection {
   color: $necomesi-color-selection-text;
   background: $necomesi-color-selection-bg;
