@@ -1,16 +1,17 @@
 @charset "UTF-8";
 
 // ------------------------------------------------------
-// Block - linkList
+// Block - inline-link-list
 //
 
-.necobase-ss-link-list {
-	@extend %sb-nestableList;
-	margin: 1em 0 0;
-	padding: 0 0 0 1em;
+.necobase-ss-inline-link-list {
+	margin: 1em 0 -0.5em -1em;
+	padding: 0;
 
 	> li {
-		margin: 0.5em 0 0;
+		display: inline-block;
+		margin: 0 0 0.5em 1em;
+		padding-left: 1em;
 		list-style-type: none;
 		text-indent: -1em;
 
@@ -26,19 +27,9 @@
 				border-style: solid;
 				border-color: transparent $necobase-color-link-link;
 				margin: 0 0.75em 0 -1em;
+//				margin-right: 0.75em;
 				vertical-align: 0.125em;
 			}
-
-			&:hover {
-
-				&:before {
-					border-color: transparent $necobase-color-link-hover;
-				}
-			}
-		}
-
-		&:first-child {
-			margin-top: 0;
 		}
 	}
 }
