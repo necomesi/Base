@@ -74,7 +74,7 @@ module.exports = function (grunt) {
 		sass: {
 			sass_dev: {
 				options: {
-					sourcemap: 'none',
+					sourcemap: 'auto',
 					style    : 'expanded'
 				},
 				files: [{
@@ -103,6 +103,7 @@ module.exports = function (grunt) {
 		autoprefixer: {
 			autoprefixer: {
 				options: {
+          map: true,
 					browsers: [
 						'ie >= 8',
 						'ff >= 32',
