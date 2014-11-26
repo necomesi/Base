@@ -8,83 +8,83 @@
 // ------------------------------------------------------
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :before,
 :after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-	color: $necobase-color-text;
-	background-color: $necobase-color-bg;
-	font-size: $necobase-font-size;
-	line-height: 1.618;
-	font-family: $necobase-font-family;
-	word-wrap: break-word;
-	-webkit-tap-highlight-color: $necobase-color-link-tap;
+  color: $necobase-color-text;
+  background-color: $necobase-color-bg;
+  font-size: $necobase-font-size;
+  line-height: 1.618;
+  font-family: $necobase-font-family;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: $necobase-color-link-tap;
 }
 
 body {
 }
 
 a {
-	color: $necobase-color-link-link;
+  color: $necobase-color-link-link;
 
-	&:hover,
-	&:focus {
-		color: $necobase-color-link-hover;
-	}
+  &:hover,
+  &:focus {
+    color: $necobase-color-link-hover;
+  }
 
-	&:active {
-		color: $necobase-color-link-active;
-	}
+  &:active {
+    color: $necobase-color-link-active;
+  }
 }
 
 figure {
-	margin: 0;
+  margin: 0;
 }
 
 img {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 hr {
-	margin: 20px 0;
-	border: 0;
-	border-top: 1px solid $necobase-color-border;
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid $necobase-color-border;
 }
 
 table {
 }
 
 th {
-	text-align: left;
+  text-align: left;
 }
 
 em {
-	font-weight: bold;
-	font-style: normal;
+  font-weight: bold;
+  font-style: normal;
 }
 
 strong {
-	color: $necobase-color-emphasis;
+  color: $necobase-color-emphasis;
 }
 
 small {
 }
 
 mark {
-	background: transparent;
-	color: inherit;
+  background: transparent;
+  color: inherit;
 }
 
 label {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 ::selection {
-	color: $necomesi-color-selection-text;
-	background: $necomesi-color-selection-bg;
+  color: $necomesi-color-selection-text;
+  background: $necomesi-color-selection-bg;
 }

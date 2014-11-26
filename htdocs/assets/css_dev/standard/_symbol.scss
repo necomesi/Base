@@ -23,40 +23,40 @@ $necobase-ss-grid-prefix: '.necobase-ss-grid';
 
 @mixin necobase-ss-grid($split: 2 3 4 6 8 12, $base-class: $necobase-ss-grid-prefix, $margin-h: 20px, $margin-v: 0, $font-size: $necobase-font-size) {
 
-	#{$base-class} {
-		margin: $margin-v * -1 0 0 $margin-h * -1;
-		font-size: 0;
-	}
+  #{$base-class} {
+    margin: $margin-v * -1 0 0 $margin-h * -1;
+    font-size: 0;
+  }
 
-	#{$base-class}__unit {
-		display: inline-block;
-		padding: $margin-v 0 0 $margin-h;
-		font-size: $font-size;
-		vertical-align: top;
-	}
+  #{$base-class}__unit {
+    display: inline-block;
+    padding: $margin-v 0 0 $margin-h;
+    font-size: $font-size;
+    vertical-align: top;
+  }
 
-	// 以下は各サイズのユニットを生成するロジック
-	$map: ();
-	@each $divisor in $split {
-		@for $i from 1 through $divisor - 1 {
-			$divided: $i / $divisor;
-			$stored: map_get($map, $divided);
-			$stored: if($stored, $stored, ());
-			$stored: append($stored, ($i $divisor));
-			$map: map_merge($map, ($divided: $stored));
-		}
-	}
-	@each $key, $val in $map {
-		$selectors: ();
-		@each $value in $val {
-			$i: nth($value, 1);
-			$divisor: nth($value, 2);
-			$selectors: append($selectors, #{$base-class}__unit--#{$i}\/#{$divisor}, comma);
-		}
-		#{$selectors} {
-			width: $key * 100%;
-		}
-	}
+  // 以下は各サイズのユニットを生成するロジック
+  $map: ();
+  @each $divisor in $split {
+    @for $i from 1 through $divisor - 1 {
+      $divided: $i / $divisor;
+      $stored: map_get($map, $divided);
+      $stored: if($stored, $stored, ());
+      $stored: append($stored, ($i $divisor));
+      $map: map_merge($map, ($divided: $stored));
+    }
+  }
+  @each $key, $val in $map {
+    $selectors: ();
+    @each $value in $val {
+      $i: nth($value, 1);
+      $divisor: nth($value, 2);
+      $selectors: append($selectors, #{$base-class}__unit--#{$i}\/#{$divisor}, comma);
+    }
+    #{$selectors} {
+      width: $key * 100%;
+    }
+  }
 }
 
 
@@ -72,8 +72,8 @@ $necobase-ss-grid-prefix: '.necobase-ss-grid';
 
 %sb-nestableList {
 
-	%sb-nestableList {
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
-	}
+  %sb-nestableList {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
 }

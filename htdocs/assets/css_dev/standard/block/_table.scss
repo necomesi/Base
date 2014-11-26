@@ -5,197 +5,197 @@
 //
 
 .necobase-ss-table {
-	margin: 1em 0 0;
+  margin: 1em 0 0;
 
-	> table {
-		width: 100%;
-		margin: 0;
-		border: 0;
-		border-collapse: collapse;
-		border-spacing: 0;
+  > table {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 
-		> thead > tr > th,
-		> tfoot > tr > th,
-		> tbody > tr > th {
-			font-weight: normal;
-		}
+    > thead > tr > th,
+    > tfoot > tr > th,
+    > tbody > tr > th {
+      font-weight: normal;
+    }
 
-		> thead > tr > th,
-		> tfoot > tr > th {
-			background-color: $necobase-color-bg-shade;
-			padding: 0.5em;
-		}
+    > thead > tr > th,
+    > tfoot > tr > th {
+      background-color: $necobase-color-bg-shade;
+      padding: 0.5em;
+    }
 
-		> tbody > tr > th,
-		> tbody > tr > td {
-			vertical-align: top;
-		}
+    > tbody > tr > th,
+    > tbody > tr > td {
+      vertical-align: top;
+    }
 
-		> tbody > tr > th > *:first-child,
-		> tbody > tr > td > *:first-child {
-			margin-top: 0;
-		}
-	}
+    > tbody > tr > th > *:first-child,
+    > tbody > tr > td > *:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 .necobase-ss-table__caption {
-	margin: 0;
-	padding: 0 0 0.3em 0;
+  margin: 0;
+  padding: 0 0 0.3em 0;
 }
 
 .necobase-ss-table__col--1\/6 {
-	width: 16.67%;
+  width: 16.67%;
 }
 
 .necobase-ss-table__col--1\/5 {
-	width: 20%;
+  width: 20%;
 }
 
 .necobase-ss-table__col--1\/4 {
-	width: 25%;
+  width: 25%;
 }
 
 .necobase-ss-table__col--1\/3,
 .necobase-ss-table__col--2\/6 {
-	width: 33.33%;
+  width: 33.33%;
 }
 
 .necobase-ss-table__col--1\/2,
 .necobase-ss-table__col--2\/4,
 .necobase-ss-table__col--3\/6,
 .necobase-ss-table__col--4\/8 {
-	width: 50%;
+  width: 50%;
 }
 
 .necobase-ss-table__col--2\/3,
 .necobase-ss-table__col--4\/6 {
-	width: 66.67%;
+  width: 66.67%;
 }
 
 .necobase-ss-table__col--3\/4,
 .necobase-ss-table__col--6\/8 {
-	width: 75%;
+  width: 75%;
 }
 
 .necobase-ss-table__col--5\/6 {
-	width: 83.33%;
+  width: 83.33%;
 }
 
 .necobase-ss-table--a01,
 .necobase-ss-table--a02 {
 
-	> table {
+  > table {
 
-		> tbody > tr > th,
-		> tbody > tr > td {
-			padding: 0.5em;
-			border: 0;
-		}
+    > tbody > tr > th,
+    > tbody > tr > td {
+      padding: 0.5em;
+      border: 0;
+    }
 
-		> tbody > tr:first-child > th,
-		> tbody > tr:first-child > td {
-			padding-top: 0;
-		}
+    > tbody > tr:first-child > th,
+    > tbody > tr:first-child > td {
+      padding-top: 0;
+    }
 
-		> thead ~ tbody > tr:first-child > th,
-		> thead ~ tbody > tr:first-child > td,
-		> tbody ~ tbody > tr:first-child > th,
-		> tbody ~ tbody > tr:first-child > td {
-			padding-top: 0.5em;
-		}
+    > thead ~ tbody > tr:first-child > th,
+    > thead ~ tbody > tr:first-child > td,
+    > tbody ~ tbody > tr:first-child > th,
+    > tbody ~ tbody > tr:first-child > td {
+      padding-top: 0.5em;
+    }
 
-		> tbody:last-child > tr:last-child > th,
-		> tbody:last-child > tr:last-child > td {
-			padding-bottom: 0;
-		}
+    > tbody:last-child > tr:last-child > th,
+    > tbody:last-child > tr:last-child > td {
+      padding-bottom: 0;
+    }
 
-		> tfoot ~ tbody:last-child > tr:last-child > th,
-		> tfoot ~ tbody:last-child > tr:last-child > td {
-			padding-bottom: 0.5em;
-		}
-	}
+    > tfoot ~ tbody:last-child > tr:last-child > th,
+    > tfoot ~ tbody:last-child > tr:last-child > td {
+      padding-bottom: 0.5em;
+    }
+  }
 }
 
 .necobase-ss-table--a02 {
 
-	> table {
+  > table {
 
-		> thead > tr > th,
-		> tbody > tr > th,
-		> tfoot > tr > th {
-			font-weight: bold;
-		}
-	}
+    > thead > tr > th,
+    > tbody > tr > th,
+    > tfoot > tr > th {
+      font-weight: bold;
+    }
+  }
 }
 
 .necobase-ss-table--b01 {
 
-	> table {
+  > table {
 
-		> tbody > tr > th,
-		> tbody > tr > td {
-			padding: 0.8em 0.5em;
-			border: 0;
-			text-align: left;
-			font-weight: normal;
-		}
+    > tbody > tr > th,
+    > tbody > tr > td {
+      padding: 0.8em 0.5em;
+      border: 0;
+      text-align: left;
+      font-weight: normal;
+    }
 
-		> tbody > tr > th,
-		> tbody > tr > td {
-			border-top: 1px solid $necobase-color-border;
-		}
+    > tbody > tr > th,
+    > tbody > tr > td {
+      border-top: 1px solid $necobase-color-border;
+    }
 
-		> tbody > tr:first-child > th,
-		> tbody > tr:first-child > td {
-			padding-top: 0;
-			border-top: 0;
-		}
+    > tbody > tr:first-child > th,
+    > tbody > tr:first-child > td {
+      padding-top: 0;
+      border-top: 0;
+    }
 
-		> tbody > tr:last-child > th,
-		> tbody > tr:last-child > td {
-			padding-bottom: 0;
-		}
+    > tbody > tr:last-child > th,
+    > tbody > tr:last-child > td {
+      padding-bottom: 0;
+    }
 
-		> thead ~ tbody > tr:first-child > th,
-		> thead ~ tbody > tr:first-child > td {
-			padding-top: 0.8em;
-		}
+    > thead ~ tbody > tr:first-child > th,
+    > thead ~ tbody > tr:first-child > td {
+      padding-top: 0.8em;
+    }
 
-		> tfoot ~ tbody > tr:last-child > th,
-		> tfoot ~ tbody > tr:last-child > td {
-			padding-bottom: 0.8em;
-		}
-	}
+    > tfoot ~ tbody > tr:last-child > th,
+    > tfoot ~ tbody > tr:last-child > td {
+      padding-bottom: 0.8em;
+    }
+  }
 }
 
 .necobase-ss-table--c01 {
 
-	> table {
+  > table {
 
-		> thead > tr > th,
-		> thead > tr > td,
-		> tbody > tr > th,
-		> tbody > tr > td,
-		> tfoot > tr > th,
-		> tfoot > tr > td {
-			padding: 0.8em;
-			border: 1px solid $necobase-color-border;
-			font-weight: normal;
-			text-align: left;
-		}
+    > thead > tr > th,
+    > thead > tr > td,
+    > tbody > tr > th,
+    > tbody > tr > td,
+    > tfoot > tr > th,
+    > tfoot > tr > td {
+      padding: 0.8em;
+      border: 1px solid $necobase-color-border;
+      font-weight: normal;
+      text-align: left;
+    }
 
-		> thead > tr > th,
-		> tfoot > tr > th {
-			background-color: $necobase-color-bg-shade;
-		}
-	}
+    > thead > tr > th,
+    > tfoot > tr > th {
+      background-color: $necobase-color-bg-shade;
+    }
+  }
 }
 
 .necobase-ss-table--no-full {
 
-	> table {
-		width: auto;
-	}
+  > table {
+    width: auto;
+  }
 }
 
 // ----------------------------------
@@ -204,92 +204,92 @@
 
 @include necobase-mq-compact {
 
-	.necobase-ss-table__caption {
-		display: block;
-	}
+  .necobase-ss-table__caption {
+    display: block;
+  }
 
-	%break {
-		display: block;
-	}
+  %break {
+    display: block;
+  }
 
-	.necobase-ss-table--break-on-sp {
+  .necobase-ss-table--break-on-sp {
 
-		> table {
-			@extend %break;
+    > table {
+      @extend %break;
 
-			> thead,
-			> tfoot {
-				display: none
-			}
+      > thead,
+      > tfoot {
+        display: none
+      }
 
-			> tbody {
-				@extend %break;
+      > tbody {
+        @extend %break;
 
-				> tr {
-					@extend %break;
+        > tr {
+          @extend %break;
 
-					> th,
-					> td {
-						@extend %break;
-					}
-				}
-			}
-		}
+          > th,
+          > td {
+            @extend %break;
+          }
+        }
+      }
+    }
 
-		&.necobase-ss-table--a01,
-		&.necobase-ss-table--a02 {
+    &.necobase-ss-table--a01,
+    &.necobase-ss-table--a02 {
 
-			> table {
+      > table {
 
-				> tbody > tr {
+        > tbody > tr {
 
-					~ tr {
+          ~ tr {
 
-						> th {
-							margin-top: 1em;
-						}
-					}
-				}
-			}
-		}
+            > th {
+              margin-top: 1em;
+            }
+          }
+        }
+      }
+    }
 
-		&.necobase-ss-table--b01 {
+    &.necobase-ss-table--b01 {
 
-			> table {
+      > table {
 
-				> tbody > tr > th,
-				> tbody > tr > td {
-					padding: 0 0.5em 0.8em;
-					border-top-width: 0;
-				}
+        > tbody > tr > th,
+        > tbody > tr > td {
+          padding: 0 0.5em 0.8em;
+          border-top-width: 0;
+        }
 
-				> tbody > tr > th:first-child,
-				> tbody > tr > td:first-child {
-					padding-top: 0.8em;
-					border-top-width: 1px;
-				}
+        > tbody > tr > th:first-child,
+        > tbody > tr > td:first-child {
+          padding-top: 0.8em;
+          border-top-width: 1px;
+        }
 
-				> tbody > tr:first-child > th:first-child,
-				> tbody > tr:first-child > td:first-child {
-					padding-top: 0;
-				}
+        > tbody > tr:first-child > th:first-child,
+        > tbody > tr:first-child > td:first-child {
+          padding-top: 0;
+        }
 
-				> tbody > tr:last-child > th:last-child,
-				> tbody > tr:last-child > td:last-child {
-					padding-bottom: 0;
-				}
-			}
-		}
+        > tbody > tr:last-child > th:last-child,
+        > tbody > tr:last-child > td:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
 
-		&.necobase-ss-table--c01 {
+    &.necobase-ss-table--c01 {
 
-			> table {
+      > table {
 
-				> tbody > tr > th,
-				> tbody > tr > td {
-					margin-top: -1px;
-				}
-			}
-		}
-	}
+        > tbody > tr > th,
+        > tbody > tr > td {
+          margin-top: -1px;
+        }
+      }
+    }
+  }
 }

@@ -113,16 +113,16 @@ $necobase-device-compact: 480px;
 
 // PC版よりも幅の狭いデバイス（タブレット？）
 @mixin necobase-mq-narrow {
-	@media screen and (max-width: ($necobase-device-narrow)) {
-		@content
-	}
+  @media screen and (max-width: ($necobase-device-narrow)) {
+    @content
+  }
 }
 
 // さらに小型デバイス（スマホ？）
 @mixin necobase-mq-compact {
-	@media screen and (max-width: ($necobase-device-compact)) {
-		@content
-	}
+  @media screen and (max-width: ($necobase-device-compact)) {
+    @content
+  }
 }
 
 // ------------------------------------------------------

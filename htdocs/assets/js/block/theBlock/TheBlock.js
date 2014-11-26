@@ -17,18 +17,18 @@ var BASE_CLASS = 'necobase-theBlock';
 var TheBlock = Backbone.View.extend(
 /** @lends TheBlock# */
 {
-	setting: {
-	},
+  setting: {
+  },
 
-	/**
-	 * クラスの説明
-	 * @constructs
-	 * @extends Backbone.View
-	 */
-	initialize: function (setting) {
-		this.setting = _(setting).defaults(this.setting);
-		this.$el.data(BASE_CLASS, this);
-	}
+  /**
+   * クラスの説明
+   * @constructs
+   * @extends Backbone.View
+   */
+  initialize: function (setting) {
+    this.setting = _(setting).defaults(this.setting);
+    this.$el.data(BASE_CLASS, this);
+  }
 },
 /** @lends TheBlock */
 {

@@ -13,36 +13,36 @@
 // ------------------------------------------------------ */
 
 require.config({
-	//urlArgs: '2014011701',
-	baseUrl: '/assets/js',
-	shim: {
-		'modernizr': {
-			exports: 'Modernizr'
-		},
-		'$': {
-			exports: 'jQuery'
-		},
-		'_': {
-			exports: '_'
-		},
-		'Iroha': {
-			deps: ['$'],
-			exports: 'Iroha'
-		}
-	},
-	paths: {
-		// JS ライブラリ
-		'text'     : '../vendor/requirejs-text/text',
-		'Modernizr': '../vendor/modernizr/modernizr',
-		'_'        : '../vendor/underscore/underscore',
-		'jquery'   : '../vendor/jquery/dist/jquery',
-		'$'        : '../vendor/jquery/dist/jquery',
-		'Iroha'    : 'iroha/iroha',
+  //urlArgs: '2014011701',
+  baseUrl: '/assets/js',
+  shim: {
+    'modernizr': {
+      exports: 'Modernizr'
+    },
+    '$': {
+      exports: 'jQuery'
+    },
+    '_': {
+      exports: '_'
+    },
+    'Iroha': {
+      deps: ['$'],
+      exports: 'Iroha'
+    }
+  },
+  paths: {
+    // JS ライブラリ
+    'text'     : '../vendor/requirejs-text/text',
+    'Modernizr': '../vendor/modernizr/modernizr',
+    '_'        : '../vendor/underscore/underscore',
+    'jquery'   : '../vendor/jquery/dist/jquery',
+    '$'        : '../vendor/jquery/dist/jquery',
+    'Iroha'    : 'iroha/iroha',
 
-		// ブロックの JS は使用頻度が多い割に階層が深いのでここでまとめて登録する。
-		// アルファベット順に並べるといいかも。
-		TheBlock: 'block/theBlock/TheBlock'
-	}
+    // ブロックの JS は使用頻度が多い割に階層が深いのでここでまとめて登録する。
+    // アルファベット順に並べるといいかも。
+    TheBlock: 'block/theBlock/TheBlock'
+  }
 });
 
 

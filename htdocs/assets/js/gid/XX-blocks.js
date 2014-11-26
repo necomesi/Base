@@ -11,7 +11,7 @@ function(  $  ) {
 $(function () {
 
 
-	console.log('XX-blocks');
+  console.log('XX-blocks');
 
 
 });

@@ -14,13 +14,13 @@ var path = '/assets/js/gid';
 
 var myGID = util.getGID();
 if (myGID) {
-	_(specifics).each(function (val, key) {
-		_(val).each(function (sid) {
-			if (sid === myGID) {
-				require([path + '/' + key + '.js']);
-			}
-		});
-	});
+  _(specifics).each(function (val, key) {
+    _(val).each(function (sid) {
+      if (sid === myGID) {
+        require([path + '/' + key + '.js']);
+      }
+    });
+  });
 }
 
 

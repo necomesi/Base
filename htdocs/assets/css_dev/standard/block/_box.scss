@@ -5,36 +5,36 @@
 //
 
 .necobase-ss-box {
-	margin: 1.5em 0 0;
-	padding: 1em 0.8em 0.8em;
+  margin: 1.5em 0 0;
+  padding: 1em 0.8em 0.8em;
 
-	> *:first-child {
-		margin-top: 0;
-	}
+  > *:first-child {
+    margin-top: 0;
+  }
 }
 
 .necobase-ss-box__heading {
-	margin: 0 0 0.5em 0;
-	padding: 0;
-	font-size: 1.2em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  font-size: 1.2em;
 
-	& + * {
-		margin-top: 0;
-	}
+  & + * {
+    margin-top: 0;
+  }
 }
 
 .necobase-ss-box--a01 {
-	border: 3px solid $necobase-color-border;
+  border: 3px solid $necobase-color-border;
 }
 
 .necobase-ss-box--a02 {
-	border: 1px solid $necobase-color-border;
+  border: 1px solid $necobase-color-border;
 
-	.necobase-ss-box__heading {
-		font-size: 1em;
-	}
+  .necobase-ss-box__heading {
+    font-size: 1em;
+  }
 }
 
 .necobase-ss-box--b01 {
-	border: 3px solid $necobase-color-primary;
+  border: 3px solid $necobase-color-primary;
 }

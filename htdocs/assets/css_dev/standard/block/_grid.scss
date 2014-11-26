@@ -13,11 +13,11 @@
 }
 
 .necobase-ss-grid--no-gutter {
-	margin: 0;
+  margin: 0;
 
-	.necobase-ss-grid__unit {
-		padding: 0;
-	}
+  .necobase-ss-grid__unit {
+    padding: 0;
+  }
 }
 
 // ----------------------------------
@@ -26,11 +26,11 @@
 
 @include necobase-mq-compact {
 
-	.necobase-ss-grid--break-on-sp {
+  .necobase-ss-grid--break-on-sp {
 
-		.necobase-ss-grid__unit {
-			display: block;
-			width: 100%;
-		}
-	}
+    .necobase-ss-grid__unit {
+      display: block;
+      width: 100%;
+    }
+  }
 }

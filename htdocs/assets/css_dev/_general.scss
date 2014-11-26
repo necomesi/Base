@@ -10,7 +10,7 @@
 //
 
 .necobase-x-hidden {
-	@include iroha-hidden();
+  @include iroha-hidden();
 }
 
 
@@ -19,13 +19,13 @@
 //
 
 @each $direction in (top right bottom left) {
-	@each $int in (-30 -20 -15 -10 -5 -3 -2 -1 0 1 2 3 5 10 15 20 30 40 50 75 100) {
-		$negative: $int < 0;
-		$d: str_slice($direction, 1, 1);
-		.necobase-x-m#{$d}#{if($negative, n, null)}#{if($negative, $int * -1, $int)} {
-			margin-#{$direction}: $int * 1px !important;
-		}
-	}
+  @each $int in (-30 -20 -15 -10 -5 -3 -2 -1 0 1 2 3 5 10 15 20 30 40 50 75 100) {
+    $negative: $int < 0;
+    $d: str_slice($direction, 1, 1);
+    .necobase-x-m#{$d}#{if($negative, n, null)}#{if($negative, $int * -1, $int)} {
+      margin-#{$direction}: $int * 1px !important;
+    }
+  }
 }
 
 
@@ -47,10 +47,10 @@
 .necobase-x-bottom { vertical-align: bottom !important; }
 
 @each $int in (-10 -5 -3 -2 -1 0 1 2 3 5 10) {
-	$negative: $int < 0;
-	.necobase-x-va#{if($negative, n, null)}#{if($negative, $int * -1, $int)} {
-		vertical-align: $int * 1px !important;
-	}
+  $negative: $int < 0;
+  .necobase-x-va#{if($negative, n, null)}#{if($negative, $int * -1, $int)} {
+    vertical-align: $int * 1px !important;
+  }
 }
 
 

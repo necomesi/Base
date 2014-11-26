@@ -5,33 +5,33 @@
 //
 
 .necobase-ss-figure {
-	margin: 1.3em 0 0;
-	text-align: center;
+  margin: 1.3em 0 0;
+  text-align: center;
 }
 
 .necobase-ss-figure__figure {
-	vertical-align: top;
+  vertical-align: top;
 }
 
 .necobase-ss-figure__caption {
-	display: block;
-	margin: 0;
-	padding: 0.3em 0 0 0;
-	color: $necobase-color-text-sub;
-	font-size: (14 / 16) * 1em;
-	text-align: left;
+  display: block;
+  margin: 0;
+  padding: 0.3em 0 0 0;
+  color: $necobase-color-text-sub;
+  font-size: (14 / 16) * 1em;
+  text-align: left;
 
-	> p {
-		margin: 0;
-	}
+  > p {
+    margin: 0;
+  }
 }
 
 .necobase-ss-figure--bordered {
-	border: 1px solid $necobase-color-border;
+  border: 1px solid $necobase-color-border;
 
-	.necobase-ss-figure__caption {
-		padding-right: 5px;
-		padding-bottom: 5px;
-		padding-left: 5px;
-	}
+  .necobase-ss-figure__caption {
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+  }
 }
