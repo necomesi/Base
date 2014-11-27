@@ -27,6 +27,7 @@
     pointer-events: none;
   }
 
+  // IE8
   &[disabled] {
     background-color: #e1e1e1;
     border-color: #e1e1e1;
@@ -105,6 +106,13 @@
 
   &.necobase-ss-button--is-disabled,
   &:disabled {
+    background-color: #e1e1e1;
+    border-color: #e1e1e1;
+    color: #aaa;
+  }
+
+  // IE8
+  &[disabled] {
     background-color: #e1e1e1;
     border-color: #e1e1e1;
     color: #aaa;

@@ -694,6 +694,15 @@ input[type="search"] {
   border-color: #e1e1e1;
   color: #aaa;
 }
+.necobase-ss-button--primary[disabled],
+.necobase-ss-button--success[disabled],
+.necobase-ss-button--info[disabled],
+.necobase-ss-button--warning[disabled],
+.necobase-ss-button--danger[disabled] {
+  background-color: #e1e1e1;
+  border-color: #e1e1e1;
+  color: #aaa;
+}
 
 .necobase-ss-hr {
   margin: 1.5em 0;
