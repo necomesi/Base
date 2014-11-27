@@ -157,6 +157,8 @@ html {
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   word-wrap: break-word;
   -webkit-tap-highlight-color: rgba(0, 128, 255, 0.3);
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -219,6 +221,15 @@ select {
 ::selection {
   color: #fff;
   background: #bb2a21;
+}
+
+hr {
+  box-sizing: border-box;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  box-sizing: border-box;
 }
 
 /* ======================================================

@@ -24,6 +24,8 @@ html {
   font-family: $necobase-font-family;
   word-wrap: break-word;
   -webkit-tap-highlight-color: $necobase-color-link-tap;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -72,9 +74,6 @@ strong {
   color: $necobase-color-emphasis;
 }
 
-small {
-}
-
 mark {
   background: transparent;
   color: inherit;
@@ -93,4 +92,17 @@ select {
 ::selection {
   color: $necomesi-color-selection-text;
   background: $necomesi-color-selection-bg;
+}
+
+// ----------------------------------
+// Override normalize.css
+//
+
+hr {
+  box-sizing: border-box;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  box-sizing: border-box;
 }
