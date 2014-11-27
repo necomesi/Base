@@ -6,7 +6,6 @@
 
 require([ 'Iroha', '$' ],
 function(  Iroha,   $  ) {
-
   $(function () {
 
 
@@ -38,7 +37,7 @@ function(  Iroha,   $  ) {
           }
         }
       });
-      if (count) {p
+      if (count) {
         console.warn('グリッドユニットの間にテキストノードがあります。(' + count + '箇所)');
       }
     });
@@ -52,5 +51,4 @@ function(  Iroha,   $  ) {
 
 
   });
-
 });
