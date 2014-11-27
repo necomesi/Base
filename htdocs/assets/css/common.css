@@ -597,15 +597,16 @@ input[type="search"] {
 .necobase-ss-button:hover {
   color: inherit;
 }
+.necobase-ss-button.necobase-ss-button--is-active, .necobase-ss-button:active {
+  box-shadow: inset 1px 4px 5px rgba(0, 0, 0, 0.125);
+}
 .necobase-ss-button.necobase-ss-button--is-disabled, .necobase-ss-button[disabled] {
   background-color: #e1e1e1;
   border-color: #e1e1e1;
   color: #aaa;
   cursor: default;
+  box-shadow: none;
   pointer-events: none;
-}
-.necobase-ss-button.necobase-ss-button--is-active, .necobase-ss-button:active {
-  box-shadow: inset 1px 4px 5px rgba(0, 0, 0, 0.125);
 }
 
 .necobase-ss-button--primary {
