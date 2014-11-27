@@ -204,10 +204,6 @@
 
 @include necobase-mq-compact {
 
-  .necobase-ss-table__caption {
-    display: block;
-  }
-
   %break {
     display: block;
   }
@@ -290,6 +286,10 @@
           margin-top: -1px;
         }
       }
+    }
+
+    .necobase-ss-table__caption {
+      display: block;
     }
   }
 }

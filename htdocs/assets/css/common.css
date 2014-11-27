@@ -930,10 +930,6 @@ input[type="search"] {
 }
 
 @media screen and (max-width: 480px) {
-  .necobase-ss-table__caption {
-    display: block;
-  }
-
   .necobase-ss-table--break-on-sp > table, .necobase-ss-table--break-on-sp > table > tbody, .necobase-ss-table--break-on-sp > table > tbody > tr, .necobase-ss-table--break-on-sp > table > tbody > tr > th,
   .necobase-ss-table--break-on-sp > table > tbody > tr > td {
     display: block;
@@ -967,6 +963,9 @@ input[type="search"] {
   .necobase-ss-table--break-on-sp.necobase-ss-table--c01 > table > tbody > tr > th,
   .necobase-ss-table--break-on-sp.necobase-ss-table--c01 > table > tbody > tr > td {
     margin-top: -1px;
+  }
+  .necobase-ss-table--break-on-sp .necobase-ss-table__caption {
+    display: block;
   }
 }
 /* ------------------------------------------------------
