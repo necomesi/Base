@@ -1154,7 +1154,7 @@ select {
  * Block - frame
  */
 .necobase-frame__body {
-  max-width: 980px;
+  max-width: 960px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 10px;
