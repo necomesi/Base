@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.necobase-template-component {
+  margin: 3em 0 0;
+  padding: 2px 5px;
+  color: #fff;
+  background-color: #333;
+  font-size: 12px;
+}
+
+.necobase-template-component > b {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+figure img {
+  width: 100%;
+}
