@@ -4,8 +4,8 @@
 //
 // ====================================================== */
 
-define([ '_', '$', 'Iroha', 'necobase'],
-function (_,   $,   Iroha,   necobase) {
+define([ '_', '$', 'Iroha', 'necobase/necobase' ],
+function( _,   $,   Iroha,   necobase           ) {
 
 
   /** @namespace */

@@ -8,7 +8,7 @@
 // ====================================================== */
 
 define([ '_', 'Backbone', '$' ],
-function( _,   Backbone,   $ ) {
+function( _,   Backbone,   $  ) {
 
 
 var BASE_CLASS = 'necobase-theBlock';

@@ -4,8 +4,8 @@
 //
 // ====================================================== */
 
-define([ '_', '$', 'necobase', 'necobase/util'],
-function (_,   $,   necobase,   util) {
+define([ '_', '$', 'necobase/necobase', 'necobase/util' ],
+function( _,   $,   necobase,            util           ) {
 
 
   var defaultSetting = new util.CookieOption({

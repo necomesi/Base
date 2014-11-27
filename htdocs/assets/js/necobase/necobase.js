@@ -4,16 +4,16 @@
 //
 // ====================================================== */
 
-define([],
-function () {
+define([ ],
+function() {
 
 
-/** @namespace */
-var necobase = window.necobase = {};
+  /** @namespace */
+  var necobase = window.necobase = {};
 
-/** @namespace */
-window.necobase.ctx = {};
+  /** @namespace */
+  window.necobase.ctx = {};
 
 
-return necobase;
+  return necobase;
 });
