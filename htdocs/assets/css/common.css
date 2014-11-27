@@ -932,9 +932,18 @@ input[type="search"] {
 @media screen and (max-width: 480px) {
   .necobase-ss-table--break-on-sp > table, .necobase-ss-table--break-on-sp > table > tbody, .necobase-ss-table--break-on-sp > table > tbody > tr, .necobase-ss-table--break-on-sp > table > tbody > tr > th,
   .necobase-ss-table--break-on-sp > table > tbody > tr > td {
-    display: block;
+    float: left;
+    width: 100%;
   }
 
+  .necobase-ss-table--break-on-sp:before, .necobase-ss-table--break-on-sp:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+  }
+  .necobase-ss-table--break-on-sp:after {
+    clear: both;
+  }
   .necobase-ss-table--break-on-sp > table > thead,
   .necobase-ss-table--break-on-sp > table > tfoot {
     display: none;

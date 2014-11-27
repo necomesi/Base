@@ -205,10 +205,13 @@
 @include necobase-mq-compact {
 
   %break {
-    display: block;
+//    display: block; // IE >= 10
+    float: left; // IE9
+    width: 100%; // IE9
   }
 
   .necobase-ss-table--break-on-sp {
+    @include iroha-clearfix;
 
     > table {
       @extend %break;
