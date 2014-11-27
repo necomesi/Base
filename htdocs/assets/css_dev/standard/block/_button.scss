@@ -19,20 +19,12 @@
   }
 
   &.necobase-ss-button--is-disabled,
-  &:disabled {
+  &[disabled] { // IE8は :disabled 擬似クラスセレクタが使用できない
     background-color: #e1e1e1;
     border-color: #e1e1e1;
     color: #aaa;
     cursor: default;
     pointer-events: none;
-  }
-
-  // IE8
-  &[disabled] {
-    background-color: #e1e1e1;
-    border-color: #e1e1e1;
-    color: #aaa;
-    cursor: default;
   }
 
   &.necobase-ss-button--is-active,
@@ -105,14 +97,7 @@
   }
 
   &.necobase-ss-button--is-disabled,
-  &:disabled {
-    background-color: #e1e1e1;
-    border-color: #e1e1e1;
-    color: #aaa;
-  }
-
-  // IE8
-  &[disabled] {
+  &[disabled] { // IE8は :disabled 擬似クラスセレクタが使用できない
     background-color: #e1e1e1;
     border-color: #e1e1e1;
     color: #aaa;

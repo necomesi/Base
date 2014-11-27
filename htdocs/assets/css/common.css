@@ -597,18 +597,12 @@ input[type="search"] {
 .necobase-ss-button:hover {
   color: inherit;
 }
-.necobase-ss-button.necobase-ss-button--is-disabled, .necobase-ss-button:disabled {
+.necobase-ss-button.necobase-ss-button--is-disabled, .necobase-ss-button[disabled] {
   background-color: #e1e1e1;
   border-color: #e1e1e1;
   color: #aaa;
   cursor: default;
   pointer-events: none;
-}
-.necobase-ss-button[disabled] {
-  background-color: #e1e1e1;
-  border-color: #e1e1e1;
-  color: #aaa;
-  cursor: default;
 }
 .necobase-ss-button.necobase-ss-button--is-active, .necobase-ss-button:active {
   box-shadow: inset 1px 4px 5px rgba(0, 0, 0, 0.125);
@@ -681,23 +675,14 @@ input[type="search"] {
 .necobase-ss-button--danger:focus {
   color: #fff;
 }
-.necobase-ss-button--primary.necobase-ss-button--is-disabled, .necobase-ss-button--primary:disabled,
+.necobase-ss-button--primary.necobase-ss-button--is-disabled, .necobase-ss-button--primary[disabled],
 .necobase-ss-button--success.necobase-ss-button--is-disabled,
-.necobase-ss-button--success:disabled,
-.necobase-ss-button--info.necobase-ss-button--is-disabled,
-.necobase-ss-button--info:disabled,
-.necobase-ss-button--warning.necobase-ss-button--is-disabled,
-.necobase-ss-button--warning:disabled,
-.necobase-ss-button--danger.necobase-ss-button--is-disabled,
-.necobase-ss-button--danger:disabled {
-  background-color: #e1e1e1;
-  border-color: #e1e1e1;
-  color: #aaa;
-}
-.necobase-ss-button--primary[disabled],
 .necobase-ss-button--success[disabled],
+.necobase-ss-button--info.necobase-ss-button--is-disabled,
 .necobase-ss-button--info[disabled],
+.necobase-ss-button--warning.necobase-ss-button--is-disabled,
 .necobase-ss-button--warning[disabled],
+.necobase-ss-button--danger.necobase-ss-button--is-disabled,
 .necobase-ss-button--danger[disabled] {
   background-color: #e1e1e1;
   border-color: #e1e1e1;
@@ -1071,10 +1056,6 @@ input[type="search"] {
 .necobase-ss-text::-webkit-input-placeholder {
   color: #b3b3b3;
 }
-.necobase-ss-text:disabled {
-  color: #b3b3b3;
-  background-color: #f6f6f6;
-}
 .necobase-ss-text[disabled] {
   color: #b3b3b3;
   background-color: #f6f6f6;
@@ -1103,10 +1084,6 @@ input[type="search"] {
 }
 .necobase-ss-textarea::-webkit-input-placeholder {
   color: #b3b3b3;
-}
-.necobase-ss-textarea:disabled {
-  color: #b3b3b3;
-  background-color: #f6f6f6;
 }
 .necobase-ss-textarea[disabled] {
   color: #b3b3b3;
@@ -1137,11 +1114,7 @@ input[type="search"] {
   border: 1px solid #cccccc;
   border-radius: 3px;
 }
-.necobase-ss-select:disabled {
-  color: #b3b3b3;
-  background-color: #f6f6f6;
-}
-.necobase-ss-select [disabled] {
+.necobase-ss-select[disabled] {
   color: #b3b3b3;
   background-color: #f6f6f6;
 }

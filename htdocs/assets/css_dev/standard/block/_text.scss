@@ -20,13 +20,7 @@
   &:focus {
   }
 
-  &:disabled {
-    color: $necobase-color-text-sub;
-    background-color: #f6f6f6;
-  }
-
-  // IE8
-  &[disabled] {
+  &[disabled] { // IE8は :disabled 擬似クラスセレクタが使用できない
     color: $necobase-color-text-sub;
     background-color: #f6f6f6;
   }
