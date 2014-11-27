@@ -5,23 +5,23 @@
 //
 // ====================================================== */
 
-require(['_', 'necobase/util', 'text!gid/gid.json'],
-function (_,   util,            map) {
+require([ '_', 'necobase/util', 'text!gid/gid.json' ],
+function(  _,   util,            map                ) {
 
 
-var specifics = JSON.parse(map);
-var path = '/assets/js/gid';
+  var specifics = JSON.parse(map);
+  var path = '/assets/js/gid';
 
-var myGID = util.getGID();
-if (myGID) {
-  _(specifics).each(function (val, key) {
-    _(val).each(function (sid) {
-      if (sid === myGID) {
-        require([path + '/' + key + '.js']);
-      }
+  var myGID = util.getGID();
+  if (myGID) {
+    _(specifics).each(function (val, key) {
+      _(val).each(function (sid) {
+        if (sid === myGID) {
+          require([path + '/' + key + '.js']);
+        }
+      });
     });
-  });
-}
+  }
 
 
 });
