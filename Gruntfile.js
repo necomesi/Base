@@ -65,7 +65,8 @@ module.exports = function (grunt) {
 			},
 			js: {
 				files: [
-					'<%= path.jsDev %>/**/*.js'
+					'<%= path.jsDev %>/**/*.js',
+          '<%= path.jsDev %>/**/*.json'
 				],
 				tasks: ['jsDev']
 			}
