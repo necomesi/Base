@@ -15,58 +15,6 @@
 
 
 // ------------------------------------------------------
-// マージン調整
-//
-
-@each $direction in (top right bottom left) {
-  @each $int in (-30 -20 -15 -10 -5 -3 -2 -1 0 1 2 3 5 10 15 20 30 40 50 75 100) {
-    $negative: $int < 0;
-    $d: str_slice($direction, 1, 1);
-    .necobase-x-m#{$d}#{if($negative, n, null)}#{if($negative, $int * -1, $int)} {
-      margin-#{$direction}: $int * 1px !important;
-    }
-  }
-}
-
-
-// ------------------------------------------------------
-// text-align 調整
-//
-
-.necobase-x-left   { text-align: left   !important; }
-.necobase-x-center { text-align: center !important; }
-.necobase-x-right  { text-align: right  !important; }
-
-
-// ------------------------------------------------------
-// vertical-align 調整
-//
-
-.necobase-x-top    { vertical-align: top    !important; }
-.necobase-x-middle { vertical-align: middle !important; }
-.necobase-x-bottom { vertical-align: bottom !important; }
-
-@each $int in (-10 -5 -3 -2 -1 0 1 2 3 5 10) {
-  $negative: $int < 0;
-  .necobase-x-va#{if($negative, n, null)}#{if($negative, $int * -1, $int)} {
-    vertical-align: $int * 1px !important;
-  }
-}
-
-
-// ------------------------------------------------------
-// 幅調整
-//
-
-.necobase-x-wauto { width: auto  !important; }
-//.necobase-x-w100  { width: 100px !important; }
-//.necobase-x-w200  { width: 200px !important; }
-//.necobase-x-w300  { width: 300px !important; }
-//.necobase-x-w400  { width: 400px !important; }
-//.necobase-x-w500  { width: 500px !important; }
-
-
-// ------------------------------------------------------
 // 各種状態
 //
 // 一覧する目的で羅列している。ここでスタイルを定義しないこと。
