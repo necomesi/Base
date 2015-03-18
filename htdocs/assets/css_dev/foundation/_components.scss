@@ -31,7 +31,12 @@
 //@import "../../vendor/foundation/scss/foundation/components/split-buttons";
 //@import "../../vendor/foundation/scss/foundation/components/sub-nav";
 //@import "../../vendor/foundation/scss/foundation/components/switches";
+
 @import "../../vendor/foundation/scss/foundation/components/tables";
+.table {
+  @include table;
+}
+
 //@import "../../vendor/foundation/scss/foundation/components/tabs";
 //@import "../../vendor/foundation/scss/foundation/components/thumbs";
 //@import "../../vendor/foundation/scss/foundation/components/tooltips";

@@ -95,7 +95,10 @@ acronym {
 input,
 textarea,
 select {
-  font-weight: inherit;
-  font-size: inherit;
-  font-family: inherit;
+  font: inherit;
+}
+
+mark {
+  background: transparent;
+  color: inherit;
 }

@@ -6,30 +6,19 @@
 /* ======================================================
 // Basic
 // ------------------------------------------------------ */
-/*!
-YUI 3.18.1 (build f7e7bcb)
-Copyright 2014 Yahoo! Inc. All rights reserved.
-Licensed under the BSD License.
-http://yuilibrary.com/license/
-*/
-/*
-  TODO will need to remove settings on HTML since we can't namespace it.
-  TODO with the prefix, should I group by selector or property for weight savings?
-*/
-html {
-  color: #000;
-  background: #FFF;
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
 }
 
-/*
-  TODO remove settings on BODY since we can't namespace it.
-*/
-/*
-  TODO test putting a class on HEAD.
-    - Fails on FF.
-*/
 body,
-div,
 dl,
 dt,
 dd,
@@ -45,31 +34,26 @@ h6,
 pre,
 code,
 form,
-fieldset,
-legend,
 input,
 textarea,
 p,
 blockquote,
 th,
-td {
+td,
+figure {
   margin: 0;
   padding: 0;
 }
 
 table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
 
-fieldset,
 img {
   border: 0;
 }
 
-/*
-  TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
-*/
 address,
 caption,
 cite,
@@ -79,8 +63,8 @@ em,
 strong,
 th,
 var {
-  font-style: normal;
   font-weight: normal;
+  font-style: normal;
 }
 
 ol,
@@ -99,13 +83,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 100%;
   font-weight: normal;
+  font-size: 100%;
 }
 
 q:before,
 q:after {
-  content: '';
+  content: "";
 }
 
 abbr,
@@ -114,50 +98,18 @@ acronym {
   font-variant: normal;
 }
 
-/* to preserve line-height and selector appearance */
-sup {
-  vertical-align: text-top;
-}
-
-sub {
-  vertical-align: text-bottom;
-}
-
 input,
 textarea,
 select {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  *font-size: 100%;
-  /*to enable resizing for IE*/
+  font: inherit;
 }
 
-/*because legend doesn't inherit in IE */
-legend {
-  color: #000;
+mark {
+  background: transparent;
+  color: inherit;
 }
 
-/* YUI CSS Detection Stamp */
-#yui3-css-stamp.cssreset {
-  display: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-:before,
-:after {
-  box-sizing: border-box;
-}
-
-html {
-  color: #000;
-  background-color: #fff;
-  font-size: 16px;
-  line-height: 1.618;
-  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+body {
   word-wrap: break-word;
   -webkit-tap-highlight-color: rgba(0, 128, 255, 0.3);
   -ms-text-size-adjust: 100%;
@@ -172,14 +124,6 @@ a:hover, a:focus {
 }
 a:active {
   color: #4a88c0;
-}
-
-figure {
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
 }
 
 hr {
@@ -199,40 +143,22 @@ em {
 
 strong {
   color: #d2322d;
-}
-
-mark {
-  background: transparent;
-  color: inherit;
-}
-
-label {
-  cursor: pointer;
-}
-
-input,
-textarea,
-select {
-  font: inherit;
+  font-weight: bold;
 }
 
 ::-moz-selection {
-  color: #fff;
   background: #bb2a21;
+  color: #fff;
 }
 
 ::selection {
-  color: #fff;
   background: #bb2a21;
-}
-
-hr {
-  box-sizing: border-box;
+  color: #fff;
 }
 
 input[type="search"] {
-  -webkit-appearance: none;
   box-sizing: border-box;
+  -webkit-appearance: none;
 }
 
 /* ======================================================
@@ -308,7 +234,7 @@ html, body {
 
 html,
 body {
-  font-size: 100%;
+  font-size: 16px;
 }
 
 body {
@@ -319,7 +245,7 @@ body {
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   font-weight: normal;
   font-style: normal;
-  line-height: 1.5;
+  line-height: 1.618;
   position: relative;
   cursor: auto;
 }
@@ -2458,54 +2384,54 @@ label.error {
   color: #d9534f;
 }
 
-table {
+.table {
   background: #FFFFFF;
   margin-bottom: 1.25rem;
   border: solid 1px #DDDDDD;
   table-layout: auto;
 }
-table caption {
+.table caption {
   background: transparent;
   color: #222222;
   font-size: 1rem;
   font-weight: bold;
 }
-table thead {
+.table thead {
   background: #F5F5F5;
 }
-table thead tr th,
-table thead tr td {
+.table thead tr th,
+.table thead tr td {
   padding: 0.5rem 0.625rem 0.625rem;
   font-size: 0.875rem;
   font-weight: bold;
   color: #222222;
 }
-table tfoot {
+.table tfoot {
   background: #F5F5F5;
 }
-table tfoot tr th,
-table tfoot tr td {
+.table tfoot tr th,
+.table tfoot tr td {
   padding: 0.5rem 0.625rem 0.625rem;
   font-size: 0.875rem;
   font-weight: bold;
   color: #222222;
 }
-table tr th,
-table tr td {
+.table tr th,
+.table tr td {
   padding: 0.5625rem 0.625rem;
   font-size: 0.875rem;
   color: #222222;
   text-align: left;
 }
-table tr.even, table tr.alt, table tr:nth-of-type(even) {
+.table tr.even, .table tr.alt, .table tr:nth-of-type(even) {
   background: #F9F9F9;
 }
-table thead tr th,
-table tfoot tr th,
-table tfoot tr td,
-table tbody tr th,
-table tbody tr td,
-table tr td {
+.table thead tr th,
+.table tfoot tr th,
+.table tfoot tr td,
+.table tbody tr th,
+.table tbody tr td,
+.table tr td {
   display: table-cell;
   line-height: 1.125rem;
 }
