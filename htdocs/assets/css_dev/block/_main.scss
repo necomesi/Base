@@ -8,6 +8,7 @@
 }
 
 .necobase-main__body {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin: 60px auto;
+  padding: 0 10px;
+  max-width: $necobase-frame-width + 20px;
 }

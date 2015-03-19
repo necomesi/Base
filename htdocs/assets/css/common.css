@@ -3731,16 +3731,6 @@ th.hide-for-touch {
 // Block
 // ------------------------------------------------------ */
 /* ------------------------------------------------------
- * Block - frame
- */
-.necobase-frame__body {
-  max-width: 960px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 10px;
-}
-
-/* ------------------------------------------------------
  * Block - header
  */
 .necobase-header {
@@ -3748,17 +3738,24 @@ th.hide-for-touch {
   background-color: #ddd;
 }
 
+.necobase-header__body {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+  max-width: 960px;
+}
+
 .necobase-header__logo {
   margin: 0;
 }
 .necobase-header__logo > a {
   display: block;
-  width: 140px;
-  height: 140px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
+  background-color: #fff;
 }
 .necobase-header__logo > a > img {
   display: block;
@@ -3809,8 +3806,9 @@ th.hide-for-touch {
  * Block - main
  */
 .necobase-main__body {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin: 60px auto;
+  padding: 0 10px;
+  max-width: 960px;
 }
 
 /* ------------------------------------------------------
@@ -3819,6 +3817,13 @@ th.hide-for-touch {
 #necobase-footer {
   padding: 30px 0;
   background-color: #ddd;
+}
+
+.necobase-footer__body {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+  max-width: 960px;
 }
 
 .necobase-footer__copyright {

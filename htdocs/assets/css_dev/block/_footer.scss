@@ -9,7 +9,11 @@
   background-color: #ddd;
 }
 
-.necobase-frame__body {
+.necobase-footer__body {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+  max-width: $necobase-frame-width + 20px;
 }
 
 .necobase-footer__copyright {

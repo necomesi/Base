@@ -10,6 +10,10 @@
 }
 
 .necobase-header__body {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+  max-width: $necobase-frame-width + 20px;
 }
 
 .necobase-header__logo {
@@ -17,12 +21,12 @@
 
   > a {
     display: block;
-    width: 140px;
-    height: 140px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
+    background-color: #fff;
 
     > img {
       display: block;
