@@ -5,30 +5,28 @@ module.exports = function (grunt) {
 
   var path = require('path');
 
-  //var gidMap = grunt.file.readJSON(grunt.template.process('<%= dir.gid %>/gid.json', {data: {dir: dir}}));
-
 
   grunt.initConfig({
     path: {
-      root  : './htdocs',
-      assets: '<%= path.root %>/assets',
-      css   : '<%= path.assets %>/css',
-      cssDev: '<%= path.assets %>/css_dev',
-      js    : '<%= path.assets %>/js',
-      jsDev : '<%= path.assets %>/js_dev',
-      gid   : '<%= path.jsDev %>/gid',
-      api   : '<%= path.root %>/api/v1'
+      root  : 'htdocs',
+      dist  : 'dist',
+      assets: 'assets',
+      css   : 'css',
+      cssDev: 'css_dev',
+      js    : 'js',
+      gid   : 'gid',
+      inc   : 'inc',
+      api   : 'api/v1'
     },
-
-    //gidMap: grunt.file.readJSON(grunt.template.process('<%= path.gid %>/gid.json', {data: {dir: dir}})),
 
     clean: {
       clean: {
         src: [
-          //dir.css + '/**/*'
-          '<%= path.css %>/**/*',
-          '<%= path.js %>/**/*'
+          '<%= path.root %>/<%= path.assets %>/<%= path.css %>/**/*'
         ]
+      },
+      dist: {
+        src: ['<%= path.dist %>']
       }
     },
 
@@ -36,15 +34,16 @@ module.exports = function (grunt) {
       options: {
         timestamp: true
       },
-      js: {
+      dist: {
         files: [{
           expand: true,
-          cwd: '<%= path.jsDev %>',
+          dot: true,
+          cwd: '<%= path.root %>',
           src: [
-            '**/*.js',
-            '**/*.json'
+            '**/*',
+            '!<%= assets %>/<%= path.cssDev %>'
           ],
-          dest: '<%= path.js %>'
+          dest: '<%= path.dist %>'
         }]
       }
     },
@@ -59,16 +58,9 @@ module.exports = function (grunt) {
       },
       scss: {
         files: [
-          '<%= path.cssDev %>/**/*.scss'
+          '<%= path.root %>/<%= path.assets %>/<%= path.cssDev %>/**/*.scss'
         ],
         tasks: ['cssDev']
-      },
-      js: {
-        files: [
-          '<%= path.jsDev %>/**/*.js',
-          '<%= path.jsDev %>/**/*.json'
-        ],
-        tasks: ['jsDev']
       }
     },
 
@@ -80,9 +72,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd   : '<%= path.cssDev %>',
+          cwd   : '<%= path.root %>/<%= path.assets %>/<%= path.cssDev %>',
           src   : '**/*.scss',
-          dest  : '<%= path.css %>',
+          dest  : '<%= path.root %>/<%= path.assets %>/<%= path.css %>',
           ext   : '.css'
         }]
       },
@@ -93,9 +85,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd   : '<%= path.cssDev %>',
+          cwd   : '<%= path.root %>/<%= path.assets %>/<%= path.cssDev %>',
           src   : '**/*.scss',
-          dest  : '<%= path.css %>',
+          dest  : '<%= path.root %>/<%= path.assets %>/<%= path.css %>',
           ext   : '.css'
         }]
       }
@@ -116,49 +108,49 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd   : '<%= path.css %>',
+          cwd   : '<%= path.root %>/<%= path.assets %>/<%= path.css %>',
           src   : '**/*.css',
-          dest  : '<%= path.css %>'
+          dest  : '<%= path.root %>/<%= path.assets %>/<%= path.css %>'
         }]
       }
     },
 
-    requirejs: {
+    useminPrepare: {
       options: {
-        generateSourceMaps: false,
-        preserveLicenseComments: true
+        root: '<%= path.dist %>'
       },
-      requirejs: {
-        options: {
-          appDir: '<%= path.jsDev %>',
-          mainConfigFile: '<%= path.jsDev %>/common.js',
-          baseUrl: './',
-          optimize: 'uglify2',
-          dir: '<%= path.js %>',
-          modules: (function() {
-            var modules = [{name: 'common'}];
-            var baseDir = 'htdocs/assets/js_dev/gid/';
-            var fnames = grunt.file.expand({cwd: baseDir}, '*.js');
-            fnames.forEach(function(fname) {
-              modules.push({
-                name: 'gid/' + fname.replace(/\.js$/, ''),
-                exclude: ['common']
-              });
-            });
-            return modules;
-          })()
-        }
-      }
+      html: '<%= path.dist %>/<%= path.assets %>/<%= path.inc %>/head/*.html'
+    },
+
+    usemin: {
+      html: '<%= path.dist %>/<%= path.assets %>/<%= path.inc %>/head/*.html'
     }
 
   });
 
-  grunt.registerTask('cssDev', ['sass:sass_dev', 'autoprefixer']);
-  grunt.registerTask('cssDeploy', ['sass:sass_deploy', 'autoprefixer']);
-  grunt.registerTask('jsDev', ['copy:js']);
-  grunt.registerTask('jsDeploy', ['copy:js', 'requirejs']);
+  grunt.registerTask('cssDev', [
+    'sass:sass_dev',
+    'autoprefixer'
+  ]);
+  grunt.registerTask('cssDeploy', [
+    'sass:sass_deploy',
+    'autoprefixer'
+  ]);
 
-  grunt.registerTask('default', ['clean', 'cssDev', 'jsDev', 'watch']);
-  grunt.registerTask('deploy' , ['clean', 'cssDeploy', 'jsDeploy']);
+  grunt.registerTask('default', [
+    'clean:clean',
+    'cssDev',
+    //'jsDev',
+    'watch'
+  ]);
+  grunt.registerTask('deploy' , [
+    'clean',
+    'cssDeploy',
+    'copy:dist',
+    'useminPrepare',
+    'concat:generated',
+    'uglify:generated',
+    'usemin'
+  ]);
 
 };

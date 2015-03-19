@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+// ------------------------------------------------------
+// Block - dl
+//
+
+.necobase-ss-dl {
+  @extend %sb-nestableList;
+  margin: 1.5em 0 0;
+
+  > dt {
+    margin: 0.75em 0 0.25em 0;
+    font-weight: bold;
+  }
+
+  > dd {
+    margin: 0;
+    padding-left: 2em;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}

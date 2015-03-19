@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+// ======================================================
+//
+//   Standard styles
+//
+// ======================================================
+
+@import "symbol";
+
+
+/* ------------------------------------------------------
+// Grid
+*/
+
+@import "block/grid";
+
+
+/* ------------------------------------------------------
+// Block
+*/
+
+@import "block/h1";
+@import "block/h2";
+@import "block/h3";
+@import "block/h4";
+@import "block/h5";
+@import "block/h6";
+@import "block/p";
+@import "block/plain";
+@import "block/ul";
+@import "block/inline-list";
+@import "block/ol";
+@import "block/dl";
+@import "block/note-list";
+@import "block/link-list";
+@import "block/inline-link-list";
+@import "block/button";
+@import "block/hr";
+@import "block/box";
+@import "block/figure";
+@import "block/table";
+
+
+/* ------------------------------------------------------
+// Form block
+*/
+
+@import "block/form";
+@import "block/label";
+@import "block/text";
+@import "block/textarea";
+@import "block/radio";
+@import "block/checkbox";
+@import "block/select";
+@import "block/action";
+
+
+/* ------------------------------------------------------
+// Inline styles
+*/
+
+.necobase-ss-em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.necobase-ss-strong {
+  color: $necobase-color-emphasis;
+  font-weight: bold;
+  font-style: normal;
+}

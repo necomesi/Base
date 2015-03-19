@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+// ------------------------------------------------------
+// Block - grid
+//
+
+@include necobase-ss-grid();
+
+.necobase-ss-grid {
+}
+
+.necobase-ss-grid__unit {
+}
+
+.necobase-ss-grid--no-gutter {
+  margin: 0;
+
+  .necobase-ss-grid__unit {
+    padding: 0;
+  }
+}
+
+// ----------------------------------
+// デバイス幅に応じたスタイル
+//
+
+@include necobase-mq-compact {
+
+  .necobase-ss-grid--break-on-sp {
+
+    .necobase-ss-grid__unit {
+      display: block;
+      width: 100%;
+    }
+  }
+}

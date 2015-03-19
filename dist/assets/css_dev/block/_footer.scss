@@ -1,0 +1,22 @@
+﻿@charset "UTF-8";
+
+/* ------------------------------------------------------
+ * Block - footer
+ */
+
+#necobase-footer {
+  padding: 30px 0;
+  background-color: #ddd;
+}
+
+.necobase-footer__body {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+  max-width: $necobase-frame-width + 20px;
+}
+
+.necobase-footer__copyright {
+  margin: 0;
+  text-align: right;
+}

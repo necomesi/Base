@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// ------------------------------------------------------
+// Block - h5
+//
+
+.necobase-ss-hr {
+  margin: 1.5em 0;
+  height: 0;
+  border-top: 1px solid $necobase-color-border;
+
+  > hr {
+    display: none;
+  }
+}

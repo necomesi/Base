@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------
+ * Block - main-nav
+ */
+
+.necobase-main-nav {
+}
+
+.necobase-main-nav__list {
+  @include iroha-clearfix;
+  margin: 40px 0 0 -15px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.necobase-main-nav__item {
+  float: left;
+  width: 25%;
+  padding-left: 15px;
+
+  > a {
+    display: block;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+  }
+}
+
+.necobase-main-nav__item--is-current {
+
+  > a {
+
+  }
+}
+
+// ----------------------------------
+// デバイス幅に応じたスタイル
+//
+
+@include necobase-mq-compact {
+
+  .necobase-main-nav__item {
+    float: none;
+    width: auto;
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

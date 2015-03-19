@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+// ======================================================
+// 基本スタイル
+// ------------------------------------------------------
+// - 各 HTML タグに対するスタイルを記述する。
+// - ウェブサイト全体を通して各タグに対する「基本的にあるべき」見ためを表現するようにする。
+// ------------------------------------------------------
+
+body {
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: $necobase-color-link-tap;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: $necobase-color-link-link;
+
+  &:hover,
+  &:focus {
+    color: $necobase-color-link-hover;
+  }
+
+  &:active {
+    color: $necobase-color-link-active;
+  }
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid $necobase-color-border;
+}
+
+table {
+}
+
+th {
+  text-align: left;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+strong {
+  color: $necobase-color-emphasis;
+  font-weight: bold;
+}
+
+::selection {
+  background: $necomesi-color-selection-bg;
+  color: $necomesi-color-selection-text;
+}

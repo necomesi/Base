@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+// -----------------------------------------------------------------
+//      Iroha : Variables, Mixins, Functions for Sass.
+// ----------------------------------------------------------------- */
+
+
+// =========== iroha static values ===========
+
+$iroha-font-size-base : 16px;
+
+
+
+// =========== iroha mixins ===========
+
+@mixin iroha-clearfix($side:both) {
+//  *zoom: 1;  // clear float for ~WinIE7
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+  }
+
+  &:after {
+    clear: $side;
+//    height: 1px\9;          // consider print on IE8
+//    margin-bottom: -1px\9;  // consider print on IE8
+//    background: red\9;      // for debug
+  }
+}
+
+@mixin iroha-opacity($opacity:1) {
+  opacity: $opacity;
+  -ms-filter: unquote("alpha(opacity=#{round($opacity * 100)})");
+}
+
+@mixin iroha-white-space($value:normal) {
+  @if $value == nowrap {
+    white-space: $value;
+    word-wrap: normal;  // IE は、word-wrap :break-word が効いてると結局折り返ししてしまうため。
+    word-break: normal; // IE は、word-break:break-all  が効いてると結局折り返ししてしまうため。
+  }
+  @else {
+    white-space: $value;
+  }
+}
+
+@mixin iroha-reset($display:block) {
+  display: $display;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 100%;
+}
+
+@mixin iroha-hidden() {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+}
+
+// iroha-hidden を上書きして表示させるもの
+@mixin iroha-visible() {
+  position: static !important;
+  overflow: visible !important;
+  width: auto !important;
+  height: auto !important;
+  pointer-events: auto !important;
+}
+
+@mixin iroha-hide-focus() {
+  outline: none;
+//  hide-focus: expression(this.hideFocus=true); // for old IE
+}
+
+@mixin iroha-show-focus() {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+@mixin iroha-text-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin iroha-reset-button() {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: none;
+  }
+}
+
+// TODO 使っているか確認
+@mixin iroha-font-size(
+    $font-size  : $iroha-font-size-base
+  , $line-height: $iroha-font-size-base
+  , $margin-top : null
+){
+  @if $margin-top != null { margin-top: iroha-rem-size($margin-top) }
+  font-size: iroha-rem-size($font-size);
+  line-height: $line-height / $font-size;
+}
+
+// TODO 使っているか確認
+@mixin iroha-img-resize($size:auto) {
+  @if ($size == auto) {
+  }
+  @else if (unit($size) == "%") {
+    width: $size;
+  }
+  @else if (unit($size) == "" and type_of($size) == "number") {
+    zoom: $size;
+  }
+  vertical-align: top;
+}
+
+// TODO 使っているか確認
+@mixin iroha-img-density($density:2) {
+  @include iroha-img-resize(1 / $density);
+}
+
+// TODO 使っているか確認
+@mixin iroha-img-fluid($width:100%) {
+  @include iroha-img-resize($width);
+}
+
+@mixin iroha-hv-center() {
+  display: block;
+  text-align: center;
+
+  &:before,
+  &:after,
+  & > * {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  &:before,
+  &:after {
+    width: 0;
+    height: 100%;
+    margin: 0 -1px;
+    content: "";
+  }
+}
+
+@mixin iroha-placeholder() {
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+// OSX 向けフォントレンダリングの調整
+// http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+@mixin iroha-font-smoothing($value:on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin iroha-emphasis-with-memo($content:"！", $color:red) {
+  position: relative;
+  outline: 3px solid $color !important;
+
+  &:before {
+    position: absolute;
+    z-index: 2;
+    left: -3px;
+    top: -3px;
+    display: block;
+    margin: 0;
+    padding: 3px;
+    font-size: 11px;
+    line-height: 1.2;
+    text-align: left;
+    color: white;
+    background: $color;
+    content: $content
+  }
+}
+
+
+
+// =========== iroha functions ===========
+
+@function iroha-em-size($size:0px, $base-size:$iroha-font-size-base) {
+  @return $size / $base-size * 1em;
+}
+
+@function iroha-rem-size($size:0px) {
+  @return $size / $iroha-font-size-base * 1rem;
+}
+
+// from : http://jsdo.it/a_t/j9mT
+@function iroha-strip-unit($value) {
+  $_nounit_divisor: (floor($value) * 2) % 2 + 1;
+  @return ($value / $_nounit_divisor);
+}

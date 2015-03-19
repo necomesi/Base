@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+// ======================================================
+// Symbols
+// ------------------------------------------------------
+
+
+// ------------------------------------------------------
+// Variables
+//
+
+// ----------------------------------
+// Color - $necobase-color
+//
+
+//
+// 機能を抽象化した色表現
+//
+
+// プライマリカラー。サイトのシンボルとなる色を指定するといい。
+$necobase-color-primary : #bb2a21;
+// 強調
+$necobase-color-emphasis: #d2322d;
+// 成功
+$necobase-color-success : #5cb85c;
+// 通知
+$necobase-color-info    : #5bc0de;
+// 警告
+$necobase-color-warning : #f0ad4e;
+// ヤバい
+$necobase-color-danger  : #d9534f;
+
+//
+// 前景色
+//
+
+// 通常テキスト色
+$necobase-color-text    : #000;
+// 薄いテキスト色
+$necobase-color-text-sub: lighten($necobase-color-text, 70%);
+// ボーダー
+$necobase-color-border  : lighten($necobase-color-text, 80%);
+
+//
+// 背景色
+//
+
+// 通常背景色
+$necobase-color-bg      : #fff;
+// 網掛けエリア色
+$necobase-color-bg-shade: #f0f0f0;
+
+//
+// リンク色
+//
+
+// 通常リンク色
+$necobase-color-link-link   : #225ca6;
+// マウスホバー時のリンク色
+$necobase-color-link-hover  : #4a88c0;
+// 押下時のリンク色
+$necobase-color-link-active : #4a88c0;
+// タップされた時の網掛け色（iOSのみで有効）
+$necobase-color-link-tap    : rgba(0, 128, 255, 0.3);
+
+//
+// その他の色
+//
+
+// 選択時の色
+$necomesi-color-selection-text: #fff;
+$necomesi-color-selection-bg  : #bb2a21;
+
+// ----------------------------------
+// Typography - $necobase-font
+//
+
+// 既定フォントサイズ
+$necobase-font-size: $iroha-font-size-base;
+
+// 既定フォントファミリー
+//$necobase-font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$necobase-font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// ----------------------------------
+// Layout - $necobase-frame
+//
+
+$necobase-frame-width: 940px;
+
+// ----------------------------------
+// Divice definition - $necobase-device
+//
+
+// PC版よりも幅の狭いデバイス（タブレット？）
+$necobase-device-narrow : 768px;
+// さらに小型デバイス（スマホ？）
+$necobase-device-compact: 480px;
+
+
+// ------------------------------------------------------
+// Functions
+//
+
+
+// ------------------------------------------------------
+// Mixins
+//
+
+// ----------------------------------
+// メディアクエリー
+//
+
+// PC版よりも幅の狭いデバイス（タブレット？）
+@mixin necobase-mq-narrow {
+  @media screen and (max-width: ($necobase-device-narrow)) {
+    @content
+  }
+}
+
+// さらに小型デバイス（スマホ？）
+@mixin necobase-mq-compact {
+  @media screen and (max-width: ($necobase-device-compact)) {
+    @content
+  }
+}
+
+// ------------------------------------------------------
+// Placeholder Selectors
+//
