@@ -20,10 +20,6 @@ require.config({
     },
     '_': {
       exports: '_'
-    },
-    'Iroha': {
-      deps: ['$'],
-      exports: 'Iroha'
     }
   },
   paths: {
@@ -32,7 +28,6 @@ require.config({
     '_'        : '../vendor/underscore/underscore',
     'jquery'   : '../vendor/jquery/dist/jquery',
     '$'        : '../vendor/jquery/dist/jquery',
-    'Iroha'    : 'iroha/iroha',
 
     // ブロックの JS は使用頻度が多い割に階層が深いのでここでまとめて登録する。
     // アルファベット順に並べるといいかも。
@@ -45,4 +40,4 @@ require.config({
 // 必須ライブラリと全画面共通の初期処理を開始する JS の読み込み
 // ------------------------------------------------------ */
 
-require(['$', '_', 'Iroha', 'necobase/necobase', 'gid/gid', 'gid/all']);
+require(['$', '_', 'necobase/necobase', 'gid/gid', 'gid/all']);

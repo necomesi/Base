@@ -4,8 +4,8 @@
 //
 // ====================================================== */
 
-require([ 'Iroha', '$' ],
-function(  Iroha,   $  ) {
+require([ '$' ],
+function(  $  ) {
   $(function () {
 
 
@@ -15,9 +15,9 @@ function(  Iroha,   $  ) {
     // iOS の場合、$(document).on('click') が自由に扱えない。
     // そのためダミーのクリックイベントを body の直接の子要素にバインドする。
     // こうすることで $(document) が click イベントを受け取れるようになる。
-    if (Iroha.ua.isiOS) {
-      $(document.body).children().on('click', function () {});
-    }
+    //if (Iroha.ua.isiOS) {
+    //  $(document.body).children().on('click', function () {});
+    //}
 
 
     /* ======================================================
