@@ -4,13 +4,10 @@
 //
 // ====================================================== */
 
-require([ '$' ],
-function(  $  ) {
-  $(function () {
+$(function () {
 
 
-    console.log('XX-template');
+  console.log('XX-template');
 
 
-  });
 });
