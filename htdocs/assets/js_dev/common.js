@@ -26,8 +26,8 @@ require.config({
     // JS ライブラリ
     'text'     : '../vendor/requirejs-text/text',
     '_'        : '../vendor/underscore/underscore',
-    'jquery'   : '../vendor/jquery/dist/jquery',
-    '$'        : '../vendor/jquery/dist/jquery',
+    'jquery'   : '../vendor/jquery/jquery',
+    '$'        : '../vendor/jquery/jquery',
 
     // ブロックの JS は使用頻度が多い割に階層が深いのでここでまとめて登録する。
     // アルファベット順に並べるといいかも。
