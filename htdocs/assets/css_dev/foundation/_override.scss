@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------
+// Overrides for Foundation components
+*/
+
+#{text-inputs(text search tel url email password, 'input')} {
+
+  &[size] {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+#{text-inputs(number, 'input')} {
+  display: inline-block;
+  width: auto;
+}
+
+#{text-inputs(textarea, 'input')} {
+
+  &[cols] {
+    width: auto;
+  }
+
+  &[rows] {
+    height: auto;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-bottom: 0;
+}
