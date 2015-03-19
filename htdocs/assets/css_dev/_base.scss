@@ -7,28 +7,11 @@
 // - ウェブサイト全体を通して各タグに対する「基本的にあるべき」見ためを表現するようにする。
 // ------------------------------------------------------
 
-* {
-  box-sizing: border-box;
-}
-
-:before,
-:after {
-  box-sizing: border-box;
-}
-
-html {
-  color: $necobase-color-text;
-  background-color: $necobase-color-bg;
-  font-size: $necobase-font-size;
-  line-height: 1.618;
-  font-family: $necobase-font-family;
+body {
   word-wrap: break-word;
   -webkit-tap-highlight-color: $necobase-color-link-tap;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-
-body {
 }
 
 a {
@@ -42,14 +25,6 @@ a {
   &:active {
     color: $necobase-color-link-active;
   }
-}
-
-figure {
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
 }
 
 hr {
@@ -72,37 +47,10 @@ em {
 
 strong {
   color: $necobase-color-emphasis;
-}
-
-mark {
-  background: transparent;
-  color: inherit;
-}
-
-label {
-  cursor: pointer;
-}
-
-input,
-textarea,
-select {
-  font: inherit;
+  font-weight: bold;
 }
 
 ::selection {
-  color: $necomesi-color-selection-text;
   background: $necomesi-color-selection-bg;
-}
-
-// ----------------------------------
-// Override normalize.css
-//
-
-hr {
-  box-sizing: border-box;
-}
-
-input[type="search"] {
-  -webkit-appearance: none;
-  box-sizing: border-box;
+  color: $necomesi-color-selection-text;
 }
