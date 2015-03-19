@@ -15,9 +15,6 @@ require.config({
   //urlArgs: '2014011701',
   baseUrl: '/assets/js',
   shim: {
-    'modernizr': {
-      exports: 'Modernizr'
-    },
     '$': {
       exports: 'jQuery'
     },
@@ -32,7 +29,6 @@ require.config({
   paths: {
     // JS ライブラリ
     'text'     : '../vendor/requirejs-text/text',
-    'Modernizr': '../vendor/modernizr/modernizr',
     '_'        : '../vendor/underscore/underscore',
     'jquery'   : '../vendor/jquery/dist/jquery',
     '$'        : '../vendor/jquery/dist/jquery',
@@ -49,4 +45,4 @@ require.config({
 // 必須ライブラリと全画面共通の初期処理を開始する JS の読み込み
 // ------------------------------------------------------ */
 
-require(['Modernizr', '$', '_', 'Iroha', 'necobase/necobase', 'gid/gid', 'gid/all']);
+require(['$', '_', 'Iroha', 'necobase/necobase', 'gid/gid', 'gid/all']);
