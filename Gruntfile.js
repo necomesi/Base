@@ -4,6 +4,8 @@ module.exports = function (grunt) {
   grunt.file.expand({cwd: 'node_modules'}, 'grunt-*').forEach(grunt.loadNpmTasks);
 
   var path = require('path');
+  var fs = require('fs');
+  var _ = require('lodash');
 
 
   grunt.initConfig({
@@ -26,7 +28,7 @@ module.exports = function (grunt) {
         ]
       },
       dist: {
-        src: ['<%= path.dist %>']
+        src: ['<%= path.dist %>', '.tmp']
       }
     },
 
@@ -61,6 +63,24 @@ module.exports = function (grunt) {
           '<%= path.root %>/<%= path.assets %>/<%= path.cssDev %>/**/*.scss'
         ],
         tasks: ['cssDev']
+      }
+    },
+
+    uglify: {
+      options: {
+        sourceMap: true,
+        //sourceMapIncludeSources: true,
+        //sourceMapRoot: '<%= path.root %>',
+        preserveComments: 'some',
+        screwIE8: true
+      }
+    },
+
+    concat: {
+      options: {
+        separator: '\n\n',
+        sourceMap: true,
+        sourceMapStyle: 'link'
       }
     },
 
@@ -117,7 +137,35 @@ module.exports = function (grunt) {
 
     useminPrepare: {
       options: {
-        root: '<%= path.dist %>'
+        root: '<%= path.dist %>',
+        // Source mapsをうまく出力するためのWorkaround
+        flow: {
+          steps: {
+            js : [{
+              name: 'uglify',
+              createConfig: function(context, block) {
+                context.outDir = context.inDir;
+                context.outFiles = [];
+                var cfg = {
+                  files: []
+                };
+                context.inFiles.forEach(function (fname) {
+                  var file = path.join(context.inDir, fname);
+                  var outfile = path.join(context.outDir, fname);
+                  var fname2 = path.dirname(fname) + '/' + path.basename(fname, '.js') + '.min.js';
+                  outfile = path.dirname(outfile) + '/' + path.basename(outfile, '.js') + '.min.js';
+                  cfg.files.push({
+                    src: [file],
+                    dest: outfile
+                  });
+                  context.outFiles.push(fname2);
+                });
+                return cfg;
+              }
+            }, 'concat']
+          },
+          post : {}
+        }
       },
       html: '<%= path.dist %>/<%= path.assets %>/<%= path.inc %>/head/*.html'
     },
@@ -140,7 +188,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'clean:clean',
     'cssDev',
-    //'jsDev',
     'watch'
   ]);
   grunt.registerTask('deploy' , [
@@ -148,8 +195,8 @@ module.exports = function (grunt) {
     'cssDeploy',
     'copy:dist',
     'useminPrepare',
-    'concat:generated',
     'uglify:generated',
+    'concat:generated',
     'usemin'
   ]);
 
