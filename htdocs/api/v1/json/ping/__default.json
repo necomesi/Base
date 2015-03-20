@@ -1,0 +1,9 @@
+{
+  "status": {
+    "code": "0",
+    "text": ""
+  },
+  "response":{
+    "test": "<!--#include virtual=\"/assets/inc/head/head-xx-template.html\"-->"
+  }
+}
