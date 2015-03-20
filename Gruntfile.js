@@ -14,7 +14,6 @@ module.exports = function (grunt) {
       dist  : 'dist',
       assets: 'assets',
       css   : 'css',
-      cssDev: 'css_dev',
       js    : 'js',
       gid   : 'gid',
       inc   : 'inc',
@@ -22,11 +21,6 @@ module.exports = function (grunt) {
     },
 
     clean: {
-      clean: {
-        src: [
-          '<%= path.root %>/<%= path.assets %>/<%= path.css %>/**/*'
-        ]
-      },
       dist: {
         src: ['<%= path.dist %>', '.tmp']
       }
@@ -43,7 +37,7 @@ module.exports = function (grunt) {
           cwd: '<%= path.root %>',
           src: [
             '**/*',
-            '!<%= assets %>/<%= path.cssDev %>'
+            '!<%= assets %>/<%= path.css %>'
           ],
           dest: '<%= path.dist %>'
         }]
@@ -60,7 +54,7 @@ module.exports = function (grunt) {
       },
       scss: {
         files: [
-          '<%= path.root %>/<%= path.assets %>/<%= path.cssDev %>/**/*.scss'
+          '<%= path.root %>/<%= path.assets %>/<%= path.css %>/**/*.scss'
         ],
         tasks: ['cssDev']
       }
@@ -92,7 +86,7 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd   : '<%= path.root %>/<%= path.assets %>/<%= path.cssDev %>',
+          cwd   : '<%= path.root %>/<%= path.assets %>/<%= path.css %>',
           src   : '**/*.scss',
           dest  : '<%= path.root %>/<%= path.assets %>/<%= path.css %>',
           ext   : '.css'
@@ -105,9 +99,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd   : '<%= path.root %>/<%= path.assets %>/<%= path.cssDev %>',
+          cwd   : '<%= path.dist %>/<%= path.assets %>/<%= path.css %>',
           src   : '**/*.scss',
-          dest  : '<%= path.root %>/<%= path.assets %>/<%= path.css %>',
+          dest  : '<%= path.dist %>/<%= path.assets %>/<%= path.css %>',
           ext   : '.css'
         }]
       }
@@ -128,9 +122,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd   : '<%= path.root %>/<%= path.assets %>/<%= path.css %>',
+          cwd   : '<%= path.dist %>/<%= path.assets %>/<%= path.css %>',
           src   : '**/*.css',
-          dest  : '<%= path.root %>/<%= path.assets %>/<%= path.css %>'
+          dest  : '<%= path.dist %>/<%= path.assets %>/<%= path.css %>'
         }]
       }
     },
@@ -186,14 +180,13 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'clean:clean',
     'cssDev',
     'watch'
   ]);
   grunt.registerTask('deploy' , [
     'clean',
-    'cssDeploy',
     'copy:dist',
+    'cssDeploy',
     'useminPrepare',
     'uglify:generated',
     'concat:generated',
