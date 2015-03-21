@@ -9,7 +9,6 @@
 
 body {
   word-wrap: break-word;
-  -webkit-tap-highlight-color: $necobase-color-link-tap;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -25,19 +24,6 @@ a {
   &:active {
     color: $necobase-color-link-active;
   }
-}
-
-hr {
-  margin: 20px 0;
-  border: 0;
-  border-top: 1px solid $necobase-color-border;
-}
-
-table {
-}
-
-th {
-  text-align: left;
 }
 
 em {
