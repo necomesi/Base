@@ -28,12 +28,12 @@ $table-border-color: $necobase-color-border;
 
 // Reset and dependencies
 //@import "../vendor/bootstrap/assets/stylesheets/bootstrap/normalize";
-//@import "../vendor/bootstrap/assets/stylesheets/bootstrap/print";
+@import "../vendor/bootstrap/assets/stylesheets/bootstrap/print";
 //@import "../vendor/bootstrap/assets/stylesheets/bootstrap/glyphicons";
 
 // Core CSS
 @import "../vendor/bootstrap/assets/stylesheets/bootstrap/scaffolding";
-//@import "../vendor/bootstrap/assets/stylesheets/bootstrap/type";
+@import "../vendor/bootstrap/assets/stylesheets/bootstrap/type";
 //@import "../vendor/bootstrap/assets/stylesheets/bootstrap/code";
 @import "../vendor/bootstrap/assets/stylesheets/bootstrap/grid";
 @import "../vendor/bootstrap/assets/stylesheets/bootstrap/tables";
