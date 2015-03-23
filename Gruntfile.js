@@ -132,6 +132,7 @@ module.exports = function (grunt) {
     useminPrepare: {
       options: {
         root: '<%= path.dist %>',
+        dest: '<%= path.dist %>',
         // Source mapsをうまく出力するためのWorkaround
         flow: {
           steps: {
