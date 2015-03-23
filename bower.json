@@ -8,9 +8,10 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "jquery": "^1.11.2",
-    "underscore": "^1.7.0",
     "modernizr": "^2.8.3",
+    "underscore": "^1.7.0",
+    "jquery": "^1.11.2",
+    "jquery.cookie": "^1.4.1",
     "html5shiv": "^3.7.2",
     "bootstrap-sass": "^3.3.4"
   }
