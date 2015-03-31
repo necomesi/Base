@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 
     clean: {
       dist: {
-        src: ['<%= path.dist %>', '.tmp']
+        src: ['<%= path.dist %>']
       }
     },
 
@@ -63,18 +63,8 @@ module.exports = function (grunt) {
     uglify: {
       options: {
         sourceMap: true,
-        //sourceMapIncludeSources: true,
-        //sourceMapRoot: '<%= path.root %>',
         preserveComments: 'some',
-        screwIE8: true
-      }
-    },
-
-    concat: {
-      options: {
-        separator: '\n\n',
-        sourceMap: true,
-        sourceMapStyle: 'link'
+        screwIE8: false
       }
     },
 
@@ -133,33 +123,11 @@ module.exports = function (grunt) {
       options: {
         root: '<%= path.dist %>',
         dest: '<%= path.dist %>',
-        // Source mapsをうまく出力するためのWorkaround
         flow: {
           steps: {
-            js : [{
-              name: 'uglify',
-              createConfig: function(context, block) {
-                context.outDir = context.inDir;
-                context.outFiles = [];
-                var cfg = {
-                  files: []
-                };
-                context.inFiles.forEach(function (fname) {
-                  var file = path.join(context.inDir, fname);
-                  var outfile = path.join(context.outDir, fname);
-                  var fname2 = path.dirname(fname) + '/' + path.basename(fname, '.js') + '.min.js';
-                  outfile = path.dirname(outfile) + '/' + path.basename(outfile, '.js') + '.min.js';
-                  cfg.files.push({
-                    src: [file],
-                    dest: outfile
-                  });
-                  context.outFiles.push(fname2);
-                });
-                return cfg;
-              }
-            }, 'concat']
+            js: ['uglifyjs']
           },
-          post : {}
+          post: {}
         }
       },
       html: '<%= path.dist %>/<%= path.assets %>/<%= path.inc %>/head/*.html'
@@ -190,7 +158,6 @@ module.exports = function (grunt) {
     'cssDeploy',
     'useminPrepare',
     'uglify:generated',
-    'concat:generated',
     'usemin'
   ]);
 
